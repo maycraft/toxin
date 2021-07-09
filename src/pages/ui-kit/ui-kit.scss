@@ -1,0 +1,67 @@
+.colors-types {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors {
+    .item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        &__color{
+            width: 7rem;
+            height: 7rem;
+            border-radius: 6px;
+            margin-right: 4rem;
+
+            &-dark {
+                background: $dark;
+            }
+            &-dark-75 {
+                background: $dark75;
+            }
+            &-dark-50 {
+                background: $dark50;
+            }
+            &-dark-25 {
+                background: $dark25;
+            }
+            &-dark-5 {
+                background: $dark5;
+            }
+            &-purple {
+                background: $purple;
+            }
+            &-green {
+                background: $green;    
+            }
+        }
+        &__descr {
+            font-size: 1.9rem;
+            line-height: 2.8rem;
+            color: $dark;
+        }
+        &__title {
+            font-weight: bold;
+        }
+    }
+}
+
+.fonts {
+    display: flex;
+    flex-direction: column;
+    max-width: 43.6rem;
+
+    .font {
+        display: flex;
+        margin-bottom: 5rem;
+
+        &__name {
+            width: 3.7rem;
+            color: $dark25;
+            margin-right: 3rem;
+            text-align: right;
+            font-weight: normal;
+        }
+    }
+}

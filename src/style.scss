@@ -1,5 +1,6 @@
 @import './scss/variables';
 @import './scss/fonts';
+@import './pages/ui-kit/ui-kit.scss';
 
 @import './components/button/button';
 
@@ -44,5 +45,9 @@ h3 {
 
 .wrapper {
     max-width: 120rem;
-    margin: 0 auto;
+    margin: 2rem auto 0;
+}
+
+section {
+    padding: 0 15px;
 }
