@@ -1,0 +1,18 @@
+.text-field {
+    width: 320px;
+    padding: 1.3rem 1.5rem;
+    border: 1px solid $dark25;
+    border-radius: 4px;
+    background: $white;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.4rem;
+    color: $dark75;
+
+    &::placeholder {
+        color: $dark25;
+    }
+
+    &:focus, &:hover {
+        border-color: $dark50;
+    } 
+}
