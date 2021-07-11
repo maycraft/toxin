@@ -1,0 +1,13 @@
+mixin radio(options)
+    -
+        let radioName = options.name || ''
+        let radioValue = options.value || ''
+    label.radio
+        input(
+            type="radio"
+            class="radio__input"
+            name=radioName
+            value=radioValue
+        )
+        span.radio__button
+        span.radio__text= options.text
