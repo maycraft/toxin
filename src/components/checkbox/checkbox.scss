@@ -1,0 +1,32 @@
+.check {
+    & > &__input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    & > &__box {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+        color: $dark50;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            border: 1px solid $dark25;
+            border-radius: 4px;
+            margin-right: 1rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+        }
+    }
+
+    & > &__input:checked + &__box::before {
+        border-color: $purple;
+        background-image: url('./check.svg');
+    }
+}

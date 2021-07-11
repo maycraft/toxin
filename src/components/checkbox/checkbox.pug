@@ -1,0 +1,11 @@
+mixin checkbox(options)
+    -
+        let checkboxName = options.name || ''
+        let checkboxValue = options.value || ''
+    label.check
+        input(
+            type = 'checkbox'
+            value = checkboxValue
+            class = 'check__input'
+        )
+        span.check__box= options.text
