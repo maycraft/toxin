@@ -1,9 +1,5 @@
-// $btnGradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-$btnGradient: linear-gradient(180deg, rgba(188,156,255,1) 0%, rgba(139,164,249,1) 100%);
-
 button.btn {
     padding: 1.5rem 1.9rem;
-    // border: 2px solid transparent;
     border: none;
     line-height: 1.5rem;
     text-transform: uppercase;
@@ -15,11 +11,10 @@ button.btn {
     opacity: 1;
     background: $white;
     position: relative;
-    margin-right: 5px; //temp
 
     &.btn-filled {
         background: rgb(188,156,255);
-        background: $btnGradient;
+        background: $purpleGradient;
         color: $white;
 
         &:hover {
@@ -38,7 +33,7 @@ button.btn {
             left: -2px;
             right: -2px;
             bottom: -2px;
-            background: $btnGradient;
+            background: $purpleGradient;
             border-radius: 2.4rem;
             z-index: -1;
         }
@@ -64,7 +59,7 @@ button.btn {
     &.btn-big {
         padding: 1.4rem 9.4rem;
         background: rgb(188,156,255);
-        background: $btnGradient;
+        background: $purpleGradient;
         color: $white;
 
         &::after {
