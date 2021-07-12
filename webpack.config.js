@@ -4,7 +4,10 @@ const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const config = {
-    entry: './src/app.js',
+    entry: {
+        index: './src/app.js',
+        ['ui-kit']: './src/pages/ui-kit/ui-kit.js',
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js',
@@ -13,13 +16,7 @@ const config = {
     devServer: {
         historyApiFallback: true,
         inline: true,
-        // contentBase: path.resolve(__dirname, 'dist'),
-        // watchContentBase: true,
         open: true,
-        // overlay: true,
-        // lazy: false,
-        // // compress: true,
-        // hot: true,
         port: 3000,
     },
     module: {
@@ -44,19 +41,20 @@ const config = {
             {
                 test: /\.(scss|css)$/i,
                 use: [miniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'resolve-url-loader', 'sass-loader' ]
-                // use: [miniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader' ]
             },
         ]
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new miniCssExtractPlugin({
-            filename: 'style.css'
-        }),
+        new miniCssExtractPlugin(),
         new HtmlWebpackPlugin({
             template: 'src/index.pug',
             filename: 'index.html'
-        })
+        }),
+        new HtmlWebpackPlugin({
+            template: 'src/pages/ui-kit/ui-kit.pug',
+            filename: 'ui-kit.html'
+        }),
     ],
     stats: {
         children: true,
