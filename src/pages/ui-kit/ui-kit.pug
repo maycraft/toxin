@@ -1,41 +1,38 @@
-- 
-    const colors = [
-        {class: 'dark', title: 'Dark Shade 100%', code: '#1F2041'},
-        {class: 'dark-75', title: 'Dark Shade 75%', code: '#1F2041'},
-        {class: 'dark-50', title: 'Dark Shade 50%', code: '#1F2041'},
-        {class: 'dark-25', title: 'Dark Shade 25%', code: '#1F2041'},
-        {class: 'dark-5', title: 'Dark Shade 5%', code: '#1F2041'},
-        {class: 'purple', title: 'Purple', code: '#BC9CFF'},
-        {class: 'green', title: 'Green', code: '#6FCF97'},
-    ]
+extends ../../layout/layout
 
-    const fonts = [
-        {name: 'h1', example: 'This one is the sub-section or widget title'},
-        {name: 'h2', example: 'Next one is the item title inside widgets'},
-        {name: 'h3', example: 'This is a label or CTA text'},
-        {name: 'body', example: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}
-    ]
-
-section.colors-types
-    .colors
-        each color in colors
-            .item
-                div(class=`item__color item__color-${color.class}`)
-                .item__descr
-                    p.item__title= color.title 
-                    p.item__code= color.code
-    .fonts
-        .font
-            h1.font__name H1
-            h1.font__example This one is the sub-section or widget title
-        .font
-            h2.font__name H2
-            h2.font__example Next one is the item title inside widgets
-        .font
-            h3.font__name H3
-            h3.font__example This is a label or CTA text
-        .font
-            p.font__name Body
-            .font__wrap
-                p.font__example This is the body text which is used for most 
-                p.font__example of the design, like paragraphs, lists, etc.
+block variables
+    - 
+        let title = 'UI-Kit'
+        const colors = [
+            {class: 'dark', title: 'Dark Shade 100%', code: '#1F2041'},
+            {class: 'dark-75', title: 'Dark Shade 75%', code: '#1F2041'},
+            {class: 'dark-50', title: 'Dark Shade 50%', code: '#1F2041'},
+            {class: 'dark-25', title: 'Dark Shade 25%', code: '#1F2041'},
+            {class: 'dark-5', title: 'Dark Shade 5%', code: '#1F2041'},
+            {class: 'purple', title: 'Purple', code: '#BC9CFF'},
+            {class: 'green', title: 'Green', code: '#6FCF97'},
+        ]
+block content
+    section.colors-types
+        .colors
+            each color in colors
+                .item
+                    div(class=`item__color item__color-${color.class}`)
+                    .item__descr
+                        p.item__title= color.title 
+                        p.item__code= color.code
+        .fonts
+            .font
+                h1.font__name H1
+                h1.font__example This one is the sub-section or widget title
+            .font
+                h2.font__name H2
+                h2.font__example Next one is the item title inside widgets
+            .font
+                h3.font__name H3
+                h3.font__example This is a label or CTA text
+            .font
+                p.font__name Body
+                .font__wrap
+                    p.font__example This is the body text which is used for most 
+                    p.font__example of the design, like paragraphs, lists, etc.
