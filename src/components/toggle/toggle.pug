@@ -1,0 +1,9 @@
+mixin toggle(options)
+    -
+        let toggleTitle = options.title || ''
+        let toggleName = options.name || ''
+        let toggleValue = options.value || ''
+    
+    label.toggle= toggleTitle
+        input(type="checkbox", name=toggleName value=toggleValue)
+        span.toggle__slider
