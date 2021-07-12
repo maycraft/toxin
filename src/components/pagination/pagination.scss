@@ -1,0 +1,47 @@
+.pagination{
+    text-align: center;
+    &__nav{
+        display: inline-flex;
+    }
+    &__item {
+        list-style: none;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        
+        &-active{
+            color: $white;
+            font-weight: bold;
+            background: $purpleGradient;
+        }
+    }
+    &__link, &__separator {
+        text-decoration: none;
+        color: $dark50;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    &__next, &__prev {
+        background: $greenGradient;
+        a { 
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-image: url('./arrow_forward.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &__prev {
+        transform: rotate(180deg);
+    }
+    &__descr {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        color: $dark75;
+        margin-top: 1rem;
+    }
+}
