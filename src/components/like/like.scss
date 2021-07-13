@@ -1,0 +1,36 @@
+@import '../../scss/variables';
+
+.like {
+    position: relative;
+    width: 4rem;
+    height: 2rem;
+    background: $white;
+    border: 1px solid $dark25;
+    border-radius: 1rem;
+    cursor: pointer;
+    background-image: url('./heart.svg');
+    background-repeat: no-repeat;
+    background-position: 4px 5px;
+
+    &-clicked {
+        border-color: $purple;
+        background-image: url('./fill-heart.svg');
+        & > span {
+            color: $purple;
+        }
+    }
+    
+    &__count {
+        position: absolute;
+        display: inline-block;
+        color: $dark25;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        text-align: right;
+        width: 9px;
+        height: 9px;
+        top: 3px;
+        right: 12px;
+        pointer-events: none;
+    }
+}

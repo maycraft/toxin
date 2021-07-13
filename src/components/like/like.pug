@@ -1,0 +1,6 @@
+mixin like(options)
+    -
+        let classLike = 'like'
+        classLike += options.liked ? ' like-clicked' : ''
+    button(class=classLike)
+        span.like__count= options.count
