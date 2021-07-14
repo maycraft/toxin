@@ -1,9 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const config = {
+const isDev = process.env.NODE_ENV === "development";
+console.log(isDev);
+module.exports = {
     entry: {
         index: './src/app.js',
         ['ui-kit']: './src/pages/ui-kit/ui-kit.js',
@@ -23,11 +25,12 @@ const config = {
         rules: [
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/source',
+                type: 'asset/resource',
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
-                type: 'asset/resource',
+                // type: 'asset/resource',
+                type: 'asset/inline',
             },
             {
                 test: /\.pug$/i,
@@ -40,7 +43,12 @@ const config = {
             },
             {
                 test: /\.(scss|css)$/i,
-                use: [miniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'resolve-url-loader', 'sass-loader' ]
+                use: [
+                        isDev ? "style-loader" : miniCssExtractPlugin.loader, 
+                        'css-loader', 
+                        'postcss-loader', 
+                        // 'resolve-url-loader', 
+                        'sass-loader' ]
             },
         ]
     },
@@ -61,14 +69,16 @@ const config = {
         colors: true,
         errorDetails: true,
         logging: 'error',
-    }
+    },
+    target: isDev? 'web' : 'browserslist',
+    devtool: isDev ? 'eval-cheap-module-source-map' : false
 }
 
-module.exports = (env, options) => {
-	//получаем булевую переменну запущен ли сейчас продакш режим
-	const isProd = options.mode === 'production';
-	//В зависимости от значения сейчас продакш или нет, мы либо добавляем карту либо нет
-	config.devtool = isProd ? 'eval-cheap-source-map' : 'eval-cheap-module-source-map';
-    config.target = isProd ? 'browserslist' : 'web';
-	return config;
-}
+// module.exports = (env, options) => {
+// 	//получаем булевую переменну запущен ли сейчас продакш режим
+// 	const isProd = options.mode === 'production';
+// 	//В зависимости от значения сейчас продакш или нет, мы либо добавляем карту либо нет
+// 	config.devtool = isProd ? 'eval-cheap-source-map' : 'eval-cheap-module-source-map';
+//     config.target = isProd ? 'browserslist' : 'web';
+// 	return config;
+// }
