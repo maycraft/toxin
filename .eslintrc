@@ -1,0 +1,27 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["airbnb", "plugin:prettier/recommended"],
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "tabWidth": 4,
+                "singleQuote": true,
+                "trailingComma": "all",
+                "semi": true,
+                "bracketSpacing": true,
+                "arrowParens": "avoid",
+                "printWidth": 100,
+                "endOfLine": "auto"
+            }
+        ],
+        "linebreak-style": 0,
+        "no-undef": "off",
+        "no-plusplus": "off",
+        "radix": "off",
+        "func-names": ["error", "never"],
+        "no-new": "off",
+        "no-restricted-syntax": "off"
+    }
+}
