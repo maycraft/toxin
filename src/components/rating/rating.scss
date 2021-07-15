@@ -1,0 +1,14 @@
+.rate {
+    display: inline-block;
+    &__star {
+        display: inline-block;
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url('./img/star-outline.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        &-checked {
+            background-image: url('./img/star-fill.svg');
+        }
+    }
+}
