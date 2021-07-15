@@ -149,4 +149,5 @@ for (const property in inputMask) {
         InputMask.prototype[property] = inputMask[property];
     }
 }
+document.querySelector('.masked').value = '';
 new InputMask();
