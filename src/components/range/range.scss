@@ -1,0 +1,65 @@
+@import '../../scss/variables';
+
+.range {
+    width: 26.6rem;
+
+    &__slider {
+        background: $white;
+        border: 1px solid $dark25;
+        border-radius: 3px;
+        box-shadow: none;
+    }
+
+    &__descr {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $dark;
+    }
+
+    &__values {
+        color: $dark50;
+    }
+}
+
+.noUi {
+    
+    &-horizontal {
+        height: 6px;
+        .noUi-handle {
+            width: 12px;
+            height: 12px;
+            background: $greenGradient;
+            border: 2px solid $white;
+            border-radius: 50%;
+            top: -4px;
+            right: -6px;
+
+            &::before {
+                display: none;
+            }
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &-handle {
+        box-shadow: none;
+}
+    &-connects {
+        overflow: visible;
+    }
+    &-connect {
+        background: $greenGradient;
+        border-radius: 3px;
+        height: 6px;
+        top: -1px;
+    }
+}
