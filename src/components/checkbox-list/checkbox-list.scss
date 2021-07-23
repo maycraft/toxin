@@ -1,0 +1,47 @@
+@import '../../scss/variables';
+
+.checkbox-list {
+    width: 26.6rem;
+    cursor: pointer;
+    position: relative;
+
+    .open::before {
+        transform: rotate(180deg);
+    }
+    &__title {
+        padding: 1.8rem 0;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-image: url('./img/check-mark.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 2rem;
+            right: 12px;
+        }
+    }
+    &__items {
+        max-width: 22.2rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s linear;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1;
+        background: $white;
+    }
+    &__item {
+        margin-bottom: 7px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .show {
+        max-height: 186px;
+    }
+}
