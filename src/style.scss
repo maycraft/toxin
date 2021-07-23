@@ -12,6 +12,10 @@ html {
     outline: none;
 }
 
+li {
+    list-style: none;
+}
+
 body {
     font-family: Montserrat, Arial, sans-serif;
     font-size: 14px;
@@ -48,4 +52,8 @@ h3 {
 
 section {
     padding: 0 15px;
+}
+
+.hide {
+    display: none !important;
 }
