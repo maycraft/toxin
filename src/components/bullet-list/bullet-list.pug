@@ -1,0 +1,7 @@
+include ../bullet/bullet
+
+mixin bulletList(title, items)
+    .bullet-list
+        h3.bullet-list__title= title
+        each val in items
+            +bullet(val)
