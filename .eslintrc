@@ -22,6 +22,8 @@
         "radix": "off",
         "func-names": ["error", "never"],
         "no-new": "off",
-        "no-restricted-syntax": "off"
+        "no-restricted-syntax": "off",
+        "prefer-template": "off",
+        "prefer-destructuring": "off"
     }
 }
