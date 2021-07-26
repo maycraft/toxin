@@ -1,10 +1,10 @@
 include ../checkbox/checkbox
 
-mixin checkboxList(options)
-    - const { title, items } = options;
+mixin checkboxList(title, items)
     .checkbox-list
-        h3.checkbox-list__title= options.title
+        h3.checkbox-list__title= title
         ul.checkbox-list__items
             each val in items
                 li.checkbox-list__item 
-                    +checkbox({text: val.text, value: val.value, isChecked: val.isChecked})
+                    +checkbox(val)
+                    //- +checkbox({text: val.text, value: val.value, isChecked: val.isChecked})
