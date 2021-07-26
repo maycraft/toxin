@@ -1,0 +1,7 @@
+include ../checkbox/checkbox
+
+mixin richboxList(title, items)
+    h3= title
+    .richbox-list__body
+        each val in items
+            +checkbox(val)

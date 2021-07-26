@@ -1,0 +1,1 @@
+import './richbox-list.scss';
