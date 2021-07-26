@@ -1,33 +1,62 @@
 @import '../../scss/variables';
-.check {
-    & > &__input {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-    }
-    & > &__box {
-        display: inline-flex;
-        align-items: center;
-        user-select: none;
-        color: $dark50;
-        cursor: pointer;
 
-        &::before {
+.checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 3rem;
+    cursor: pointer;
+    user-select: none;
+    min-height: 2rem;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .checkbox__checkmark:after {
+            border-color: $purple;
+            background-image: url('./check.svg');
+        }
+    }
+
+    &__checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+
+        &::after {
             content: '';
             display: inline-block;
             width: 2rem;
             height: 2rem;
             border: 1px solid $dark25;
             border-radius: 4px;
-            margin-right: 1rem;
             background-repeat: no-repeat;
             background-position: center center;
             background-size: 50% 50%;
         }
     }
+    &__body {
+        width: 203px;
+    }
+    &__title {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        color: $dark50;
 
-    & > &__input:checked + &__box::before {
-        border-color: $purple;
-        background-image: url('./check.svg');
+        &-rich {
+            font-weight: bold;
+            color: $dark75;
+        }
+    }
+    &__descr {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        color: $dark50;
+        margin-top: 7px;
     }
 }

@@ -1,8 +1,14 @@
 mixin checkbox(options)
     -
-        let {name, value, text, isChecked=false} = options
-        let checkboxName = name || ''
-        let checkboxValue = value || ''
-    label.check
-        input.check__input(type='checkbox', value=checkboxValue, checked=isChecked)
-        span.check__box= text
+        let {name='', value='', title='', isChecked=false, isRich=false, descr=''} = options
+        //- let checkboxName = name || ''
+        //- let checkboxValue = value || ''
+        let className = 'checkbox__title';
+        className += isRich ? ' checkbox__title-rich' : '' 
+    label.checkbox
+        input(type='checkbox', value=value, checked=isChecked)
+        .checkbox__checkmark
+        .checkbox__body
+            p(class=className)= title
+                if isRich
+                    p.checkbox__descr= descr
