@@ -1,0 +1,11 @@
+.checkbox-buttons{
+    &__body {
+        margin-top: 1.6rem;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 1.3rem;
+        }
+    }
+}

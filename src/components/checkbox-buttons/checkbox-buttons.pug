@@ -1,0 +1,7 @@
+include ../checkbox/checkbox
+
+mixin checkboxButtons(title, items)
+    h3= title
+    .checkbox-buttons__body
+        each val in items
+            +checkbox(val)
