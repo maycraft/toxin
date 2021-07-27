@@ -1,6 +1,7 @@
 mixin like(options)
     -
+        const { count, isLiked } = options
         let classLike = 'like'
-        classLike += options.liked ? ' like-clicked' : ''
+        classLike += isLiked ? ' like-clicked' : ''
     button(class=classLike)
-        span.like__count= options.count
+        span.like__count= count
