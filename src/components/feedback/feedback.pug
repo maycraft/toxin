@@ -1,0 +1,14 @@
+include ../like/like
+
+mixin feedback(options)
+    -
+        const {ava='', name='', online='', text='', likeObj={} } = options
+    .feedback
+        .feedback__info
+            .feedback__avatar
+                img(src=ava, alt=name)
+            +like(likeObj)
+        .feedback__message
+            .feedback__name= name
+            .feedback__online= online
+            .feedback__text= text
