@@ -1,0 +1,10 @@
+mixin benefit(options)
+    -
+        let { icon, title = "", descr = "", isBordered = false } = options;
+        let className = "benefit"
+        className += isBordered ? ' benefit-bordered' : ''
+    div(class=className)
+        i.material-icons.benefit__icon= icon
+        .benefit__text
+            p.benefit__title= title
+            p.benefit__descr= descr
