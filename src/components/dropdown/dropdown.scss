@@ -1,0 +1,61 @@
+@import '../../scss/variables';
+
+.dropdown{
+    &__room {
+        width: 26.6rem;
+    }
+    &__guest {
+        width: 32rem;
+    }
+}
+
+.iqdropdown {
+    height: 4.4rem;
+    border: 1px solid $dark25;
+    border-radius: 3px 3px 0 0;
+    &.menu-open {
+        border-color: $dark50;
+        & .iqdropdown-selection::after {
+            background-image: none;
+        }
+    }
+    &-button-apply {
+        margin-left: auto;
+    }
+    & &-selection {
+        font-family: Montserrat, Arial, sans-serif;
+        @extend %font14-24;
+        color: $dark75;
+        position: relative;
+        &::after {
+            content: 'expand_more';
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            color: $dark75;
+            position: absolute;
+            background-image: none;
+            top: 0;
+            right: 5px;
+        }
+    }
+    & &-menu {
+        box-shadow: none;
+        border: 1px solid $dark50;
+        border-radius: 0 0 3px 3px;
+        border-top: none;
+        top: 45px;
+    }
+    &-title {
+        @extend %font12-15;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 4.5px;
+        color: $dark;
+    }
+    &-button {
+        display: flex;
+        padding: 14px 7px 14px 14px;
+    }
+}
