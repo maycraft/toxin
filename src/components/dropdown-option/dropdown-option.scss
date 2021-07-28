@@ -1,0 +1,73 @@
+@import '../../scss/variables';
+
+.iqdropdown {
+    & &-menu {
+        &-option{
+            height: auto;
+            padding: 4px 7px 3px 15px;
+            display: flex;
+            justify-content: space-between;
+
+            &:first-child {
+                padding-top: 7px;
+            }
+            &:last-child {
+                padding-bottom: 7px;
+            }
+        }
+    }
+    &-item {
+        font-family: Montserrat, Arial, sans-serif;
+        @extend %font12-15;
+        font-weight: bold;
+        color: $dark;
+    }
+    & &-item-controls {
+        height: 3rem;
+        width: 9.2rem;
+        justify-content: space-between;
+        align-items: center;
+        // margin: 7px;
+        .counter {
+            @extend %font12-15;
+            font-family: Montserrat, Arial, sans-serif;
+            font-weight: bold;
+            color: $dark;
+            border: none;
+            padding: 0;
+        }
+        button.button-decrement, 
+        button.button-increment {
+            border-radius: 50%;
+            border: 1px solid $dark50;
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+    }
+    .icon-decrement{
+        width: 6px;
+        height: 6px;
+        min-width: 6px;
+        
+        &::after {
+            width: 6px;
+            height: 1px;
+            background: $dark50;
+            top: 4px;
+        }
+        &.icon-increment {
+            &::before {
+                width: 6px;
+                height: 1px;
+                background: $dark50;
+                top: 4px;
+            }
+        }
+    }
+}
