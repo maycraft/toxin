@@ -12,16 +12,16 @@
         padding: 1.8rem 0;
 
         &::before {
-            content: '';
-            display: block;
-            width: 12px;
-            height: 12px;
-            background-image: url('./img/check-mark.svg');
-            background-position: center;
-            background-repeat: no-repeat;
+            content: 'expand_more';
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            color: $dark50;
+            text-transform: none;
             position: absolute;
-            top: 2rem;
-            right: 12px;
+            top: 18px;
+            right: 6px;
         }
     }
     &__items {
