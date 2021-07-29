@@ -9,7 +9,7 @@ console.log(isDev);
 module.exports = {
     entry: {
         index: './src/app.js',
-        'ui-kit': './src/pages/ui-kit/ui-kit.js',
+        colors: './src/pages/colors/colors.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -70,8 +70,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             favicon: './src/favicon.png',
-            template: 'src/pages/ui-kit/ui-kit.pug',
-            filename: 'ui-kit.html',
+            template: 'src/pages/colors/colors.pug',
+            filename: 'colors.html',
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
