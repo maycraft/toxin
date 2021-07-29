@@ -1,11 +1,15 @@
 @import '../../scss/variables';
 
 .colors-types {
+    max-width: 1140px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    // padding: 0 150px;
 }
 
 .colors {
+    max-width: 281px;
     .item {
         display: flex;
         align-items: center;
@@ -52,18 +56,33 @@
 .fonts {
     display: flex;
     flex-direction: column;
-    max-width: 43.6rem;
+    max-width: 444px;
 
     .font {
         display: flex;
-        margin-bottom: 5rem;
+        margin-top: 53px;
+
+        &:first-child {
+            margin: 0;
+        }
 
         &__name {
-            width: 3.7rem;
-            color: $dark25;
-            margin-right: 3rem;
+            min-width: 37px;
+            margin-right:30px;
             text-align: right;
             font-weight: normal;
+            line-height: 24px;
+        }
+        &__title {
+            color: $dark25;
+        }
+        &__wrap {
+            max-width: 301px;
+            line-height: 24px;
+        }
+        &__body {
+            display: flex;
+            margin-top: 47px;
         }
     }
 }

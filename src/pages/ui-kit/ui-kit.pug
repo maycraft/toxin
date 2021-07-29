@@ -1,7 +1,7 @@
 extends ../../layout/layout
 
 block variables
-    - 
+    -
         let title = 'UI-Kit'
         const colors = [
             {class: 'dark', title: 'Dark Shade 100%', code: '#1F2041'},
@@ -17,22 +17,27 @@ block content
         .colors
             each color in colors
                 .item
-                    div(class=`item__color item__color-${color.class}`)
+                    .item__color(class="item__color-" + color.class)
                     .item__descr
-                        p.item__title= color.title 
+                        p.item__title= color.title
                         p.item__code= color.code
         .fonts
             .font
-                h1.font__name H1
-                h1.font__example This one is the sub-section or widget title
+                .font__name
+                    h1.font__title H1
+                .font__example
+                    h1 This one is the sub-section or widget title
             .font
-                h2.font__name H2
-                h2.font__example Next one is the item title inside widgets
+                .font__name
+                    h2.font__title H2
+                .font__example
+                    h2 Next one is the item title inside widgets
             .font
-                h3.font__name H3
-                h3.font__example This is a label or CTA text
-            .font
-                p.font__name Body
-                .font__wrap
-                    p.font__example This is the body text which is used for most 
-                    p.font__example of the design, like paragraphs, lists, etc.
+                .font__name
+                    h3.font__title H3
+                .font__example
+                    h3 This is a label or CTA text
+            .font__body
+                .font__name
+                    p.font__title Body
+                p.font__wrap This is the body text which is used for most of the design, like paragraphs, lists, etc.
