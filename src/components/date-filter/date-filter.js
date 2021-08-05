@@ -24,6 +24,7 @@ const options = {
         ],
     },
     dateFormat: 'dd M',
+    // inline: true,
     clearButton: true,
     prevHtml: '<i class="material-icons date-filter__arrow">arrow_back</i>',
     nextHtml: '<i class="material-icons date-filter__arrow">arrow_forward</i>',
