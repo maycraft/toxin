@@ -4,6 +4,7 @@ import 'air-datepicker/dist/css/datepicker.min.css';
 import './date-filter.scss';
 
 const options = {
+    classes: 'date-filter-datepicker',
     range: true,
     multipleDatesSeparator: ' - ',
     language: {
@@ -30,17 +31,19 @@ const options = {
         days: 'MM yyyy',
     },
     offset: 20,
+    showEvent: 'click',
 };
 
-const $dateFilterInput = $('.date-filter__input');
-const Datepicker = $dateFilterInput.datepicker(options).data('datepicker');
+const $dateFilterInput = $('.date-filter__input[name="date-filter"]');
+const DateInput = $dateFilterInput.datepicker(options).data('datepicker');
 const $btnConfirm = $('<span class="datepicker--button-confirm">Применить</span>');
-$('.datepicker--buttons').append($btnConfirm);
+const $dateFilter = $('.date-filter-datepicker');
+$dateFilter.children('.datepicker--buttons').append($btnConfirm);
 
-$('.datepicker--button-confirm').on('click', () => {
-    Datepicker.hide();
+$dateFilter.find('.datepicker--button-confirm').on('click', () => {
+    DateInput.hide();
 });
 
 $('.date-filter').on('click', () => {
-    Datepicker.show();
+    DateInput.show();
 });
