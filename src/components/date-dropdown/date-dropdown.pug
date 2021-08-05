@@ -1,0 +1,19 @@
+mixin dateDropdown(title_start, title_end)
+    .date-dropdown
+        .date-dropdown__part
+            h3= title_start
+            .date-dropdown-block
+                input.datepicker-here.date-dropdown__input.date-dropdown__input-start(
+                    type='text',
+                    placeholder='ДД.ММ.ГГГГ',
+                    name='date-dropdown'
+                )
+                i.material-icons.date-dropdown__icon expand_more
+        .date-dropdown__part
+            h3= title_end
+            .date-dropdown-block
+                input.date-dropdown__input.date-dropdown__input-end(
+                    type='text',
+                    placeholder='ДД.ММ.ГГГГ'
+                )
+                i.material-icons.date-dropdown__icon expand_more
