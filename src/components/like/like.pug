@@ -1,6 +1,6 @@
 mixin like(options)
     -
-        const { count, isLiked } = options
+        const { count=0, isLiked=false } = options
         let classLike = 'like'
         classLike += isLiked ? ' like-clicked' : ''
     button(class=classLike)
