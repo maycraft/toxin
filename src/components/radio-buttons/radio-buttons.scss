@@ -3,5 +3,7 @@
 .radio-buttons {
     margin-top: 16px;
     display: flex;
-    justify-content: space-between;
+    .radio {
+        margin-right: 2rem;
+    }
 }
