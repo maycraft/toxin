@@ -1,0 +1,7 @@
+include ../radio/radio.pug
+
+mixin radioButtons(title, radioData)
+    h3= title
+    .radio-buttons 
+        each radioEl in radioData
+            +radio(radioEl)
