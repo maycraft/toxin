@@ -52,5 +52,6 @@
     "jquery": "^3.6.0",
     "nouislider": "^15.2.0"
   },
-  "browserslist": "> 0.5%, not dead"
+  "browserslist": "> 0.5%, not dead",
+  "homepage": "https://sergeless.github.io/toxin/"
 }
