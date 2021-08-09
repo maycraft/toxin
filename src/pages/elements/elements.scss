@@ -1,0 +1,9 @@
+@import '../../scss/variables';
+
+.elements
+    {
+        &__item {
+            max-width: 350px;
+            padding: 0 15px;
+        }
+    }

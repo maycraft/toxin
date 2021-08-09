@@ -1,0 +1,35 @@
+extends ../../layout/ui-kit.pug
+include ../../components/textfield/textfield.pug
+include ../../components/dropdown/dropdown.pug
+include ../../components/inputmasked/inputmasked.pug
+include ../../components/date-dropdown/date-dropdown.pug
+include ../../components/date-filter/date-filter.pug
+include ../../components/subscription-textfield/subscription-textfield.pug
+
+block variables
+    -
+        const dropdownGuests = [
+            { id: 1, name: "взрослые", wordForms: ""},
+            { id: 2, name: "дети", wordForms: ""},
+            { id: 3, name: "младенцы", wordForms: "младенец,младенца,младенцев"}
+        ]
+
+block content
+    .elements
+        .elements__item
+            .element__textfield
+                +textfield('Text Field','Email')
+            .element__textfield
+                +textfield('Text Field','Email', 'This is pretty awesome')
+            .element__dropdown
+                +dropdown({type: 'guest', items: dropdownGuests, title: 'гости', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
+            .element__dropdown
+                +inputmasked('masked text field')
+            .element__date-dropdown
+                +dateDropdown('date Dropdown', 'date Dropdown')
+            .element__filter-date-dropdown
+                +dateFilter('filter date dropdown')
+            .element__subscription-text-field
+                +subscriptionTextfield('subscription text field')
+        .elements__item
+        .elements__item
