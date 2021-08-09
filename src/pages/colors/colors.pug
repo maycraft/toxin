@@ -1,26 +1,21 @@
 extends ../../layout/layout
-
+include ../../components/color/color
 block variables
     -
-        let title = 'UI-Kit'
         const colors = [
-            {class: 'dark', title: 'Dark Shade 100%', code: '#1F2041'},
-            {class: 'dark-75', title: 'Dark Shade 75%', code: '#1F2041'},
-            {class: 'dark-50', title: 'Dark Shade 50%', code: '#1F2041'},
-            {class: 'dark-25', title: 'Dark Shade 25%', code: '#1F2041'},
-            {class: 'dark-5', title: 'Dark Shade 5%', code: '#1F2041'},
-            {class: 'purple', title: 'Purple', code: '#BC9CFF'},
-            {class: 'green', title: 'Green', code: '#6FCF97'},
+            {className: 'dark', title: 'Dark Shade 100%', code: '#1F2041'},
+            {className: 'dark-75', title: 'Dark Shade 75%', code: '#1F2041'},
+            {className: 'dark-50', title: 'Dark Shade 50%', code: '#1F2041'},
+            {className: 'dark-25', title: 'Dark Shade 25%', code: '#1F2041'},
+            {className: 'dark-5', title: 'Dark Shade 5%', code: '#1F2041'},
+            {className: 'purple', title: 'Purple', code: '#BC9CFF'},
+            {className: 'green', title: 'Green', code: '#6FCF97'},
         ]
 block content
     section.colors-types
         .colors
-            each color in colors
-                .item
-                    .item__color(class="item__color-" + color.class)
-                    .item__descr
-                        p.item__title= color.title
-                        p.item__code= color.code
+            each objColor in colors
+                +color(objColor)
         .fonts
             .font
                 .font__name
