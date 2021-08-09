@@ -1,7 +1,6 @@
 @import '../../scss/_variables.scss';
 
 .text-field {
-    width: 320px;
     padding: 1.3rem 1.5rem;
     border: 1px solid $dark25;
     border-radius: 4px;
@@ -9,6 +8,7 @@
     font-family: Montserrat, sans-serif;
     font-size: 1.4rem;
     color: $dark75;
+    margin-top: 5px;
 
     &::placeholder {
         color: $dark25;

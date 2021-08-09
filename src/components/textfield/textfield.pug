@@ -1,4 +1,3 @@
-mixin textfield(placeholder)
-    input(type="text" 
-        placeholder= placeholder 
-        class="text-field")
+mixin textfield(title, placeholder, value="")
+    h3= title
+    input.text-field(type='text', placeholder=placeholder, value=value)
