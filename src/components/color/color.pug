@@ -1,0 +1,7 @@
+mixin color(options)
+    - let { className, title, code } = options;
+    .item
+        .item__color(class="item__color-" + className)
+        .item__descr
+            p.item__title= title
+            p.item__code= code
