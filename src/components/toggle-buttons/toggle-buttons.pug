@@ -1,0 +1,7 @@
+include ../toggle/toggle.pug
+
+mixin toggleButtons(title, toggleElements)
+    h3= title
+    .toggle-buttons
+        each objEl in toggleElements
+            +toggle(objEl)
