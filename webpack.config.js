@@ -10,7 +10,6 @@ module.exports = {
     entry: {
         index: './src/app.js',
         colors: './src/pages/colors/colors.js',
-        elements: './src/pages/elements/elements.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -72,12 +71,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             favicon: './src/favicon.png',
             template: 'src/pages/colors/colors.pug',
-            filename: 'colors',
-        }),
-        new HtmlWebpackPlugin({
-            favicon: './src/favicon.png',
-            template: 'src/pages/elements/elements.pug',
-            filename: 'elements',
+            filename: 'colors.html',
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
