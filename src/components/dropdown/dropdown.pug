@@ -11,7 +11,7 @@ mixin dropdown(props)
                 isApply = false } = props
         let className = "iqdropdown"
         className += isSmall ? ' small' : ''
-    p.iqdropdown-title= title
+    h3.iqdropdown-title= title
     div(class=className, data-dropdown-type=type)
         p.iqdropdown-selection(data-default-value=defaultValue)
         .iqdropdown-menu(data-common-form-text=common)
