@@ -1,13 +1,9 @@
 mixin radio(options)
     -
-        let radioName = options.name || ''
-        let radioValue = options.value || ''
+        //- let radioName = options.name || ''
+        //- let radioValue = options.value || ''
+        const { name='', text='', isChecked=false, value='' } = options
     label.radio
-        input(
-            type="radio"
-            class="radio__input"
-            name=radioName
-            value=radioValue
-        )
+        input.radio__input(type='radio', name=name, value=value, checked=isChecked)
         span.radio__button
-        span.radio__text= options.text
+        span.radio__text= text
