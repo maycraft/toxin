@@ -1,7 +1,7 @@
 mixin rating(stars=0)
     .rate
         - for (let i = 0; i < 5; i++)
-            -   let classRate = 'rate__star'
+            - let classRate = "rate__star";
             if i < stars
-                - classRate += ` ${classRate}-checked`
+                - classRate += ` ${classRate}-checked`;
             span(class=classRate)
