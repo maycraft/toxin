@@ -5,6 +5,13 @@ include ../../components/inputmasked/inputmasked.pug
 include ../../components/date-dropdown/date-dropdown.pug
 include ../../components/date-filter/date-filter.pug
 include ../../components/subscription-textfield/subscription-textfield.pug
+include ../../components/checkbox-buttons/checkbox-buttons.pug
+include ../../components/radio-buttons/radio-buttons.pug
+include ../../components/toggle-buttons/toggle-buttons.pug
+include ../../components/like-block/like-block.pug
+include ../../components/rate-buttons/rate-buttons.pug
+include ../../components/richbox-list/richbox-list.pug
+include ../../components/range/range.pug
 
 block variables
     -
@@ -13,7 +20,28 @@ block variables
             { id: 2, name: "дети", wordForms: ""},
             { id: 3, name: "младенцы", wordForms: "младенец,младенца,младенцев"}
         ]
-
+        const checkList = [
+            {title: 'Можно курить', name: 'smoke', value: 'smoked'},
+            {title: 'Можно с питомцами', name: 'pet', value: 'pet', isChecked: true},
+            {title: 'Можно пригласить гостей (до 10 человек)', name: 'festival', value: 'festival', isChecked: true}
+        ]
+        const radioButtonsData = [
+            {text: 'Мужчина', name: 'sex', value: 'male', isChecked: true},
+            {text: 'Женщина', name: 'sex', value: 'female'}
+        ]
+        const toggleData = [
+            {text: 'Получать спецпредложения', isChecked: true},
+            {text: 'Получать спецпредложения'}
+        ]
+        const likeData = [
+            {count: 2},
+            {count: 12, isLiked: true}
+        ]
+        const rateArr = [4, 5]
+        const richboxList = [
+                        {title: 'Широкий коридор', name: 'corridor', value: 'corridor', isRich: true, descr: 'Ширина коридоров в номере не менее 91 см.'},
+            {title: 'Помощник для инвалидов', name: 'ivalid', value: 'ivalid', isRich: true, descr: 'На 1 этаже вас встретит специалист  и проводит до номера.'}
+        ]
 block content
     .elements
         .elements__item
@@ -22,7 +50,7 @@ block content
             .element__textfield
                 +textfield('Text Field','Email', 'This is pretty awesome')
             .element__dropdown
-                +dropdown({type: 'guest', items: dropdownGuests, title: 'гости', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
+                +dropdown({type: 'guest', items: dropdownGuests, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
             .element__dropdown
                 +inputmasked('masked text field')
             .element__date-dropdown
@@ -32,4 +60,20 @@ block content
             .element__subscription-text-field
                 +subscriptionTextfield('subscription text field')
         .elements__item
+            .element__checkbox_buttons
+                +checkboxButtons('Checkbox Buttons', checkList)
+            .element__radio__buttons
+                +radioButtons('Radio Buttons', radioButtonsData)
+            .element__toggle
+                +toggleButtons('Toggle', toggleData)
+            .element__like-button
+                +likeBlock('like button', likeData)
+            .element__rate-button
+                +rateButtons('rate button', rateArr)
+            .element__dropdown-open
+                +dropdown({type: 'guest', items: dropdownGuests, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
+            .element__rich-checkbox-buttons
+                +richboxList('rich Checkbox Buttons', richboxList)
         .elements__item
+            .element__range-slider
+                +range('Range Slider', 0, 15000, 5000, 10000, 1000)
