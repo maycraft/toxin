@@ -1,6 +1,6 @@
-mixin range(title)
+mixin range(title, min=0, max=100, start=0, end=100, step=10)
     .range
         p.range__descr
             span.range__title= title
             span.range__values
-        .range__slider
+        .range__slider(data-min=min, data-max=max, data-start=start, data-end=end, data-step=step)
