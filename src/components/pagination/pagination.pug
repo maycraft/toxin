@@ -1,15 +1,17 @@
-mixin pagination()
+mixin pagination(title="")
+    if title
+        h3.pagination__title= title
     .pagination
         ul.pagination__nav
             li.pagination__item.pagination__item-active 1
             li.pagination__item
-                a.pagination__link(href="?page=2") 2
+                a.pagination__link(href='?page=2') 2
             li.pagination__item
-                a.pagination__link(href="?page=3") 3
+                a.pagination__link(href='?page=3') 3
             li.pagination__item
                 span.pagination__separator ...
             li.pagination__item
-                a.pagination__link(href="?page=15") 15
+                a.pagination__link(href='?page=15') 15
             li.pagination__item.pagination__next
-                a.pagination__link(href="?page=2")
+                a.pagination__link(href='?page=2')
         p.pagination__descr 1 – 12 из 100+ вариантов аренды
