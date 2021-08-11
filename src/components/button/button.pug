@@ -1,12 +1,16 @@
 mixin btn(options)
-    -   let btnClassName = 'btn'
-    case options.type
+    -
+        const {type='filled', title='button', className=''} = options
+        let btnClassName = 'btn'
+    case type
         when 'filled'
-            - btnClassName += ' btn-filled'
+            - btnClassName += " btn-filled";
         when 'outline'
-            - btnClassName += ' btn-outline'
+            - btnClassName += " btn-outline";
         when 'text'
-            - btnClassName += ' btn-text'
+            - btnClassName += " btn-text";
         when 'big'
-            - btnClassName += ' btn-big'
-    button(class = btnClassName)= options.title
+            - btnClassName += " btn-big";
+    -
+        btnClassName += className ? ` ${className}` : ''
+    button(class=btnClassName)= title
