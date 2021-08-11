@@ -1,0 +1,21 @@
+@import '../../scss/variables';
+
+.buttons-block {
+    margin-top: 16px;
+    max-width: 218px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        // column-gap: 2rem;
+        margin-bottom: 3rem;
+
+        &:nth-child(odd) {
+            margin-right: 2rem;
+        }
+        &:nth-child(5),
+        &:nth-child(6) {
+            margin-bottom: 0;
+        }
+    }
+}

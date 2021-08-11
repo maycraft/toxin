@@ -1,0 +1,8 @@
+include ../button/button.pug
+
+mixin buttonsBlock(title, buttonList)
+    h3= title
+    .buttons-block
+        each button in buttonList
+            .buttons-block__item
+                +btn(button)
