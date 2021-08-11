@@ -12,6 +12,11 @@ include ../../components/like-block/like-block.pug
 include ../../components/rate-buttons/rate-buttons.pug
 include ../../components/richbox-list/richbox-list.pug
 include ../../components/range/range.pug
+include ../../components/buttons-block/buttons-block.pug
+include ../../components/button/button.pug
+include ../../components/pagination/pagination.pug
+include ../../components/bullet-list/bullet-list.pug
+include ../../components/feedback/feedback.pug
 
 block variables
     -
@@ -42,6 +47,22 @@ block variables
                         {title: 'Широкий коридор', name: 'corridor', value: 'corridor', isRich: true, descr: 'Ширина коридоров в номере не менее 91 см.'},
             {title: 'Помощник для инвалидов', name: 'ivalid', value: 'ivalid', isRich: true, descr: 'На 1 этаже вас встретит специалист  и проводит до номера.'}
         ]
+        const buttonList = [
+            {type: 'filled', title: 'click me'},
+            {type: 'filled', title: 'click me', className: 'btn-focus'},
+            {type: 'outline', title: 'click me'},
+            {type: 'outline', title: 'click me', className: 'btn-focus'},
+            {type: 'text', title: 'click me'},
+            {type: 'text', title: 'click me', className: 'btn-focus'},
+        ]
+        const bulletArr = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
+        const feedbackObj = {   
+            ava: '/src/components/feedback/img/sarafanov.png',
+            name: 'Мурад Сарафанов',
+            online: '5 дней назад',
+            text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+            likeObj: {count: 12, isLiked: true}
+        }
 block content
     .elements
         .elements__item
@@ -74,6 +95,18 @@ block content
                 +dropdown({type: 'guest', items: dropdownGuests, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
             .element__rich-checkbox-buttons
                 +richboxList('rich Checkbox Buttons', richboxList)
+            .element__review 
+                +feedback(feedbackObj)
         .elements__item
             .element__range-slider
                 +range('Range Slider', 0, 15000, 5000, 10000, 1000)
+            .element__buttons
+                +buttonsBlock('buttons', buttonList)
+            .element__big-button
+                +btn({type: 'big', title: 'перейти к оплате'})
+            .element__pagination
+                +pagination('pagination')
+            .element__dropdown-open-full
+                +dropdown({type: 'guest', items: dropdownGuests, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
+            .element__bullet-list
+                +bulletList('bullet list', bulletArr)

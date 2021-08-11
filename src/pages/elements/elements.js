@@ -11,5 +11,10 @@ import '../../components/like-block/like-block';
 import '../../components/rate-buttons/rate-buttons';
 import '../../components/richbox-list/richbox-list';
 import '../../components/range/range';
+import '../../components/buttons-block/buttons-block';
+import '../../components/button/button';
+import '../../components/pagination/pagination';
+import '../../components/bullet-list/bullet-list';
+import '../../components/feedback/feedback';
 
 import './elements.scss';
