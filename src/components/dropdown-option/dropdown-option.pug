@@ -1,4 +1,8 @@
-mixin dropdown-option(id, name, wordForms, type)
-    .iqdropdown-menu-option(data-id=`${type}${id}`, data-word-forms=wordForms) 
+mixin dropdown-option(type='item', id=0, name='item', wordForms='', defaultCount=0)
+    .iqdropdown-menu-option(
+        data-id=`${type}${id}`,
+        data-word-forms=wordForms,
+        data-defaultcount=defaultCount
+    ) 
         div
             p.iqdropdown-item= name

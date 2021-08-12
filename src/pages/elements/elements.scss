@@ -1,11 +1,38 @@
 @import '../../scss/variables';
 
-.elements
-    {
-        display: flex;
-        
-        &__item {
-            max-width: 350px;
-            padding: 0 15px;
+.elements {
+    max-width: 1157px;
+    margin: 32px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    column-gap: 127px;
+
+    &__item {
+        // max-width: 320px;
+    }
+    .element {
+
+        &-small {
+            max-width: 266px;
+        }
+        &__dropdown-open {
+            margin-bottom: 157px;
+        }
+        &__expandable-checkbox-list {
+            margin-bottom: 18px;
+
+            &-open {
+                margin-bottom: 250px;
+            }
         }
     }
+    .mb-2 {
+        margin-bottom: 2rem;
+    }
+    .mb-4 {
+        margin-bottom: 4rem;
+    }
+    .mb-10 {
+        margin-bottom: 10rem;
+    }
+}

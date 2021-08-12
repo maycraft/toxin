@@ -3,20 +3,21 @@ include ../button/button
 
 mixin dropdown(props)
     -
-        const { type = '',
+        const { type = 'item',
                 items = [], 
                 title = 'гости',
                 common = '',
                 defaultValue = 'Сколько гостей',
-                isApply = false } = props
+                isApply = false,
+                isOpen = false } = props
         let className = "iqdropdown"
-        className += isSmall ? ' small' : ''
+        className += isOpen ? ' menu-open' : ''
     h3.iqdropdown-title= title
     div(class=className, data-dropdown-type=type)
         p.iqdropdown-selection(data-default-value=defaultValue)
         .iqdropdown-menu(data-common-form-text=common)
             each val in items
-                +dropdown-option(val.id, val.name, val.wordForms, type)
+                +dropdown-option(type, val.id, val.name, val.wordForms, val.defaultCount)
             if isApply
                 .iqdropdown-button
                     .iqdropdown-button-clear.hide

@@ -1,28 +1,181 @@
 extends ./layout/layout
 
 include ./components/textfield/textfield
-include ./components/checkbox/checkbox
+include ./components/checkbox-buttons/checkbox-buttons
 include ./components/radio/radio
 include ./components/pagination/pagination
 include ./components/toggle/toggle
 include ./components/like/like
+include ./components/inputmasked/inputmasked
+include ./components/rating/rating
+include ./components/range/range
+//- include ./components/dropdown/dropdown
+include ./components/checkbox-list/checkbox-list
+include ./components/bullet-list/bullet-list
+include ./components/richbox-list/richbox-list
+include ./components/benefit/benefit
+include ./components/feedback/feedback
+include ./components/subscription-textfield/subscription-textfield
+include ./components/date-filter/date-filter
+include ./components/date-dropdown/date-dropdown
 
 block variables
-    - let title = 'Create components'
+    - let title = "Create components";
 block content
-    .wrapper
-        section
-            +textfield("Email")
-            br
-            br
-            +checkbox({text: 'Можно курить', name: 'smoke', value: 'smoked'})
-            br
-            br
-            +radio({text: 'Мужчина', name: 'sex', value: 'male'})
-            br
-            +radio({text: 'Женщина', name: 'sex', value: 'female'})
-            br
-            +toggle({title: 'Получать спецпредложения'})
-            br
-            br
-            +like(12)
+    -
+        const items = [
+            {
+                id: 1, 
+                name: "спальни",
+                wordForms: "спальня,спальни,спален"
+            },
+            {
+                id: 2, 
+                name: "кровати",
+                wordForms: "кровать,кровати,кроватей"
+            },
+            {
+                id: 3, 
+                name: "ванные комнаты",
+                wordForms: "ванная комната,ванные комнаты,ванных комнат"
+            }
+        ]
+        const guests = [
+            {
+                id: 1,
+                name: "взрослые",
+                wordForms: ""
+            },
+            {
+                id: 2,
+                name: "дети",
+                wordForms: ""
+            },
+            {
+                id: 3,
+                name: "младенцы",
+                wordForms: "младенец,младенца,младенцев"
+            }
+        ]
+        const checkList = [
+            {title: 'Можно курить', name: 'smoke', value: 'smoked'},
+            {title: 'Можно с питомцами', name: 'pet', value: 'pet', isChecked: true},
+            {title: 'Можно пригласить гостей (до 10 человек)', name: 'festival', value: 'festival', isChecked: true}
+        ]
+        const additionList = [
+            {
+                title: 'Завтрак',
+                value: 'breakfast'
+            },
+            {
+                title: 'Письменный стол',
+                value: 'desk',
+                isChecked: true
+            },
+            {
+                title: 'Стул для кормления',
+                value: 'feedchair',
+                isChecked: true
+            },
+            {
+                title: 'Кроватка',
+                value: 'crib',
+                isChecked: true
+            },
+            {
+                title: 'Телевизор',
+                value: 'tv'
+            },
+            {
+                title: 'Шампунь',
+                value: 'schampoo'
+            },
+        ]
+        const bulletItems = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
+        const richboxItems = [
+            {title: 'Широкий коридор', name: 'corridor', value: 'corridor', isRich: true, descr: 'Ширина коридоров в номере не менее 91 см.'},
+            {title: 'Помощник для инвалидов', name: 'ivalid', value: 'ivalid', isRich: true, descr: 'На 1 этаже вас встретит специалист  и проводит до номера.'}
+        ]
+        const benefitItems = [
+            {
+                icon: 'insert_emoticon',
+                title: 'Комфорт',
+                descr: 'Шумопоглощающие стены',
+                isBordered: true
+            },
+            {
+                icon: 'location_city',
+                title: 'Удобство',
+                descr: 'Окно в каждой из спален',
+                isBordered: true
+            },
+        ]
+        const feedbackItem = {   
+                ava: '/src/components/feedback/img/sarafanov.png',
+                name: 'Мурад Сарафанов',
+                online: '5 дней назад',
+                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                likeObj: {count: 12, isLiked: true}
+            }
+    section
+        +textfield("Email")
+        br
+        br
+        +checkboxButtons('Checkbox Buttons', checkList)
+        br
+        br
+        +radio({text: 'Мужчина', name: 'sex', value: 'male'})
+        br
+        +radio({text: 'Женщина', name: 'sex', value: 'female'})
+        br
+        +toggle({text: 'Получать спецпредложения'})
+        br
+        br
+        +like({count: 2})
+        +like({count: 12, isLiked: true})
+        br
+        br
+        +inputmasked
+        br
+        br
+        +rating(3)
+        br
+        br
+        +range('диапазон цен')
+        br
+        br
+        .dropdown__room
+            //- +dropdown({type: 'room', items, title: 'dropdown', defaultValue: 'Что предпочитаете'})
+        br
+        br
+        .dropdown__guest
+            //- +dropdown({type: 'guest', items: guests, title: 'гости', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
+        br
+        br
+        .dropdown__guest
+            //- +dropdown({type: 'test', items: guests, title: 'Тест', defaultValue: 'Затестим', isApply: true, common: 'гость,гостя,гостей'})
+        br
+        br
+        //- +checkboxList('expandable checkbox list', additionList)
+        br
+        br
+        +bulletList('bullet list', bulletItems)
+        br
+        br
+        +richboxList('rich Checkbox Buttons', richboxItems)
+        br
+        br
+        +dateFilter('filter date dropdown')
+        br
+        br
+        +dateDropdown('date Dropdown', 'date Dropdown')
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br

@@ -1,18 +1,13 @@
 @import '../../scss/variables';
 
-.dropdown{
-    &__room {
-        width: 26.6rem;
-    }
-    &__guest {
-        width: 32rem;
-    }
-}
-
 .iqdropdown {
-    height: 4.4rem;
+    height: auto;
+    padding: 8px 12px;
     border: 1px solid $dark25;
     border-radius: 3px 3px 0 0;
+    &-menu {
+        height: 116px;
+    }
     &.menu-open {
         border-color: $dark50;
         & .iqdropdown-selection::after {
@@ -37,7 +32,7 @@
             position: absolute;
             background-image: none;
             top: 0;
-            right: 5px;
+            right: 10px;
         }
     }
     & &-menu {
@@ -51,7 +46,7 @@
         @extend %font12-15;
         font-weight: bold;
         display: inline-block;
-        margin-bottom: 4.5px;
+        margin-bottom: 5px;
         color: $dark;
     }
     &-button {

@@ -2,16 +2,17 @@
 
 .text-field {
     width: 100%;
-    padding: 1.3rem 1.5rem;
+    @extend %font14-24;
+    padding: 9px 15px;
     border: 1px solid $dark25;
     border-radius: 4px;
     background: $white;
     font-family: Montserrat, sans-serif;
-    font-size: 1.4rem;
     color: $dark75;
     margin-top: 5px;
 
     &::placeholder {
+        // line-height: 18px;
         color: $dark25;
     }
 
