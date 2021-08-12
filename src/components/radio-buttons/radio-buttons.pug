@@ -1,7 +1,7 @@
 include ../radio/radio.pug
 
 mixin radioButtons(title, radioData)
-    h3= title
+    h3.radio-buttons__title= title
     .radio-buttons 
         each radioEl in radioData
             +radio(radioEl)

@@ -5,7 +5,7 @@
     margin: 32px auto;
     display: grid;
     grid-template-columns: repeat(3, 320px);
-    column-gap: 127px;
+    column-gap: 126px;
 
     &__item {
         // max-width: 320px;
@@ -25,6 +25,21 @@
                 margin-bottom: 250px;
             }
         }
+        &__checkbox_buttons {
+            max-width: 222px;
+        }
+        &__radio__buttons {
+            height: 55px;
+        }
+        &__rate-button {
+            margin-bottom: 195px;
+        }
+        &__dropdown-open {
+            margin-bottom: 250px;
+        }
+        &__rich-checkbox-buttons {
+            margin-bottom: 230px;
+        }
     }
     .mb-2 {
         margin-bottom: 2rem;
@@ -34,5 +49,8 @@
     }
     .mb-10 {
         margin-bottom: 10rem;
+    }
+    .mb-20 {
+        margin-bottom: 20rem;
     }
 }

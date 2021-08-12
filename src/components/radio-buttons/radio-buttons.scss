@@ -3,6 +3,9 @@
 .radio-buttons {
     margin-top: 16px;
     display: flex;
+    &__title {
+        height: 15px;
+    }
     .radio {
         margin-right: 2rem;
     }

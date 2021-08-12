@@ -157,18 +157,18 @@ block content
                     +benefit(item)
 
         section.elements__item
-            .element__checkbox_buttons
+            .element__checkbox_buttons.mb-4
                 +checkboxButtons('Checkbox Buttons', checkList)
-            .element__radio__buttons
+            .element__radio__buttons.mb-4
                 +radioButtons('Radio Buttons', radioButtonsData)
-            .element__toggle
+            .element__toggle.mb-4
                 +toggleButtons('Toggle', toggleData)
-            .element__like-button
+            .element__like-button.mb-4
                 +likeBlock('like button', likeData)
             .element__rate-button
                 +rateButtons('rate button', rateArr)
             .element__dropdown-open
-                +dropdown({type: 'guest', items: dropdownGuests, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
+                +dropdown({type: 'guest', items: dropdownGuests, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей', isOpen: true})
             .element__rich-checkbox-buttons
                 +richboxList('rich Checkbox Buttons', richboxList)
             .element__review 

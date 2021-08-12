@@ -6,7 +6,7 @@
     border: 1px solid $dark25;
     border-radius: 3px 3px 0 0;
     &-menu {
-        height: 116px;
+        height: auto;
     }
     &.menu-open {
         border-color: $dark50;
@@ -51,6 +51,6 @@
     }
     &-button {
         display: flex;
-        padding: 14px 7px 14px 14px;
+        padding: 19px 7px 10px 14px;
     }
 }
