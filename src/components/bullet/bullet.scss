@@ -5,14 +5,14 @@
         @extend %font14-24;
         color: $dark75;
         position: relative;
-        padding-left: 2.1rem;
-        margin-bottom: 1.1rem;
+        padding-left: 20px;
+        margin-bottom: 10px;
 
         &::before {
             content: '';
             display: inline-block;
-            width: 1rem;
-            height: 1rem;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background: $dark25;
             position: absolute;

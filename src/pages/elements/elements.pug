@@ -46,6 +46,11 @@ block variables
             { id: 2, name: "дети", wordForms: ""},
             { id: 3, name: "младенцы", wordForms: "младенец,младенца,младенцев"}
         ]
+        const dropdownGuestsFull = [
+            { id: 1, name: "взрослые", wordForms: "", defaultCount: 2},
+            { id: 2, name: "дети", wordForms: "", defaultCount: 1},
+            { id: 3, name: "младенцы", wordForms: "младенец,младенца,младенцев"}
+        ]
         const checkList = [
             {title: 'Можно курить', name: 'smoke', value: 'smoked'},
             {title: 'Можно с питомцами', name: 'pet', value: 'pet', isChecked: true},
@@ -142,20 +147,9 @@ block content
                 +dateDropdown('date Dropdown', 'date Dropdown')
             .element__filter-date-dropdown.element-small.mb-4
                 +dateFilter('filter date dropdown')
-            .element__subscription-text-field.element-small.mb-10
+            .element__subscription-text-field.element-small
                 +subscriptionTextfield('subscription text field')
-            .element__dropdown.element-small.mb-2.mb-2
-                +dropdown({type: 'room', items: dropdownRoom, title: 'dropdown', defaultValue: 'Что предпочитаете'})
-            .element__dropdown-open.element-small
-                +dropdown({type: 'room', items: dropdownRoom, title: 'dropdown', defaultValue: 'Что предпочитаете', isOpen: true})
-            .element__expandable-checkbox-list.element-small
-                +checkboxList('expandable checkbox list', additionList)
-            .element__expandable-checkbox-list-open.element-small
-                +checkboxList('expandable checkbox list', additionList, isOpen=true)
-            .element__benefit.element-small
-                each item in benefitList
-                    +benefit(item)
-
+        section.elements__divide
         section.elements__item
             .element__checkbox_buttons.mb-4
                 +checkboxButtons('Checkbox Buttons', checkList)
@@ -167,22 +161,44 @@ block content
                 +likeBlock('like button', likeData)
             .element__rate-button
                 +rateButtons('rate button', rateArr)
-            .element__dropdown-open
-                +dropdown({type: 'guest', items: dropdownGuests, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей', isOpen: true})
-            .element__rich-checkbox-buttons
-                +richboxList('rich Checkbox Buttons', richboxList)
-            .element__review 
-                +feedback(feedbackObj)
+        section.elements__divide
         section.elements__item
-            .element__range-slider
-                +range('Range Slider', 0, 15000, 5000, 10000, 1000)
-            .element__buttons
+            .element__range-slider.element-small.mb-4
+                +range('Range Slider', 0, 16000, 5000, 10000, 1000)
+            .element__buttons.mb-3
                 +buttonsBlock('buttons', buttonList)
-            .element__big-button
+            .element__big-button.mb-4
                 +btn({type: 'big', title: 'перейти к оплате'})
             .element__pagination
                 +pagination('pagination')
-            .element__dropdown-open-full
-                +dropdown({type: 'guest', items: dropdownGuests, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
+        section.elements__item
+            .element__dropdown.element-small.mb-2.mb-2
+                +dropdown({type: 'room', items: dropdownRoom, title: 'dropdown', defaultValue: 'Что предпочитаете'})
+            .element__dropdown-open.element-small
+                +dropdown({type: 'room', items: dropdownRoom, title: 'dropdown', defaultValue: 'Что предпочитаете', isOpen: true})
+            .element__expandable-checkbox-list.element-small
+                +checkboxList('expandable checkbox list', additionList)
+            .element__expandable-checkbox-list-open.element-small
+                +checkboxList('expandable checkbox list', additionList, isOpen=true) 
+        section.elements__divide
+        section.elements__item 
+            .element__dropdown__guest-open
+                +dropdown({type: 'guest-open', items: dropdownGuests, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей', isOpen: true})
+            .element__rich-checkbox-buttons
+                +richboxList('rich Checkbox Buttons', richboxList)
+        section.elements__divide
+        section.elements__item
+            .element__dropdown__guest-open
+                +dropdown({type: 'guest-full', items: dropdownGuestsFull, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей', isOpen: 'true'})
             .element__bullet-list
                 +bulletList('bullet list', bulletArr)
+        section.elements__item
+            .element__benefit.element-small
+                each item in benefitList
+                    +benefit(item)
+        section.elements__divide
+        section.elements__item.elements__item-join
+            .element__review 
+                +feedback(feedbackObj)
+        section.elements__divide
+        section.elements__divide
