@@ -5,8 +5,7 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
 .date-filter {
     border: 1px solid $dark25;
     border-radius: 4px;
-    max-width: 266px; //temp
-    padding: 9px 0;
+    padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,6 +20,7 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
         pointer-events: none;
 
         &::placeholder {
+            font-family: Montserrat, Arial, sans-serif;
             color: $dark25;
         }
 

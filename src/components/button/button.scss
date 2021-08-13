@@ -11,19 +11,23 @@ button.btn {
     opacity: 1;
     background: $white;
     position: relative;
+    white-space: nowrap;
 
     &.btn-filled {
         background: rgb(188,156,255);
         background: $purpleGradient;
         color: $white;
 
+        &.btn-focus {
+            opacity: 0.5;
+        }
+        
         &:hover {
             opacity: 0.5;
         }
     }
 
     &.btn-outline {
-        margin: 2px;
         color: $purple;
 
         &::before {
@@ -36,6 +40,11 @@ button.btn {
             background: $purpleGradient;
             border-radius: 2.4rem;
             z-index: -1;
+
+        }
+        
+        &.btn-focus.btn-outline::before {
+            opacity: 0.5;
         }
 
         &:hover::before {
@@ -51,6 +60,10 @@ button.btn {
         display: inline-block;
         padding: 0;
         color: $purple;
+
+        &.btn-focus {
+            color: $dark50;
+        }
 
         &:hover {
             color: $dark50;

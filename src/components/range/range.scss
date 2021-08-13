@@ -1,8 +1,7 @@
 @import '../../scss/variables';
 
 .range {
-    width: 26.6rem;
-
+    height: 46px;
     &__slider {
         background: $white;
         border: 1px solid $dark25;
@@ -13,9 +12,9 @@
     &__descr {
         display: flex;
         justify-content: space-between;
-        font-size: 1.2rem;
-        line-height: 1.5rem;
+        @extend %font12-15;
         margin-bottom: 2rem;
+        height: 15px;
     }
 
     &__title {
@@ -26,6 +25,9 @@
 
     &__values {
         color: $dark50;
+    }
+    button.btn.btn-text {
+        height: 15px;
     }
 }
 

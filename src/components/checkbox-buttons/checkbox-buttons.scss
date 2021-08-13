@@ -1,11 +1,14 @@
 .checkbox-buttons{
     &__body {
-        margin-top: 1.6rem;
+        margin-top: 16px;
         display: flex;
         flex-direction: column;
 
-        label {
-            margin-bottom: 1.3rem;
+        label.checkbox {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }

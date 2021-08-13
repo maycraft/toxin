@@ -38,7 +38,6 @@ const options = {
         $('.date-dropdown__input-end').val(fd.split('-')[1]);
     },
 };
-
 const $dateDropdownInput = $('.date-dropdown__input[name="date-dropdown"]');
 const DateDropdown = $dateDropdownInput.datepicker(options).data('datepicker');
 const $btnConfirm = $('<span class="datepicker--button-confirm">Применить</span>');

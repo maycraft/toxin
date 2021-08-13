@@ -1,7 +1,8 @@
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
+import '../dropdown-option/dropdown-option';
+import '../button/button';
 import './dropdown.scss';
-import '../dropdown-option/dropdown-option.scss';
 
 // Функция для отображения значения в нужном склонении
 function declOfWord(n, words) {
@@ -103,7 +104,7 @@ const options = {
                 btn.style.opacity = 0.4;
             } else {
                 // Если у счётчека не нулевое значени, то есть 2 варианта
-                // В data-word-form есть значение и используем его
+                // // В data-word-form есть значение и используем его
                 if (wordForms[0]) {
                     strValue +=
                         strValue.length === 0
@@ -135,4 +136,6 @@ const options = {
         return strValue;
     },
 };
-$('.iqdropdown').iqDropdown(options);
+$(document).ready(() => {
+    $('.iqdropdown').iqDropdown(options);
+});

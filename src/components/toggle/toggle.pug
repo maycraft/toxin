@@ -1,9 +1,7 @@
 mixin toggle(options)
     -
-        let toggleTitle = options.title || ''
-        let toggleName = options.name || ''
-        let toggleValue = options.value || ''
-    
-    label.toggle= toggleTitle
-        input(type="checkbox", name=toggleName value=toggleValue)
+        const { text="", name="", value="", isChecked=false } = options
+
+    label.toggle= text
+        input(type='checkbox', name=name, value=value, checked=isChecked)
         span.toggle__slider

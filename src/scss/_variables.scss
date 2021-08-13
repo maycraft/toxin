@@ -12,12 +12,17 @@ $purpleGradient: linear-gradient(180deg, rgba(188,156,255,1) 0%, rgba(139,164,24
 $greenGradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
 %font12-15 {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 12px;
+    line-height: 15px;
     text-transform: uppercase;
 }
 
+%font14-18 {
+    font-size: 14px;
+    line-height: 18px;
+}
+
 %font14-24 {
-    font-size: 1.4rem;
-    line-height: 2.4rem;
+    font-size: 14px;
+    line-height: 24px;
 }

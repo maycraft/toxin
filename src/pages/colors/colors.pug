@@ -1,6 +1,5 @@
 extends ../../layout/ui-kit.pug
 include ../../components/color/color
-include ../../components/logo/logo
 
 block variables
     -
@@ -13,9 +12,6 @@ block variables
             {className: 'purple', title: 'Purple', code: '#BC9CFF'},
             {className: 'green', title: 'Green', code: '#6FCF97'},
         ]
-block header
-    header.logo
-        +logo_bw
 block content
     section.colors-types
         .colors

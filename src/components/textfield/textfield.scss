@@ -1,16 +1,18 @@
 @import '../../scss/_variables.scss';
 
 .text-field {
-    width: 320px;
-    padding: 1.3rem 1.5rem;
+    width: 100%;
+    @extend %font14-24;
+    padding: 9px 15px;
     border: 1px solid $dark25;
     border-radius: 4px;
     background: $white;
     font-family: Montserrat, sans-serif;
-    font-size: 1.4rem;
     color: $dark75;
+    margin-top: 5px;
 
     &::placeholder {
+        // line-height: 18px;
         color: $dark25;
     }
 

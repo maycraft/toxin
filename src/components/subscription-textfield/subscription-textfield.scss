@@ -1,17 +1,17 @@
 @import '../../scss/variables';
 .subsription-textfield {
-    padding: 9px 4px 8px 15px;
+    padding: 8px 3px 7px 13px;
     border: 1px solid $dark25;
     border-radius: 4px;
     display: flex;
     align-items: center;
-    max-width: 26.7rem;
 
     &__title {
         margin-bottom: 5px;
     }
 
     &__input {
+        font-family: Montserrat, Arial, sans-serif;
         width: 90%;
         border: none;
         @extend %font14-24;
@@ -24,6 +24,7 @@
     &__submit {
         border: 0;
         background: $white;
+        padding-right: 5px;
     }
     &__arrow {
         background: $purpleGradient;

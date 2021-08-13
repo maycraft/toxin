@@ -1,3 +1,4 @@
+include ../components/logo/logo
 block variables
 
 doctype html
@@ -10,5 +11,6 @@ html(lang='ru')
         block scripts
     body
         .wrapper
-            block header
+            header.logo
+                +logo_bw
             block content

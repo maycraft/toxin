@@ -1,10 +1,11 @@
 include ../checkbox/checkbox
 
-mixin checkboxList(title, items)
-    .checkbox-list
+mixin checkboxList(title='checkbox list', items=[], isOpen=false)
+    - let className = "checkbox-list";
+    - className += isOpen ? " open" : "";
+    div(class=className)
         h3.checkbox-list__title= title
         ul.checkbox-list__items
             each val in items
                 li.checkbox-list__item 
                     +checkbox(val)
-                    //- +checkbox({text: val.text, value: val.value, isChecked: val.isChecked})
