@@ -7,21 +7,6 @@
     grid-template-rows: 627px 586px 158px;
     row-gap: 100px;
     &__item {
-        // &:nth-child(6){
-        //     margin-top: 92px;
-        // }
-        // &:nth-child(8){
-        //     margin-top: 100px;
-        // }
-        // &:nth-child(10){
-        //     margin-top: 100px;
-        // }
-        // &:nth-child(11){
-        //     margin-top: 173px;
-        // }
-        // &:nth-child(13){
-        //     margin-top: 202px;
-        // }
         &-join {
             grid-column: span 3;
         }
@@ -59,8 +44,5 @@
     }
     .mb-4 {
         margin-bottom: 4rem;
-    }
-    .mb-10 {
-        margin-bottom: 10rem;
     }
 }
