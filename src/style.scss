@@ -78,3 +78,41 @@ header.logo {
     /* Support for IE. */
     font-feature-settings: 'liga';
 }
+
+.list {
+    display: inline-block;
+    max-width: 500px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-250px);
+
+    &__item {
+        @extend %font14-24;
+        position: relative;
+        padding-left: 10px;
+        margin-bottom: 15px;
+        
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 3px;
+            position: absolute;
+            top:0;
+            left: 0;
+            bottom: 0;
+            background: #21c0c0;
+            margin-right: 10px;
+        }
+    }
+    &__link {
+        color: $dark50;
+        text-decoration: none;
+        padding-bottom: 3px;
+        border-bottom: 1px solid $dark50;
+
+        &:hover {
+            border: none;
+        }
+    }
+}
