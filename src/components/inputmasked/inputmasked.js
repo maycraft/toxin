@@ -149,5 +149,8 @@ for (const property in inputMask) {
         InputMask.prototype[property] = inputMask[property];
     }
 }
-document.querySelector('.masked').value = '';
-new InputMask();
+const masked = document.querySelector('.masked');
+if (masked) {
+    masked.value = '';
+    new InputMask();
+}
