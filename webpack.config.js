@@ -79,7 +79,7 @@ module.exports = {
                     favicon: 'src/favicon.png',
                     template: `src/pages/${page}/${page}.pug`,
                     inject: 'body',
-                    filename: page === 'index' ? 'index.html' : page,
+                    filename: page === 'index' ? 'index.html' : `${page}.html`,
                     chunks: [page],
                 }),
         ),
