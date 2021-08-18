@@ -5,16 +5,18 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 const isDev = process.env.NODE_ENV === 'development';
+const pages = ['index', 'colors', 'elements', 'cards'];
 console.log(isDev);
 module.exports = {
     entry: {
         index: './src/app.js',
         colors: './src/pages/colors/colors.js',
         elements: './src/pages/elements/elements.js',
+        cards: './src/pages/cards/cards.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].bundle.js',
+        filename: '[name].[hash].bundle.js',
     },
     devServer: {
         historyApiFallback: true,
@@ -63,27 +65,24 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new MiniCssExtractPlugin(),
-        new HtmlWebpackPlugin({
-            favicon: './src/favicon.png',
-            template: 'src/index.pug',
-            filename: 'index.html',
-        }),
-        new HtmlWebpackPlugin({
-            favicon: './src/favicon.png',
-            template: 'src/pages/colors/colors.pug',
-            filename: 'colors.html',
-        }),
-        new HtmlWebpackPlugin({
-            favicon: './src/favicon.png',
-            template: 'src/pages/elements/elements.pug',
-            filename: 'elements.html',
+        new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].css',
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
         }),
+        ...pages.map(
+            page =>
+                new HtmlWebpackPlugin({
+                    favicon: 'src/favicon.png',
+                    template: `src/pages/${page}/${page}.pug`,
+                    inject: 'body',
+                    filename: page === 'index' ? 'index.html' : page,
+                    chunks: [page],
+                }),
+        ),
     ],
     stats: {
         children: true,

@@ -1,11 +1,11 @@
-@import '../../scss/variables';
+@import '../../main.scss';
 
 .colors-types {
-    max-width: 1140px;
-    margin: 0 auto;
+    box-sizing: content-box;
+    max-width: 1141px;
+    padding: 33px 150px;
     display: flex;
     justify-content: space-between;
-    padding: 33px 0;
 }
 
 .colors {
