@@ -1,0 +1,13 @@
+include ../date-dropdown/date-dropdown.pug
+include ../dropdown/dropdown.pug
+include ../button/button.pug
+
+mixin formSearch(options)
+    - const { title, dropdownGuests } = options;
+    .form-search 
+        h1.form-search__title= title
+        .form-search__dropdown
+            +dateDropdown('прибытие', 'выезд')
+        +dropdown({type: 'forms-search-guest', items: dropdownGuests, title: 'гости', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
+        .form-search__button 
+            +btn({type: 'big', title: 'подобрать номер'})

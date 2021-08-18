@@ -1,3 +1,5 @@
+import './elements.scss';
+
 import '../../components/textfield/textfield';
 import '../../components/dropdown/dropdown';
 import '../../components/inputmasked/inputmasked';
@@ -18,5 +20,3 @@ import '../../components/bullet-list/bullet-list';
 import '../../components/feedback/feedback';
 import '../../components/benefit/benefit';
 import '../../components/checkbox-list/checkbox-list';
-
-import './elements.scss';
