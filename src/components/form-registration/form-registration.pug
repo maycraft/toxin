@@ -1,0 +1,31 @@
+include ../textfield/textfield.pug
+include ../radio-buttons/radio-buttons.pug
+include ../inputmasked/inputmasked.pug
+include ../toggle/toggle.pug
+include ../button/button.pug
+include ../auth-info/auth-info.pug
+
+mixin formRegistration(options)
+    -
+        const {title, radioButtonsData} = options
+    .form.form-registration 
+        .form__element
+            h1.form-registration__title= title
+        .form__element
+            .form__subelement
+                +textfield({placeholder: 'Имя'})
+            .form__subelement
+                +textfield({placeholder: 'Фамилия'})
+            +radioButtons('', radioButtonsData)
+        .form__element
+            +inputmasked('дата рождения')
+        .form__element
+            .form__subelement
+                +textfield({title: 'данные для входа в сервис', placeholder: 'Email'})
+            .form__subelement
+                +textfield({placeholder: 'Пароль'})
+            +toggle({text: 'Получать спецпредложения'})
+        .form__element
+            +btn({type: 'big', title: 'перейти к оплате'})
+        .form__element-last
+            +authInfo('Уже есть аккаунт на Toxin', 'войти')
