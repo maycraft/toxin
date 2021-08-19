@@ -136,9 +136,9 @@ block content
     .elements
         section.elements__item
             .element__textfield.mb-2
-                +textfield('Text Field','Email')
+                +textfield({title: 'Text Field', placeholder: 'Email'})
             .element__textfield.mb-2
-                +textfield('Text Field','Email', 'This is pretty awesome')
+                +textfield({title: 'Text Field', placeholder: 'Email', value: 'This is pretty awesome'})
             .element__dropdown.mb-2
                 +dropdown({type: 'guest', items: dropdownGuests, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
             .element__masked-text-field.mb-4
