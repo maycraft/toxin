@@ -32,8 +32,8 @@ module.exports = {
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
-                // type: 'asset/resource',
-                type: 'asset/inline',
+                type: 'asset/resource',
+                // type: 'asset/inline',
             },
             {
                 test: /\.pug$/i,
@@ -55,7 +55,8 @@ module.exports = {
             {
                 test: /\.(scss|css)$/i,
                 use: [
-                    isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    // isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'postcss-loader',
                     'sass-loader',
@@ -79,7 +80,7 @@ module.exports = {
                     favicon: 'src/favicon.png',
                     template: `src/pages/${page}/${page}.pug`,
                     inject: 'body',
-                    filename: page === 'index' ? 'index.html' : page,
+                    filename: page === 'index' ? 'index.html' : `${page}.html`,
                     chunks: [page],
                 }),
         ),
