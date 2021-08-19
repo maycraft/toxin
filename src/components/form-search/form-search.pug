@@ -4,10 +4,12 @@ include ../button/button.pug
 
 mixin formSearch(options)
     - const { title, dropdownGuests } = options;
-    .form-search 
-        h1.form-search__title= title
-        .form-search__dropdown
+    .form.form-search 
+        .form__element
+            h1.form-search__title= title
+        .form__element
             +dateDropdown('прибытие', 'выезд')
-        +dropdown({type: 'forms-search-guest', items: dropdownGuests, title: 'гости', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
-        .form-search__button 
+        .form__element
+            +dropdown({type: 'forms-search-guest', items: dropdownGuests, title: 'гости', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
+        .form__element-last 
             +btn({type: 'big', title: 'подобрать номер'})
