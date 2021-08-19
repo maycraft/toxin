@@ -1,5 +1,6 @@
 mixin inputmasked(title)
-    h3.masked__text= title
+    if title
+        h3.masked__text= title
     input.masked(
         type='text',
         placeholder='ДД.ММ.ГГГГ',
