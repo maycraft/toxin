@@ -3,4 +3,4 @@ include ../button/button.pug
 mixin authInfo(text, btnTitle)
     .auth-info 
         p.auth-info__text= text
-        +btn({type: 'outline', title: btnTitle})
+        +btn({type: 'outline', title: btnTitle, className: 'auth-info__btn'})

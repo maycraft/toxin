@@ -1,2 +1,2 @@
-import './auth-info.scss';
 import '../button/button';
+import './auth-info.scss';
