@@ -19,7 +19,7 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
         align-items: center;
         border: 1px solid $dark25;
         border-radius: 4px;
-        padding: 9px 0;
+        padding: 9px 9px 9px 0;
     }
     &__input {
         font-family: Montserrat, Arial, sans-serif;
@@ -27,12 +27,13 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
         line-height: 18px;
         color: $dark75;
         border: none;
-        max-width: 116px;
+        box-sizing: content-box;
+        max-width: 100px;
         padding-left: 15px;
         cursor: pointer;
     }
     &__icon {
-        padding-right: 9px;
+        // padding-right: 9px;
     }
 } 
 

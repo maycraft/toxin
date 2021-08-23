@@ -144,7 +144,7 @@ block content
             .element__masked-text-field.mb-4
                 +inputmasked('masked text field')
             .element__date-dropdown.mb-4
-                +dateDropdown('date Dropdown', 'date Dropdown')
+                +dateDropdown({ title_start: 'date Dropdown',title_end: 'date Dropdown',classes: 'elements',id: 'elements'})
             .element__filter-date-dropdown.element-small.mb-4
                 +dateFilter('filter date dropdown')
             .element__subscription-text-field.element-small

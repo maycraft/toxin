@@ -3,6 +3,7 @@ import 'air-datepicker';
 import 'air-datepicker/dist/css/datepicker.min.css';
 import './date-dropdown.scss';
 
+let isOpen = false;
 const options = {
     classes: 'date-dropdown-datepicker',
     range: true,
@@ -33,21 +34,33 @@ const options = {
     },
     offset: 20,
     showEvent: 'click',
-    onSelect(fd) {
-        $('.date-dropdown__input-start').val(fd.split('-')[0]);
-        $('.date-dropdown__input-end').val(fd.split('-')[1]);
+    onSelect(fd, date, inst) {
+        const $dateDropdown = inst.$el.closest('.date-dropdown');
+        $dateDropdown.find('.date-dropdown__input-start').val(fd.split('-')[0]);
+        $dateDropdown.find('.date-dropdown__input-end').val(fd.split('-')[1]);
     },
 };
-const $dateDropdownInput = $('.date-dropdown__input[name="date-dropdown"]');
-const DateDropdown = $dateDropdownInput.datepicker(options).data('datepicker');
-const $btnConfirm = $('<span class="datepicker--button-confirm">Применить</span>');
-const $dateDropdown = $('.date-dropdown-datepicker');
-$dateDropdown.children('.datepicker--buttons').append($btnConfirm);
+const $dateDropdownInputs = $('.date-dropdown__input');
+$dateDropdownInputs.each(function () {
+    const idVal = $(this).attr('id');
+    if (idVal) {
+        const $dateDropdownEl = $(`#${idVal}`).datepicker(options);
+        const DDInst = $dateDropdownEl.data('datepicker');
+        const $btnConfirm = $('<span class="datepicker--button-confirm">Применить</span>');
+        const $dateDropdown = $(`.${DDInst.opts.classes}`);
+        $dateDropdown.children('.datepicker--buttons').append($btnConfirm);
 
-$dateDropdown.find('.datepicker--button-confirm').on('click', () => {
-    DateDropdown.hide();
-});
+        $dateDropdown.find('.datepicker--button-confirm').on('click', () => {
+            DDInst.hide();
+        });
 
-$('.date-dropdown-block').on('click', () => {
-    DateDropdown.show();
+        $dateDropdownEl.parent('.date-dropdown-block').on('click', () => {
+            if (isOpen) {
+                DDInst.hide();
+            } else {
+                DDInst.show();
+            }
+            isOpen = !isOpen;
+        });
+    }
 });

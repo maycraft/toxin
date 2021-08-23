@@ -1,12 +1,15 @@
-mixin dateDropdown(title_start, title_end)
+//- mixin dateDropdown(title_start, title_end, classes='element', id='')
+mixin dateDropdown(options)
+    - const { title_start, title_end, classes, id } = options;
     .date-dropdown
         .date-dropdown__part
             h3= title_start
             .date-dropdown-block
-                input.datepicker-here.date-dropdown__input.date-dropdown__input-start(
+                input.date-dropdown__input.date-dropdown__input-start(
                     type='text',
                     placeholder='ДД.ММ.ГГГГ',
-                    name='date-dropdown'
+                    data-classes=`date-dropdown-${classes}`,
+                    id=id
                 )
                 i.material-icons.date-dropdown__icon expand_more
         .date-dropdown__part
