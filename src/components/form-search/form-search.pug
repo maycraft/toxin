@@ -8,7 +8,7 @@ mixin formSearch(options)
         .form__element
             h1.form-search__title= title
         .form__element
-            +dateDropdown({title_start: 'прибытие',title_end: 'выезд', classes: 'search', id: 'search'})
+            +dateDropdown({id: 'search', classes: 'search', type: 'double', title_start: 'прибытие',title_end: 'выезд'})
         .form__element
             +dropdown({type: 'forms-search-guest', items: dropdownGuests, title: 'гости', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
         .form__element-mt3

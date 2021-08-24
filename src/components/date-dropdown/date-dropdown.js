@@ -25,7 +25,6 @@ const options = {
         ],
     },
     dateFormat: 'dd.mm.yyyy',
-    // inline: true,
     clearButton: true,
     prevHtml: '<i class="material-icons date-filter__arrow">arrow_back</i>',
     nextHtml: '<i class="material-icons date-filter__arrow">arrow_forward</i>',
@@ -34,15 +33,21 @@ const options = {
     },
     offset: 20,
     showEvent: 'click',
-    onSelect(fd, date, inst) {
-        const $dateDropdown = inst.$el.closest('.date-dropdown');
-        $dateDropdown.find('.date-dropdown__input-start').val(fd.split('-')[0]);
-        $dateDropdown.find('.date-dropdown__input-end').val(fd.split('-')[1]);
-    },
 };
-const $dateDropdownInputs = $('.date-dropdown__input');
+
+const $dateDropdownInputs = $('.date-dropdown__datepicker');
 $dateDropdownInputs.each(function () {
     const idVal = $(this).attr('id');
+    const dataType = $(this).data('type');
+    if (dataType) {
+        if (!options.onSelect) {
+            options.onSelect = function (fd, date, inst) {
+                const $dateDropdown = inst.$el.closest('.date-dropdown');
+                $dateDropdown.find('.date-dropdown__input-start').val(fd.split('-')[0]);
+                $dateDropdown.find('.date-dropdown__input-end').val(fd.split('-')[1]);
+            };
+        }
+    }
     if (idVal) {
         const $dateDropdownEl = $(`#${idVal}`).datepicker(options);
         const DDInst = $dateDropdownEl.data('datepicker');
@@ -54,7 +59,7 @@ $dateDropdownInputs.each(function () {
             DDInst.hide();
         });
 
-        $dateDropdownEl.parent('.date-dropdown-block').on('click', () => {
+        $dateDropdownEl.parent('.date-dropdown-wrapper').on('click', () => {
             if (isOpen) {
                 DDInst.hide();
             } else {

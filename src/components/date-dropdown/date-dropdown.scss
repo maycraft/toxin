@@ -2,9 +2,48 @@
 $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(139,164,249,0.25) 100%);
 
 .date-dropdown {
+    &-filter {
+        border: 1px solid $dark25;
+        border-radius: 4px;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    
+        &__title {
+            margin-bottom: 5px;
+        }
+        
+        &__input {
+            border: none;
+            @extend %font14-24;
+            color: $dark75;
+            padding: 0 15px;
+            cursor: pointer;
+            // pointer-events: none;
+    
+            &::placeholder {
+                font-family: Montserrat, Arial, sans-serif;
+                color: $dark25;
+            }
+    
+        }
+        &__icon {
+            color: $dark50;
+            line-height: 24px;
+            padding: 0 8px;
+    
+        }
+        &__arrow {
+            font-size: 24px;
+            line-height: 20px;
+            color: $purple;
+        }
+    }
     display: flex;
 
-    h3 {
+    &__title {
         margin-bottom: 5px;
     }
     &__part {
@@ -32,9 +71,6 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
         padding-left: 15px;
         cursor: pointer;
     }
-    &__icon {
-        // padding-right: 9px;
-    }
 } 
 
 .datepicker {
@@ -42,6 +78,9 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
     width: 32rem;
     padding: 2rem;
     box-sizing: border-box;
+    border: 1px solid $dark25;
+    border-radius: 4px;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     
     &--day-name {
         font-weight: bold;
