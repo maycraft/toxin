@@ -79,7 +79,7 @@ module.exports = {
             patterns: [
                 {
                     from: path.resolve(__dirname, 'src/img'),
-                    to: path.resolve(__dirname, 'dist/assets/img'),
+                    to: path.resolve(__dirname, 'dist/toxin/assets/img'),
                 },
             ],
         }),
