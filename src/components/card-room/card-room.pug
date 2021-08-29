@@ -1,0 +1,19 @@
+include ../rating/rating.pug
+include ../slider/slider.pug
+
+mixin cardRoom(options)
+    - const { id, images, number, cost, feedbackCount = 0, stars = 0, isFancy = false } = options;
+    - const price = new Intl.NumberFormat("ru-RU").format(cost);
+    .card-room
+        +slider(images)
+        .card-room__descr
+            .card-room__info
+                .card-room__number №
+                    .card-room__id #{ ' ' + number }
+                        if isFancy
+                            span.card-room__number-fancy люкс
+                .card-room__price <b>#{ price }&#8381</b> в сутки
+            .card-room__review
+                .card-room__stars
+                    +rating(stars)
+                .card-room__feedback <b>#{ feedbackCount } </b>Отзывов
