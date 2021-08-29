@@ -9,7 +9,10 @@
     background: $white;
     font-family: Montserrat, sans-serif;
     color: $dark75;
-    margin-top: 5px;
+    
+    &__title {
+        margin-bottom: 5px;
+    }
 
     &::placeholder {
         // line-height: 18px;

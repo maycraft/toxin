@@ -3,7 +3,6 @@ include ../../components/textfield/textfield.pug
 include ../../components/dropdown/dropdown.pug
 include ../../components/inputmasked/inputmasked.pug
 include ../../components/date-dropdown/date-dropdown.pug
-include ../../components/date-filter/date-filter.pug
 include ../../components/subscription-textfield/subscription-textfield.pug
 include ../../components/checkbox-buttons/checkbox-buttons.pug
 include ../../components/radio-buttons/radio-buttons.pug
@@ -136,17 +135,17 @@ block content
     .elements
         section.elements__item
             .element__textfield.mb-2
-                +textfield('Text Field','Email')
+                +textfield({title: 'Text Field', placeholder: 'Email'})
             .element__textfield.mb-2
-                +textfield('Text Field','Email', 'This is pretty awesome')
+                +textfield({title: 'Text Field', placeholder: 'Email', value: 'This is pretty awesome'})
             .element__dropdown.mb-2
                 +dropdown({type: 'guest', items: dropdownGuests, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
             .element__masked-text-field.mb-4
                 +inputmasked('masked text field')
             .element__date-dropdown.mb-4
-                +dateDropdown('date Dropdown', 'date Dropdown')
+                +dateDropdown({ id: 'elements', classes: 'elements', type: 'double', title_start: 'date Dropdown',title_end: 'date Dropdown',})
             .element__filter-date-dropdown.element-small.mb-4
-                +dateFilter('filter date dropdown')
+                +dateDropdown({ id: 'filter', classes: 'filter', type: 'filter', title_start: 'filter date dropdown'})
             .element__subscription-text-field.element-small
                 +subscriptionTextfield('subscription text field')
         section.elements__divide

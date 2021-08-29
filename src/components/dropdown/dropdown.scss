@@ -53,4 +53,13 @@
         display: flex;
         padding: 19px 7px 10px 14px;
     }
+    &-item-controls{
+        button {
+            font-family: Montserrat, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 22px;
+            color: $dark50;
+            font-style: normal;
+        }
+    }
 }

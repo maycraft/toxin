@@ -1,0 +1,82 @@
+@import '../../scss/variables';
+
+.appartment {
+    font-family: Montserrat, Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    &__number {
+        margin-right: 8px;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: bold;
+        color: $dark;
+
+        b {
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+    &__type {
+        @extend %font12-15;
+        color: #BC9CFF;
+        font-weight: bold;
+    }
+    &__cost {
+        font-size: 12px;
+        line-height: 18px;
+        color: $dark50;
+        span {
+            @extend %font14-18;
+            font-weight: bold;
+        }
+    }
+}
+
+.service {
+    &__line {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @extend %font14-24;
+        color: $dark75;
+        margin-bottom: 10px;
+    }
+    &__item {
+        @extend %font14-18;
+        max-width: 214px;
+        position: relative;
+    }
+}
+
+.info-sign {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 14px;
+    color: $dark25;
+    padding: 2px 8px;
+    border: 1px solid $dark25;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -25px;
+    cursor: pointer;
+} 
+
+.total {
+    display: flex;
+
+    &__text {
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 23px;
+        color: $dark;
+    }
+    &__line {
+        border-bottom: 1px dashed $dark25;
+        flex-grow: 1;
+    }
+}

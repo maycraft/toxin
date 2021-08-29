@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -32,8 +33,8 @@ module.exports = {
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
-                // type: 'asset/resource',
-                type: 'asset/inline',
+                type: 'asset/resource',
+                // type: 'asset/inline',
             },
             {
                 test: /\.pug$/i,
@@ -55,7 +56,8 @@ module.exports = {
             {
                 test: /\.(scss|css)$/i,
                 use: [
-                    isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    // isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'postcss-loader',
                     'sass-loader',
@@ -72,6 +74,14 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, 'src/img'),
+                    to: path.resolve(__dirname, 'dist/assets/img'),
+                },
+            ],
         }),
         ...pages.map(
             page =>

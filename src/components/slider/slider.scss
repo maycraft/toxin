@@ -1,0 +1,89 @@
+@import '../../scss/variables';
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 270px;
+    height: 150px;
+    border-radius: 4px 4px 0 0;
+
+    &:hover .slider__arrow {
+        display: block;
+    }
+    &__picture {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        width: 270px;
+        opacity: 0;
+        transition: opacity 0.5s;
+
+        &-active {
+            opacity: 1;
+        }
+    }
+    &__control {
+        position: absolute;
+        right: 11px;
+        bottom: 14px;
+        display: flex;
+        .control {
+            &__circle {
+                width: 7.5px;
+                height: 7.51px;
+                border: 1px solid #FFFFFF;
+                border-radius: 50%;
+                box-sizing: border-box;
+                filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+                margin-right: 3.75px;
+        
+                &-active {
+                    background: $white;
+                }
+            }
+        }
+    }
+    &__arrow {
+        display: none;
+        width: 42px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        &-left {
+            left: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+            &::before {
+                content: 'expand_more';
+                font-family: 'Material Icons';
+                font-size: 24px;
+                line-height: 24px;
+                color: #FFFFFF;
+                position: absolute;
+                top: 40%;
+                left: 10px;
+                transform: rotate(90deg);
+                cursor: pointer;
+            }
+        }
+        &-right {
+            right: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            &::after {
+                content: 'expand_more';
+                font-family: 'Material Icons';
+                font-size: 24px;
+                line-height: 24px;
+                color: #FFFFFF;
+                position: absolute;
+                top: 40%;
+                right: 10px;
+                transform: rotate(90deg);
+                cursor: pointer;
+            }
+        }
+    }
+}

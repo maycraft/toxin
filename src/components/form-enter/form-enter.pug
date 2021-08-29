@@ -1,0 +1,16 @@
+include ../textfield/textfield.pug
+include ../button/button.pug
+include ../auth-info/auth-info.pug
+
+mixin formEnter(title)
+    .form.form-enter
+        .form__element
+            h1.form-enter= title
+        .form__element
+            .form__subelement
+                +textfield({placeholder: 'Email'})
+            +textfield({placeholder: 'Пароль'})
+        .form__element
+            +btn({type: 'big', title: 'войти'})
+        .form__element-mt3
+            +authInfo('Нет аккаунта на Toxin?', 'создать')

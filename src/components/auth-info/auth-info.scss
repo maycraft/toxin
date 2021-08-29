@@ -1,0 +1,10 @@
+.auth-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__btn.btn {
+        width: 99px;
+        height: 44px;
+    }
+}

@@ -1,16 +1,16 @@
 @font-face {
-    font-family: 'Montserrat';
-    src: url('/src/fonts/Montserrat-Regular.woff') format('woff'), 
-        url('/src/fonts/Montserrat-Regular.ttf') format('ttf'),
-        url('/src/fonts/Montserrat-Regular.svg') format('svg');
+    font-family: Montserrat;
+    src: url('../fonts/Montserrat-Regular.woff') format('woff'), 
+        url('../fonts/Montserrat-Regular.ttf') format('ttf'),
+        url('../fonts/Montserrat-Regular.svg') format('svg');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Montserrat';
-    src: url('/src/fonts/Montserrat-Bold.woff') format('woff'), 
-        url('/src/fonts/Montserrat-Bold.ttf') format('ttf'),
-        url('/src/fonts/Montserrat-Bold.svg') format('svg');
+    font-family: Montserrat;
+    src: url('../fonts/Montserrat-Bold.woff') format('woff'), 
+        url('../fonts/Montserrat-Bold.ttf') format('ttf'),
+        url('../fonts/Montserrat-Bold.svg') format('svg');
     font-weight: 700;
     font-style: normal;
 }
@@ -19,10 +19,10 @@
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url('/src/fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */
+    src: url('../fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */
     src: local('Material Icons'),
     local('MaterialIcons-Regular'),
-        url('/src/fonts/MaterialIcons-Regular.woff2') format('woff2'),
-        url('/src/fonts/MaterialIcons-Regular.woff') format('woff'),
-        url('/src/fonts/MaterialIcons-Regular.ttf') format('ttf'); /* For IE6-8 */
+        url('../fonts/MaterialIcons-Regular.woff2') format('woff2'),
+        url('../fonts/MaterialIcons-Regular.woff') format('woff'),
+        url('../fonts/MaterialIcons-Regular.ttf') format('ttf'); /* For IE6-8 */
     }

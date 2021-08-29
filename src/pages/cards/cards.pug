@@ -1,5 +1,10 @@
 extends ../../layout/ui-kit.pug
 include ../../components/form-search/form-search.pug
+include ../../components/form-registration/form-registration.pug
+include ../../components/form-enter/form-enter.pug
+include ../../components/form-reserv/form-reserv.pug
+include ../../components/date-dropdown/date-dropdown.pug
+include ../../components/card-room/card-room.pug
 
 block variables
     -
@@ -11,10 +16,40 @@ block variables
                 { id: 3, name: "младенцы", wordForms: "младенец,младенца,младенцев"}
             ]
         }
+        const registrationData = {
+            title: 'Регистрация аккаунта',
+            radioButtonsData: [
+                {text: 'Мужчина', name: 'sex', value: 'male', isChecked: true},
+                {text: 'Женщина', name: 'sex', value: 'female'}
+            ],
+        }
+        const reservationData = {
+            number: 888,
+            type: 'люкс',
+            cost: '9990',
+            dpData: [
+                { id: 1, name: "взрослые", wordForms: "", defaultCount: 2},
+                { id: 2, name: "дети", wordForms: "", defaultCount: 1},
+                { id: 3, name: "младенцы", wordForms: "младенец,младенца,младенцев"}
+            ]
+        }
 
 block content
     .cards
         .cards__item
-            +formSearch(searchData)
+            .cards__element
+                +formSearch(searchData)
+            .cards__element
+                +formRegistration(registrationData)
         .cards__item
-        .cards__item
+            .cards__element
+                +formReserv(reservationData)
+            .cards__element
+                +formEnter('Войти')
+        .cards__item-small 
+            .cards__element
+                +dateDropdown({id: 'empty', classes: 'empty', type: 'inline'})
+            .cards__element
+                +cardRoom({images: ['room1.png', 'room3.png', 'room4.png', 'room5.png'], number: 888, cost: 9990, feedbackCount: 145, stars: 5, isFancy: true})
+            .cards__element
+                +cardRoom({images: ['room2.png', 'room6.png', 'room7.png', 'room8.png'], number: 840, cost: 9990, feedbackCount: 65, stars: 4 })
