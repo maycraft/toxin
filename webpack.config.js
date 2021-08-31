@@ -18,12 +18,14 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[hash].bundle.js',
-        publicPath: '/toxin',
+        publicPath: '/toxin/',
     },
     devServer: {
         historyApiFallback: true,
-        inline: true,
+        // inline: true,
+        hot: true,
         open: true,
+        openPage: 'toxin/',
         port: 3000,
     },
     module: {
@@ -67,6 +69,7 @@ module.exports = {
         ],
     },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css',
