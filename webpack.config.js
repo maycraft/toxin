@@ -18,6 +18,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[hash].bundle.js',
+        publicPath: '/toxin',
     },
     devServer: {
         historyApiFallback: true,
@@ -79,7 +80,7 @@ module.exports = {
             patterns: [
                 {
                     from: path.resolve(__dirname, 'src/img'),
-                    to: path.resolve(__dirname, 'dist/toxin/assets/img'),
+                    to: path.resolve(__dirname, 'dist/assets/img'),
                 },
             ],
         }),
