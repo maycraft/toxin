@@ -13,5 +13,6 @@
 
 #### Посмотреть сайт:
 
-1. [Colors & Type](https://sergeless.github.io/toxin/colors)
-2. [Form Elements](https://sergeless.github.io/toxin/elements)
+1. [Colors & Type](https://webcraftt.github.io/toxin/colors)
+2. [Form Elements](https://webcraftt.github.io/toxin/elements)
+3. [Cards](https://webcraftt.github.io/toxin/cards)
