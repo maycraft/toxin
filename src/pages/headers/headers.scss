@@ -1,0 +1,15 @@
+@import '../../scss/variables';
+
+.wrapper {
+    background: #F4F4F6;
+}
+
+.headers {
+    &__block {
+        padding-top: 28px;
+    }
+    &__item {
+        margin-bottom: 40px;
+        background-color: $white;
+    }
+}
