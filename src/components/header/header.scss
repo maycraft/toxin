@@ -1,0 +1,72 @@
+@import '../../scss/variables';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    max-height: 70px;
+    max-width: 1160px;
+    margin: auto;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+    &__navbar {
+        display: flex;
+        align-items: center;
+        max-width: 770px;
+    }
+
+    &-menu {
+        display: flex;
+        align-items: center;
+
+        &__item {
+            margin-right: 21px;
+            cursor: pointer;
+
+            &-active > a {
+                color: $dark75;
+                font-weight: bold;
+            }
+
+            i {
+                color: $dark50;
+                vertical-align: middle;
+            }
+        }
+        &__link {
+            font-size: 14px;
+            line-height: 17px;
+            color: $dark50;
+        }
+    }
+
+    &__auth {
+        display: flex;
+        align-items: center;
+    }
+
+    &__login {
+        padding-left: 19px;
+        border-left: 1px solid $dark10;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark50;
+    }
+
+    &__btn {
+        margin-right: 20px;
+        z-index: 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        button.header__btn-join {
+            padding: 10px 20px;
+        }
+
+        button.header__btn-login {
+            padding: 7px 19px;
+        }
+    }
+}
