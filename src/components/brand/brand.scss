@@ -3,7 +3,7 @@
 .brand {
     display: flex;
     align-items: center;
-    padding-top: 5px;
+    max-height: 40px;
 
     &__logo {
         margin-right: 12px;
