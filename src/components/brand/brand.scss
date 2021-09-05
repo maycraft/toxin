@@ -1,0 +1,11 @@
+@import '../../scss/variables';
+
+.brand {
+    display: flex;
+    align-items: center;
+    max-height: 40px;
+
+    &__logo {
+        margin-right: 12px;
+    }
+}

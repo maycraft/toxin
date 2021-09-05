@@ -6,7 +6,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 
 const isDev = process.env.NODE_ENV === 'development';
-const pages = ['index', 'colors', 'elements', 'cards'];
+const pages = ['index', 'colors', 'elements', 'cards', 'headers'];
 console.log(isDev);
 module.exports = {
     entry: {
@@ -14,6 +14,7 @@ module.exports = {
         colors: './src/pages/colors/colors.js',
         elements: './src/pages/elements/elements.js',
         cards: './src/pages/cards/cards.js',
+        headers: './src/pages/headers/headers.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

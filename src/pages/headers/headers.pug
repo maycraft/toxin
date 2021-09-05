@@ -1,0 +1,48 @@
+extends ../../layout/ui-kit.pug
+include ../../components/header/header.pug
+include ../../components/footer/footer.pug
+
+block variables
+    -
+        const menuItems = [
+            {
+                title: 'О нас',
+                link: 'aboutus.html',
+                active: true,
+                multiple: false
+            },
+            {
+                title: 'Услуги',
+                link: 'services.html',
+                active: false,
+                multiple: true
+            },
+            {
+                title: 'Вакансии',
+                link: 'vacancy.html',
+                active: false,
+                multiple: false
+            },
+            {
+                title: 'Новости',
+                link: 'news.html',
+                active: false,
+                multiple: false
+            },
+            {
+                title: 'Соглашения',
+                link: 'agreement.html',
+                active: false,
+                multiple: true
+            },
+        ]
+block content
+    .headers__block
+        .headers__item
+            +header({items: menuItems})
+        .headers__item
+            +header({items: menuItems, login: 'Юлий Цезарь'})
+        .headers__item.headers__item-dark
+            +footer
+        .headers__item.headers__item-small
+            +footer(false)

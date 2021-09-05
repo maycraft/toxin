@@ -1,5 +1,6 @@
-mixin subscriptionTextfield(title)
-    h3.subsription-textfield__title= title
+mixin subscriptionTextfield(title='')
+    if title
+        h3.subsription-textfield__title= title
     .subsription-textfield
         input.subsription-textfield__input(type='text', name='subscribe', placeholder='Email')
         button.subsription-textfield__submit(type='submit')
