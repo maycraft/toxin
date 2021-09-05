@@ -1,0 +1,8 @@
+mixin footerMenu({title, items})
+    .footer-menu
+        h3.footer-menu__title= title
+        ul.footer-menu__items
+            each item in items
+                - const { text, link } = item;
+                li.footer-menu__item
+                    a.footer-menu__link(href=link)= text
