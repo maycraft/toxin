@@ -1,5 +1,6 @@
 extends ../../layout/ui-kit.pug
 include ../../components/header/header.pug
+include ../../components/footer/footer.pug
 
 block variables
     -
@@ -41,3 +42,7 @@ block content
             +header({items: menuItems})
         .headers__item
             +header({items: menuItems, login: 'Юлий Цезарь'})
+        .headers__item.headers__item-dark
+            +footer
+        .headers__item.headers__item-small
+            +footer(false)

@@ -6,10 +6,21 @@
 
 .headers {
     &__block {
-        padding-top: 28px;
+        padding: 28px 0 140px;
     }
     &__item {
         margin-bottom: 40px;
         background-color: $white;
+
+        &-dark {
+            @media screen and (max-width: 960px ){
+                background: #F4F4F6;
+            }
+        }
+        
+        &-small {
+            background: #F4F4F6;
+        }
     }
+
 }
