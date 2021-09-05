@@ -1,0 +1,42 @@
+include ../brand/brand.pug
+include ../subscription-textfield/subscription-textfield.pug
+include ../footer-menu/footer-menu.pug
+
+mixin footer(isDesktop=true)
+    if isDesktop
+        .footer
+            .footer-descr
+                .footer-descr__item
+                    +brand
+                    p.footer-descr__info Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                .footer-descr__navigation.navigation
+                    .navigation__block.navigation__block-offset
+                        +footerMenu({ title: 'навигация', items: [ {text: 'О нас', link: '/toxin/about.html'}, {text: 'Новости', link: '/toxin/news.html'}, {text: 'Служба поддержки', link: '/toxin/support.html'}, {text: 'Услуги', link: '/toxin/services.html'}, ] })
+                    .navigation__block.navigation__block-offset
+                        +footerMenu({ title: 'о нас', items: [ {text: 'О сервисе', link: '/toxin/about-services.html'}, {text: 'Наша команда', link: '/toxin/our-team.html'}, {text: 'Вакансии', link: '/toxin/vacancy.html'}, {text: 'Инвесторы', link: '/toxin/investors.html'}, ] })
+                    .navigation__block.navigation__block-offset 
+                        +footerMenu({ title: 'Служба поддержки', items: [ {text: 'Соглашения', link: '/toxin/agreement.html'}, {text: 'Сообщества', link: '/toxin/societyt.html'}, {text: 'Связь с нами', link: '/toxin/contacts.html'}, ] })
+                .footer-descr__item.footer-descr__item-offset.subscribe 
+                    h3.subscribe__title Подписка
+                    p.footer-descr__info Получайте специальные предложения и новости сервиса
+                    +subscriptionTextfield
+            .footer__logo
+                +brand
+            .footer-copyright 
+                .footer-copyright__text Copyright © 2018 Toxin отель. Все права защищены.
+                .footer-copyright__social.social 
+                    ul.social__items 
+                        li.social__item.social__item-twitter
+                        li.social__item.social__item-facebook
+                        li.social__item.social__item-instagram
+    else
+        .footer-small
+            .footer-small__logo
+                +brand
+            .footer-small-copyright 
+                .footer-small__copyright__text Copyright © 2018 Toxin отель. Все права защищены.
+                .footer-small__social.social 
+                    ul.social__items 
+                        li.social__item.social__item-twitter
+                        li.social__item.social__item-facebook
+                        li.social__item.social__item-instagram
