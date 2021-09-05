@@ -16,3 +16,4 @@
 1. [Colors & Type](https://webcraftt.github.io/toxin/colors)
 2. [Form Elements](https://webcraftt.github.io/toxin/elements)
 3. [Cards](https://webcraftt.github.io/toxin/cards)
+4. [Headers & Footers](https://webcraftt.github.io/toxin/headers)
