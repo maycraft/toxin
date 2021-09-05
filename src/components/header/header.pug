@@ -12,7 +12,7 @@ mixin header({items, login=false})
                     - className += active ? " header-menu__item-active" : "";
                     - className += multiple ? " header-menu__item-multiple " : "";
                     li(class=className)
-                        a.header-menu__link(href='aboutus.html')= title
+                        a.header-menu__link(href='/toxin/aboutus.html')= title
                         if (multiple)
                             i.material-icons expand_more
             if login
