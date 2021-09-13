@@ -24,7 +24,7 @@ mixin formRegistration(options)
                 +textfield({title: 'данные для входа в сервис', placeholder: 'Email'})
             .form__subelement
                 +textfield({placeholder: 'Пароль'})
-            +toggle({text: 'Получать спецпредложения'})
+            +toggle({text: 'Получать спецпредложения', name: 'offer'})
         .form__element
             +btn({type: 'big', title: 'перейти к оплате'})
         .form__element-mt3

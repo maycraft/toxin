@@ -61,8 +61,8 @@ block variables
             {text: 'Женщина', name: 'sex', value: 'female'}
         ]
         const toggleData = [
-            {text: 'Получать спецпредложения', isChecked: true},
-            {text: 'Получать спецпредложения'}
+            {text: 'Получать спецпредложения', name: 'offer', isChecked: true},
+            {text: 'Получать спецпредложения', name: 'offer2' }
         ]
         const likeData = [
             {count: 2},
@@ -149,7 +149,7 @@ block content
                 +dateDropdown({ id: 'filter', classes: 'filter', type: 'filter', title_start: 'filter date dropdown'})
             .element__subscription-text-field.element-small
                 +subscriptionTextfield('subscription text field')
-        section.elements__divide
+        .elements__divide
         section.elements__item
             .element__checkbox_buttons.mb-4
                 +checkboxButtons('Checkbox Buttons', checkList)
@@ -161,7 +161,7 @@ block content
                 +likeBlock('like button', likeData)
             .element__rate-button
                 +rateButtons('rate button', rateArr)
-        section.elements__divide
+        .elements__divide
         section.elements__item
             .element__range-slider.element-small.mb-4
                 +range('Range Slider', 0, 16000, 5000, 10000, 1000)
@@ -180,25 +180,25 @@ block content
                 +checkboxList('expandable checkbox list', additionList)
             .element__expandable-checkbox-list-open.element-small
                 +checkboxList('expandable checkbox list', additionList, isOpen=true) 
-        section.elements__divide
+        .elements__divide
         section.elements__item 
             .element__dropdown__guest-open
                 +dropdown({type: 'guest-open', items: dropdownGuests, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей', isOpen: true})
             .element__rich-checkbox-buttons
                 +richboxList('rich Checkbox Buttons', richboxList)
-        section.elements__divide
+        .elements__divide
         section.elements__item
             .element__dropdown__guest-open
                 +dropdown({type: 'guest-full', items: dropdownGuestsFull, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей', isOpen: 'true'})
             .element__bullet-list
                 +bulletList('bullet list', bulletArr)
-        section.elements__item
+        .elements__item
             .element__benefit.element-small
                 each item in benefitList
                     +benefit(item)
-        section.elements__divide
-        section.elements__item.elements__item-join
+        .elements__divide
+        .elements__item.elements__item-join
             .element__review 
                 +feedback(feedbackObj)
-        section.elements__divide
-        section.elements__divide
+        .elements__divide
+        .elements__divide

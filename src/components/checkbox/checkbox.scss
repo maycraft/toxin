@@ -50,9 +50,11 @@
         }
     }
     &__descr {
+        display: inline-block;
         font-size: 1.2rem;
         line-height: 1.4rem;
+        font-weight: normal;
         color: $dark50;
-        margin-top: 7px;
+        margin-top: 5px;
     }
 }

@@ -12,7 +12,7 @@ mixin formReserv(options)
                 .appartment__info
                     span.appartment__number № <b>#{ number }</b>
                     span.appartment__type= type
-                .appartment__cost <span>#{ formatNum }&#8381</span> в сутки
+                .appartment__cost <span>#{ formatNum }&#8381;</span> в сутки
         .form__element
             +dateDropdown({id: 'reservation', classes: 'reservation', type: 'double', title_start: 'прибытие', title_end: 'выезд'})
         .form__element
@@ -20,20 +20,20 @@ mixin formReserv(options)
         .form__element
             .form-reserv__service.service 
                 .service__line 
-                    p.service__item #{ formatNum }&#8381 X 4 суток
-                    span.service__cost #{ new Intl.NumberFormat('ru-RU').format(cost * 4) }&#8381
+                    p.service__item #{ formatNum }&#8381; X 4 суток
+                    span.service__cost #{ new Intl.NumberFormat('ru-RU').format(cost * 4) }&#8381;
                 .service__line
                     p.service__item Сбор за услуги: скидка 2 179₽
                         span.info-sign i
-                    span.service__cost 0&#8381
+                    span.service__cost 0&#8381;
                 .service__line
                     p.service__item Сбор за дополнительные услуги
                         span.info-sign i
-                    span.service__cost 300&#8381
+                    span.service__cost 300&#8381;
         .form__element-mt3
             .form-reserv__total.total
                 p.total__text Итого
                 span.total__line
-                p.total__text #{ new Intl.NumberFormat('ru-RU').format(38081) }&#8381
+                p.total__text #{ new Intl.NumberFormat('ru-RU').format(38081) }&#8381;
         .form__element-mt2
             +btn({type: 'big', title: 'забронировать'})

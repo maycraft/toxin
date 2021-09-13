@@ -5,8 +5,8 @@ mixin checkbox(options)
         className += isRich ? ' checkbox__title-rich' : '' 
     label.checkbox
         input(type='checkbox', value=value, checked=isChecked)
-        .checkbox__checkmark
-        .checkbox__body
-            p(class=className)= title
+        span.checkbox__checkmark
+        span.checkbox__body
+            span(class=className)= title
                 if isRich
-                    p.checkbox__descr= descr
+                    span.checkbox__descr= descr
