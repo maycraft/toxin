@@ -13,7 +13,7 @@
     }
     &__descr {
         max-width: 234px;
-        margin: 20px auto;
+        padding: 20px 19px 17px;
     }
     &__info {
         display: flex;
@@ -24,7 +24,8 @@
     &__review {
         display: flex;
         justify-content: space-between;
-        padding: 10px 2px 16px;
+        align-items: center;
+        margin-top: 10px;
     }
     &__number {
         font-size: 14px;
