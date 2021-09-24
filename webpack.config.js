@@ -9,16 +9,17 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminOptipng = require('imagemin-optipng');
 
 const isDev = process.env.NODE_ENV === 'development';
-const pages = ['index', 'colors', 'elements', 'cards', 'headers', 'landing'];
+const pages = ['index', 'colors', 'elements', 'cards', 'headers', 'landing', 'search'];
 console.log(isDev);
 module.exports = {
     entry: {
-        index: './src/app.js',
-        colors: './src/pages/colors/colors.js',
-        elements: './src/pages/elements/elements.js',
-        cards: './src/pages/cards/cards.js',
-        headers: './src/pages/headers/headers.js',
-        landing: './src/pages/landing/landing.js',
+        index: '@/app.js',
+        colors: '@pages/colors/colors.js',
+        elements: '@pages/elements/elements.js',
+        cards: '@pages/cards/cards.js',
+        headers: '@pages/headers/headers.js',
+        landing: '@pages/landing/landing.js',
+        search: '@pages/search/search.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -124,5 +125,12 @@ module.exports = {
     devtool: isDev ? 'eval-cheap-module-source-map' : false,
     resolve: {
         modules: [path.resolve(__dirname, 'node_modules')],
+        alias: {
+            '@': path.resolve(__dirname, 'src'),
+            '@components': path.resolve(__dirname, 'src/components'),
+            '@fonts': path.resolve(__dirname, 'src/fonts'),
+            '@pages': path.resolve(__dirname, 'src/pages'),
+            '@scss': path.resolve(__dirname, 'src/scss'),
+        },
     },
 };

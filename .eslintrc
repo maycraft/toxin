@@ -1,6 +1,6 @@
 {
     "parser": "babel-eslint",
-    "extends": ["airbnb", "plugin:prettier/recommended"],
+    "extends": ["airbnb", "plugin:prettier/recommended", "plugin:import/recommended"],
     "plugins": ["prettier"],
     "rules": {
         "prettier/prettier": [
@@ -25,5 +25,18 @@
         "no-restricted-syntax": "off",
         "prefer-template": "off",
         "prefer-destructuring": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "alias": {
+                "map": [
+                    ["@", "./src"],
+                    ["@components", "./src/components"],
+                    ["@fonts", "./src/fonts"],
+                    ["@pages", "./src/pages"],
+                    ["@scss", "./src/scss"]
+                ]
+            }
+        }
     }
 }
