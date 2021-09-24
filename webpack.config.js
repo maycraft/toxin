@@ -4,9 +4,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const imageminOptipng = require('imagemin-optipng');
 
 const isDev = process.env.NODE_ENV === 'development';
-const pages = ['index', 'colors', 'elements', 'cards', 'headers'];
+const pages = ['index', 'colors', 'elements', 'cards', 'headers', 'landing'];
 console.log(isDev);
 module.exports = {
     entry: {
@@ -15,6 +18,7 @@ module.exports = {
         elements: './src/pages/elements/elements.js',
         cards: './src/pages/cards/cards.js',
         headers: './src/pages/headers/headers.js',
+        landing: './src/pages/landing/landing.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -86,6 +90,17 @@ module.exports = {
                     from: path.resolve(__dirname, 'src/img'),
                     to: path.resolve(__dirname, 'dist/assets/img'),
                 },
+            ],
+        }),
+        new ImageminPlugin({
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            jpegtran: null,
+            plugins: [
+                imageminMozjpeg({
+                    quality: 70,
+                    progressive: true,
+                }),
+                imageminOptipng(),
             ],
         }),
         ...pages.map(
