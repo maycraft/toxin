@@ -17,3 +17,4 @@
 2. [Form Elements](https://webcraftt.github.io/toxin/elements)
 3. [Cards](https://webcraftt.github.io/toxin/cards)
 4. [Headers & Footers](https://webcraftt.github.io/toxin/headers)
+5. [Landing](https://webcraftt.github.io/toxin/landing)
