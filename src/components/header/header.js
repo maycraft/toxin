@@ -1,3 +1,3 @@
 import './header.scss';
-import '../brand/brand';
-import '../button/button';
+import '@components/brand/brand';
+import '@components/button/button';

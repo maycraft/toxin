@@ -1,4 +1,4 @@
 import './footer.scss';
-import '../brand/brand';
-import '../subscription-textfield/subscription-textfield';
-import '../footer-menu/footer-menu';
+import '@components/brand/brand';
+import '@components/subscription-textfield/subscription-textfield';
+import '@components/footer-menu/footer-menu';
