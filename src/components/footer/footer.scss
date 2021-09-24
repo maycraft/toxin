@@ -1,11 +1,8 @@
 @import '../../scss/variables';
 
 .footer {
-    max-width: 1190px;
-    margin: auto;
     background-color: $white;
-    padding: 0 15px;
-    
+
     &-small {
         margin: auto;
         background-color: $white;
@@ -17,7 +14,7 @@
         align-items: center;
 
         &__copyright__text {
-            margin: 16px 0 25px;
+            margin: 20px 0 25px;
         }
 
         &__social {
@@ -26,9 +23,9 @@
         }
     }
 
-    @media screen and (max-width: 960px ){
-        max-width: 768px;
-        padding: 120px 0;
+    @media screen and (max-width: 768px ){
+        // padding: 120px 0;
+        padding: 50px 0;
         box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     }
 
@@ -36,13 +33,24 @@
         padding: 100px 0;
         box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
         display: flex;
+        flex-wrap: wrap;
 
-        @media screen and (max-width: 960px){
+        @media screen and (max-width: 1060px){
+            justify-content: space-evenly;
+            padding: 50px 0;
+        }
+
+        @media screen and (max-width: 768px){
             display: none;
         }
 
         &__item {
-            max-width: 260px;
+            width: 22.5%;
+            min-width: 210px;
+
+            @media screen and (max-width: 1060px){
+                width: 35%;
+            }
 
             &:first-child {
                 margin-right: 40px;
@@ -69,7 +77,7 @@
         justify-content: center;
         display: none;
 
-        @media screen and (max-width: 960px ){
+        @media screen and (max-width: 768px ){
             display: flex;
         }
     }
@@ -81,7 +89,7 @@
         padding: 25px 0;
         box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
-        @media screen and (max-width: 960px ){
+        @media screen and (max-width: 768px ){
             justify-content: center;
             flex-direction: column;
             padding: 0;
@@ -91,18 +99,29 @@
         &__text {
             @extend %font14-17;
             color: $dark75;
+            text-align: center;
 
-            @media screen and (max-width: 960px ){
+            @media screen and (max-width: 768px ){
                 margin: 20px 0 25px;
             }
         }
     }
 }
-
 .navigation {
-
     display: flex;
     margin-top: 0;
+    max-width: 600px;
+    flex-grow: 1;
+
+    @media screen and (max-width: 1060px){
+        order: 1;
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    &__block {
+        width: 33.33%;
+    }
 
     &__items {
         margin-top: 21px;

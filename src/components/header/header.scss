@@ -3,16 +3,21 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    align-items: center;
+    padding: 15px 0;
     max-height: 70px;
-    max-width: 1190px;
-    margin: auto;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-
-    &__navbar {
+    
+    .header__menu.show {
+        display: flex;
+    }
+    
+    & &__menu {
         display: flex;
         align-items: center;
-        max-width: 770px;
+        height: auto;
+        overflow: hidden;
+        transition: height .5s linear;
     }
 
     &-menu {
@@ -69,4 +74,67 @@
             padding: 7px 19px;
         }
     }
+
+    .burmenu {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: none;
+        margin-top: 10px;
+
+        &:focus {
+            outline: none;
+        }
+        &__line {
+            display: block;
+            height: 5px;
+            width: 25px;
+            margin: 4px auto;
+            background: $purple;
+            pointer-events: none;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+@media screen and (max-width: 992px){
+    align-items: flex-start;
+    .header {
+        &__menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: $white;
+            position: relative;
+            z-index: 1;
+        }
+
+        &-menu {
+            flex-direction: column;
+
+            &__item {
+                margin-top: 20px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        &__burmenu {
+            display: block;
+            margin-left: auto;
+        }
+    }
+    &__btn {
+        margin-top: 20px;
+    }
+}
 }

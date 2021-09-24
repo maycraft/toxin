@@ -6,7 +6,9 @@
 
 .headers {
     &__block {
-        padding: 28px 0 140px;
+        padding: 28px 15px 140px;
+        max-width: 1190px;
+        margin: auto;
     }
     &__item {
         margin-bottom: 40px;

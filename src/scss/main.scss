@@ -3,6 +3,11 @@
 
 html {
     font-size: 10px;
+    font-family: Montserrat, Arial, sans-serif;
+    line-height: 18px;
+    background-color: $white;
+    color: $dark75;
+    min-height: 100%;
 }
 
 * {
@@ -13,10 +18,8 @@ html {
 }
 
 body {
-    font-family: Montserrat, Arial, sans-serif;
     font-size: 14px;
-    line-height: 18px;
-    color: $dark75;
+    height: 100%;
 }
 
 li {
@@ -47,10 +50,20 @@ a {
     text-decoration: none;
 }
 
+#wrapper {
+    max-width: 1920px;
+    min-width: 320px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+}
+
 .wrapper {
-    max-width: 320px;
-    margin: 0 auto;
     max-width: 1440px;
+    margin: 0 auto;
+
 }
 
 .hide {
