@@ -1,8 +1,8 @@
-import '../../scss/main.scss';
+import '@scss/main.scss';
 import './landing.scss';
-import '../../components/header/header';
-import '../../components/footer/footer';
-import '../../components/form-search/form-search';
+import '@components/header/header';
+import '@components/footer/footer';
+import '@components/form-search/form-search';
 
 const burmenu = document.querySelector('.burmenu');
 const menu = document.querySelector('.header__menu');
