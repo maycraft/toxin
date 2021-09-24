@@ -1,2 +1,2 @@
-import '../radio/radio';
+import '@components/radio/radio';
 import './radio-buttons.scss';

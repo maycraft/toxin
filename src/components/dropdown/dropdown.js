@@ -1,7 +1,7 @@
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
-import '../dropdown-option/dropdown-option';
-import '../button/button';
+import '@components/dropdown-option/dropdown-option';
+import '@components/button/button';
 import './dropdown.scss';
 
 // Функция для отображения значения в нужном склонении

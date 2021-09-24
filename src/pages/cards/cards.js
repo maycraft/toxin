@@ -1,10 +1,10 @@
-import '../../scss/main.scss';
+import '@scss/main.scss';
 import './cards.scss';
-import '../../components/form-search/form-search';
-import '../../components/form-registration/form-registration';
-import '../../components/form-reserv/form-reserv';
-import '../../components/date-dropdown/date-dropdown';
-import '../../components/card-room/card-room';
+import '@components/form-search/form-search';
+import '@components/form-registration/form-registration';
+import '@components/form-reserv/form-reserv';
+import '@components/date-dropdown/date-dropdown';
+import '@components/card-room/card-room';
 
 const $dateFilterInst = $('#empty').data('datepicker');
 $dateFilterInst.update('startDate', new Date('2019-08-08'));

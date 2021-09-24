@@ -1,7 +1,7 @@
 import './form-registration.scss';
-import '../textfield/textfield';
-import '../radio-buttons/radio-buttons';
-import '../inputmasked/inputmasked';
-import '../toggle/toggle';
-import '../button/button';
-import '../auth-info/auth-info';
+import '@components/textfield/textfield';
+import '@components/radio-buttons/radio-buttons';
+import '@components/inputmasked/inputmasked';
+import '@components/toggle/toggle';
+import '@components/button/button';
+import '@components/auth-info/auth-info';

@@ -1,4 +1,4 @@
-import '../date-dropdown/date-dropdown';
-import '../dropdown/dropdown';
-import '../button/button';
+import '@components/date-dropdown/date-dropdown';
+import '@components/dropdown/dropdown';
+import '@components/button/button';
 import './form-search.scss';

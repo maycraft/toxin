@@ -1,6 +1,6 @@
 import './card-room.scss';
-import '../rating/rating';
-import '../slider/slider';
+import '@components/rating/rating';
+import '@components/slider/slider';
 
 // const calendar = document.getElementById('empty');
 // const dates = calendar.querySelectorAll('.datepicker--cell');

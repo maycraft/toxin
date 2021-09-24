@@ -1,2 +1,2 @@
-import '../toggle/toggle';
+import '@components/toggle/toggle';
 import './toggle-buttons.scss';

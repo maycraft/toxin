@@ -1,7 +1,7 @@
 import './form-reserv.scss';
-import '../date-dropdown/date-dropdown';
-import '../dropdown/dropdown';
-import '../button/button';
+import '@components/date-dropdown/date-dropdown';
+import '@components/dropdown/dropdown';
+import '@components/button/button';
 
 const dropDownInst = $('#reservation').data('datepicker');
 dropDownInst.date = new Date('2019-08-08');

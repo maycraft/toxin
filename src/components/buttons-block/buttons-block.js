@@ -1,2 +1,2 @@
-import '../button/button';
+import '@components/button/button';
 import './buttons-block.scss';
