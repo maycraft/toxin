@@ -47,7 +47,12 @@ module.exports = {
             },
             {
                 test: /\.pug$/i,
-                use: ['pug-loader'],
+                use: {
+                    loader: 'pug-loader',
+                    options: {
+                        root: path.resolve(__dirname, 'src'),
+                    },
+                },
             },
             {
                 test: /\.js$/i,
