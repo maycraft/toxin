@@ -1,8 +1,11 @@
 include /components/brand/brand.pug
 include /components/button/button.pug
 
-mixin header({items=[], login=false} = {})
-    .header
+mixin header(customConfig = {})
+    - const defaultConfit = require("@components/header/header.config.json");
+    - const data = Object.assign({}, defaultConfit, customConfig);
+    - const { menu: items, buttons, login } = data;
+    header.header
         +brand
         nav.header__navbar
             button.header__burmenu.burmenu
@@ -23,7 +26,6 @@ mixin header({items=[], login=false} = {})
                 if login
                     .header__login= login
                 else
-                    .header__btn
-                        +btn({type: 'outline', title: 'войти', className: 'header__btn-login'})
-                    .header__btn 
-                        +btn({type: 'filled', title: 'зарегистрироваться', className: 'header__btn-join'})
+                    each btnConfig in buttons
+                        .header__btn
+                            +btn(btnConfig)
