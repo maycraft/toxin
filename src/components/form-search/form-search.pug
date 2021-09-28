@@ -2,8 +2,11 @@ include /components/date-dropdown/date-dropdown.pug
 include /components/dropdown/dropdown.pug
 include /components/button/button.pug
 
-mixin formSearch(options)
-    - const { title, dropdownGuests } = options;
+mixin formSearch(customConfig = {})
+    - const defaultConfig = require("@components/form-search/form-search.config.json");
+    - const mergedConfig = Object.assign({}, defaultConfig, customConfig);
+    - const { title, list: dropdownGuests } = mergedConfig;
+
     .form.form-search 
         .form-search__element
             h1.form-search__title= title

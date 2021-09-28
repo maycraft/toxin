@@ -4,55 +4,14 @@ include /components/footer/footer.pug
 include /components/form-search/form-search.pug
 
 block variables
-    -
-        const title = 'Landing'
-        const menuItems = [
-            {
-                title: 'О нас',
-                link: '/mock-address/change-me',
-                active: true,
-                multiple: false
-            },
-            {
-                title: 'Услуги',
-                link: '/mock-address/change-me',
-                active: false,
-                multiple: true
-            },
-            {
-                title: 'Вакансии',
-                link: '/mock-address/change-me',
-                active: false,
-                multiple: false
-            },
-            {
-                title: 'Новости',
-                link: '/mock-address/change-me',
-                active: false,
-                multiple: false
-            },
-            {
-                title: 'Соглашения',
-                link: '/mock-address/change-me',
-                active: false,
-                multiple: true
-            },
-        ]
-        const searchData = {
-            title: 'Найдём номера под ваши пожелания',
-            dropdownGuests: [
-                { id: 1, name: "взрослые", wordForms: ""},
-                { id: 2, name: "дети", wordForms: ""},
-                { id: 3, name: "младенцы", wordForms: "младенец,младенца,младенцев"}
-            ]
-        }
+    - const title = "Landing";
 
 block content
     .container
-        +header({items: menuItems})
+        +header
     main.content
         .container
             .content__item
-                +formSearch(searchData)
+                +formSearch
     .container
         +footer
