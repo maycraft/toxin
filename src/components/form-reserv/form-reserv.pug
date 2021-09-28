@@ -2,10 +2,13 @@ include /components/date-dropdown/date-dropdown.pug
 include /components/dropdown/dropdown.pug
 include /components/button/button.pug
 
-mixin formReserv(options)
+mixin formReserv(customConfig = {})
     -
-        const { number, type, cost, dpData } = options
+        const defaultConfig = require("@components/form-reserv/form-reserv.config.json");
+        const mergedConfig = Object.assign({}, defaultConfig, customConfig);
+        const { number, type, cost, list: dpData } = mergedConfig;
         const formatNum = new Intl.NumberFormat('ru-RU').format(cost);
+
     .form.form-reserv
         .form__element
             .form-reserv__appartment.appartment

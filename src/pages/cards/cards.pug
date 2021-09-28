@@ -7,39 +7,13 @@ include /components/date-dropdown/date-dropdown.pug
 include /components/card-room/card-room.pug
 
 block variables
-    -
-        const title = 'UI-Kit | Cards' 
-        const searchData = {
-            title: 'Найдём номера под ваши пожелания',
-            dropdownGuests: [
-                { id: 1, name: "взрослые", wordForms: ""},
-                { id: 2, name: "дети", wordForms: ""},
-                { id: 3, name: "младенцы", wordForms: "младенец,младенца,младенцев"}
-            ]
-        }
-        const registrationData = {
-            title: 'Регистрация аккаунта',
-            radioButtonsData: [
-                {text: 'Мужчина', name: 'sex', value: 'male', isChecked: true},
-                {text: 'Женщина', name: 'sex', value: 'female'}
-            ],
-        }
-        const reservationData = {
-            number: 888,
-            type: 'люкс',
-            cost: '9990',
-            dpData: [
-                { id: 1, name: "взрослые", wordForms: "", defaultCount: 2},
-                { id: 2, name: "дети", wordForms: "", defaultCount: 1},
-                { id: 3, name: "младенцы", wordForms: "младенец,младенца,младенцев"}
-            ]
-        }
+    - const title = "UI-Kit | Cards";
 
 block content
     .cards
         .cards__item
             .cards__element
-                +formSearch(searchData)
+                +formSearch
             .cards__element
                 +formRegistration(registrationData)
         .cards__item

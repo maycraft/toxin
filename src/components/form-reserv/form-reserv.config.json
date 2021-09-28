@@ -1,0 +1,24 @@
+{
+    "number": 888,
+    "type": "люкс",
+    "cost": "9990",
+    "list": [
+        { 
+            "id": 1, 
+            "name": "взрослые", 
+            "wordForms": "", 
+            "defaultCount": 2
+        },
+        { 
+            "id": 2, 
+            "name": "дети", 
+            "wordForms": "", 
+            "defaultCount": 1
+        },
+        { 
+            "id": 3, 
+            "name": "младенцы", 
+            "wordForms": "младенец,младенца,младенцев"
+        }
+    ]
+}
