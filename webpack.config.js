@@ -29,6 +29,7 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         // inline: true,
+        watchContentBase: true,
         hot: true,
         open: true,
         openPage: 'toxin/',
@@ -99,6 +100,7 @@ module.exports = {
             ],
         }),
         new ImageminPlugin({
+            disable: isDev,
             test: /\.(jpe?g|png|gif|svg)$/i,
             jpegtran: null,
             plugins: [
