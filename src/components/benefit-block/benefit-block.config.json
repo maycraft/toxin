@@ -1,0 +1,16 @@
+{
+    "list": [
+        {            
+            "icon": "insert_emoticon",
+            "title": "Комфорт",
+            "descr": "Шумопоглощающие стены",
+            "isBordered": true
+        },
+        {
+            "icon": "location_city",
+            "title": "Удобство",
+            "descr": "Окно в каждой из спален",
+            "isBordered": true
+        }
+    ]
+}

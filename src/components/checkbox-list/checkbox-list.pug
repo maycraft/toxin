@@ -1,6 +1,9 @@
 include /components/checkbox/checkbox
 
-mixin checkboxList(title='checkbox list', items=[], isOpen=false)
+mixin checkboxList(customConfig = {})
+    - const defaultConfig = require("@components/checkbox-list/checkbox-list.config.json");
+    - const mergedConfig = Object.assign({}, defaultConfig, customConfig);
+    - const { title, list: items, isOpen } = mergedConfig;
     - let className = "checkbox-list";
     - className += isOpen ? " open" : "";
     div(class=className)

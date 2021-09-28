@@ -1,0 +1,9 @@
+include /components/benefit/benefit
+
+mixin benefitBlock
+    - const defaultConfig = require("@components/benefit-block/benefit-block.config.json");
+    - const mergedConfig = Object.assign({}, defaultConfig, customConfig);
+    - const { title, list: benefitList } = mergedConfig;
+
+    each item in benefitList
+        +benefit(item)

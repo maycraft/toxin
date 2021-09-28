@@ -1,0 +1,33 @@
+{
+    "title": "expandable checkbox list",
+    "list": [
+        {
+            "title": "Завтрак",
+            "value": "breakfast"
+        },
+        {
+            "title": "Письменный стол",
+            "value": "desk",
+            "isChecked": true
+        },
+        {
+            "title": "Стул для кормления",
+            "value": "feedchair",
+            "isChecked": true
+        },
+        {
+            "title": "Кроватка",
+            "value": "crib",
+            "isChecked": true
+        },
+        {
+            "title": "Телевизор",
+            "value": "tv"
+        },
+        {
+            "title": "Шампунь",
+            "value": "schampoo"
+        }
+    ],
+    "isOpen": false
+}

@@ -1,0 +1,16 @@
+{
+    "title": "Radio Buttons",
+    "list": [
+        {
+            "text": "Мужчина", 
+            "name": "sex", 
+            "value": "male", 
+            "isChecked": true
+        },
+        {
+            "text": "Женщина", 
+            "name": "sex", 
+            "value": "female"
+        }
+    ]
+}

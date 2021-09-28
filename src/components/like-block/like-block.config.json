@@ -1,0 +1,12 @@
+{
+    "title": "like button",
+    "list": [
+        {
+            "count": 2
+        },
+        {
+            "count": 12, 
+            "isLiked": true
+        }
+    ]
+}

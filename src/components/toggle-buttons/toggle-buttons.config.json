@@ -1,0 +1,14 @@
+{
+    "title": "toggle",
+    "list": [
+        {
+            "text": "Получать спецпредложения", 
+            "name": "offer", 
+            "isChecked": true
+        },
+        {
+            "text": "Получать спецпредложения", 
+            "name": "offer2" 
+        }
+    ]
+}

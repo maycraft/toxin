@@ -1,6 +1,10 @@
 include /components/radio/radio.pug
 
-mixin radioButtons(title, radioData)
+mixin radioButtons(customConfig = {})
+    - const defaultConfig = require("@components/radio-buttons/radio-buttons.config.json");
+    - const mergedConfig = Object.assign({}, defaultConfig, customConfig);
+    - const { title, list: radioData } = mergedConfig;
+
     if title
         h3.radio-buttons__title= title
     .radio-buttons 

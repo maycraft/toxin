@@ -1,0 +1,23 @@
+{
+    "title": "checkbox buttons",
+    "list": [
+        {
+            "title": "Можно курить", 
+            "name": "smoke", 
+            "value": "smoked"
+        },
+        {
+            "title": "Можно с питомцами", 
+            "name": "pet", 
+            "value": "pet", 
+            "isChecked": true
+        },
+        {
+            "title": "Можно пригласить гостей (до 10 человек)", 
+            "name": "festival", 
+            "value": "festival", 
+            "isChecked": true
+        }
+    ],
+    "isOpen": false
+}

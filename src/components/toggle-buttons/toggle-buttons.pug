@@ -1,6 +1,10 @@
 include /components/toggle/toggle.pug
 
-mixin toggleButtons(title, toggleElements)
+mixin toggleButtons(customConfig = {})
+    - const defaultConfig = require("@components/toggle-buttons/toggle-buttons.config.json");
+    - const mergedConfig = Object.assign({}, defaultConfig, customConfig);
+    - const { title, list: toggleElements } = mergedConfig;
+
     h3= title
     .toggle-buttons
         each objEl in toggleElements

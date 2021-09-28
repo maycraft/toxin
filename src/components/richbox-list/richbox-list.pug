@@ -1,6 +1,10 @@
 include /components/checkbox/checkbox
 
-mixin richboxList(title, items)
+mixin richboxList(customConfig = {})
+    - const defaultConfig = require("@components/richbox-list/richbox-list.config.json");
+    - const mergedConfig = Object.assign({}, defaultConfig, customConfig);
+    - const { title, list: items } = mergedConfig;
+
     h3= title
     .richbox-list__body
         each val in items

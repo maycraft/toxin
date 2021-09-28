@@ -1,0 +1,19 @@
+{
+    "title": "rich checkbox buttons",
+    "list": [
+        {
+            "title": "Широкий коридор", 
+            "name": "corridor", 
+            "value": "corridor", 
+            "isRich": true, 
+            "descr": "Ширина коридоров в номере не менее 91 см."
+        },
+        {
+            "title": "Помощник для инвалидов", 
+            "name": "ivalid", 
+            "value": "ivalid", 
+            "isRich": true, 
+            "descr": "На 1 этаже вас встретит специалист  и проводит до номера."
+        }
+    ]
+}

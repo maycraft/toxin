@@ -1,6 +1,10 @@
 include /components/button/button.pug
 
-mixin buttonsBlock(title, buttonList)
+mixin buttonsBlock(customConfig = {})
+    - const defaultConfig = require("@components/buttons-block/buttons-block.config.json");
+    - const mergedConfig = Object.assign({}, defaultConfig, customConfig);
+    - const { title, list: buttonList } = mergedConfig;
+
     h3= title
     .buttons-block
         each button in buttonList

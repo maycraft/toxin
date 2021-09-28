@@ -17,7 +17,7 @@ include /components/pagination/pagination.pug
 include /components/bullet-list/bullet-list.pug
 include /components/feedback/feedback.pug
 include /components/checkbox-list/checkbox-list.pug
-include /components/benefit/benefit.pug
+include /components/benefit-block/benefit-block.pug
 
 block variables
     -
@@ -51,36 +51,7 @@ block variables
             { id: 2, name: "дети", wordForms: "", defaultCount: 1},
             { id: 3, name: "младенцы", wordForms: "младенец,младенца,младенцев"}
         ]
-        const checkList = [
-            {title: 'Можно курить', name: 'smoke', value: 'smoked'},
-            {title: 'Можно с питомцами', name: 'pet', value: 'pet', isChecked: true},
-            {title: 'Можно пригласить гостей (до 10 человек)', name: 'festival', value: 'festival', isChecked: true}
-        ]
-        const radioButtonsData = [
-            {text: 'Мужчина', name: 'sex', value: 'male', isChecked: true},
-            {text: 'Женщина', name: 'sex', value: 'female'}
-        ]
-        const toggleData = [
-            {text: 'Получать спецпредложения', name: 'offer', isChecked: true},
-            {text: 'Получать спецпредложения', name: 'offer2' }
-        ]
-        const likeData = [
-            {count: 2},
-            {count: 12, isLiked: true}
-        ]
         const rateArr = [4, 5]
-        const richboxList = [
-            {title: 'Широкий коридор', name: 'corridor', value: 'corridor', isRich: true, descr: 'Ширина коридоров в номере не менее 91 см.'},
-            {title: 'Помощник для инвалидов', name: 'ivalid', value: 'ivalid', isRich: true, descr: 'На 1 этаже вас встретит специалист  и проводит до номера.'}
-        ]
-        const buttonList = [
-            {type: 'filled', title: 'click me'},
-            {type: 'filled', title: 'click me', className: 'btn-focus'},
-            {type: 'outline', title: 'click me'},
-            {type: 'outline', title: 'click me', className: 'btn-focus'},
-            {type: 'text', title: 'click me'},
-            {type: 'text', title: 'click me', className: 'btn-focus'},
-        ]
         const bulletArr = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
         const feedbackObj = { 
             ava: 'sarafanov.png',
@@ -89,49 +60,7 @@ block variables
             text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
             likeObj: {count: 12, isLiked: true}
         }
-        const additionList = [
-            {
-                title: 'Завтрак',
-                value: 'breakfast'
-            },
-            {
-                title: 'Письменный стол',
-                value: 'desk',
-                isChecked: true
-            },
-            {
-                title: 'Стул для кормления',
-                value: 'feedchair',
-                isChecked: true
-            },
-            {
-                title: 'Кроватка',
-                value: 'crib',
-                isChecked: true
-            },
-            {
-                title: 'Телевизор',
-                value: 'tv'
-            },
-            {
-                title: 'Шампунь',
-                value: 'schampoo'
-            },
-        ]
-        const benefitList = [
-            {            
-                icon: 'insert_emoticon',
-                title: 'Комфорт',
-                descr: 'Шумопоглощающие стены',
-                isBordered: true
-            },
-            {
-                icon: 'location_city',
-                title: 'Удобство',
-                descr: 'Окно в каждой из спален',
-                isBordered: true
-            },
-        ]
+
 block content
     .elements
         section.elements__item
@@ -152,13 +81,13 @@ block content
         .elements__divide
         section.elements__item
             .element__checkbox_buttons.mb-4
-                +checkboxButtons('Checkbox Buttons', checkList)
+                +checkboxButtons
             .element__radio__buttons.mb-4
-                +radioButtons('Radio Buttons', radioButtonsData)
+                +radioButtons
             .element__toggle.mb-4
-                +toggleButtons('Toggle', toggleData)
+                +toggleButtons
             .element__like-button.mb-4
-                +likeBlock('like button', likeData)
+                +likeBlock
             .element__rate-button
                 +rateButtons('rate button', rateArr)
         .elements__divide
@@ -166,7 +95,7 @@ block content
             .element__range-slider.element-small.mb-4
                 +range('Range Slider', 0, 16000, 5000, 10000, 1000)
             .element__buttons.mb-3
-                +buttonsBlock('buttons', buttonList)
+                +buttonsBlock
             .element__big-button.mb-4
                 +btn({type: 'big', title: 'перейти к оплате'})
             .element__pagination
@@ -177,15 +106,15 @@ block content
             .element__dropdown-open.element-small
                 +dropdown({type: 'room', items: dropdownRoom, title: 'dropdown', defaultValue: 'Что предпочитаете', isOpen: true})
             .element__expandable-checkbox-list.element-small
-                +checkboxList('expandable checkbox list', additionList)
+                +checkboxList
             .element__expandable-checkbox-list-open.element-small
-                +checkboxList('expandable checkbox list', additionList, isOpen=true) 
+                +checkboxList({ isOpen: true })
         .elements__divide
         section.elements__item 
             .element__dropdown__guest-open
                 +dropdown({type: 'guest-open', items: dropdownGuests, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей', isOpen: true})
             .element__rich-checkbox-buttons
-                +richboxList('rich Checkbox Buttons', richboxList)
+                +richboxList
         .elements__divide
         section.elements__item
             .element__dropdown__guest-open
@@ -194,8 +123,7 @@ block content
                 +bulletList('bullet list', bulletArr)
         .elements__item
             .element__benefit.element-small
-                each item in benefitList
-                    +benefit(item)
+                +benefitBlock
         .elements__divide
         .elements__item.elements__item-join
             .element__review 

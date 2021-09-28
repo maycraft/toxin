@@ -1,0 +1,29 @@
+{
+    "title": "buttons",
+    "list": [
+        {
+            "type": "filled", 
+            "title": "click me"},
+        {
+            "type": "filled", 
+            "title": "click me", 
+            "className": "btn-focus"
+        },
+        {
+            "type": "outline", 
+            "title": "click me"},
+        {
+            "type": "outline", 
+            "title": "click me", 
+            "className": "btn-focus"
+        },
+        {
+            "type": "text", 
+            "title": "click me"},
+        {
+            "type": "text", 
+            "title": "click me", 
+            "className": "btn-focus"
+        }
+    ]
+}

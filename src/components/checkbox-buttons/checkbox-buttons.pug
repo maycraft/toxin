@@ -1,6 +1,9 @@
 include /components/checkbox/checkbox
 
-mixin checkboxButtons(title, items)
+mixin checkboxButtons(customConfig = {})
+    - const defaultConfig = require("@components/checkbox-buttons/checkbox-buttons.config.json");
+    - const mergedConfig = Object.assign({}, defaultConfig, customConfig);
+    - const { title, list: items } = mergedConfig;
     h3= title
     .checkbox-buttons__body
         each val in items

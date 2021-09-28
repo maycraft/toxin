@@ -18,5 +18,5 @@ import '@components/button/button';
 import '@components/pagination/pagination';
 import '@components/bullet-list/bullet-list';
 import '@components/feedback/feedback';
-import '@components/benefit/benefit';
+import '@components/benefit-block/benefit-block';
 import '@components/checkbox-list/checkbox-list';

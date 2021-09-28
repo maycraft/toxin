@@ -1,6 +1,10 @@
 include ../like/like.pug
 
-mixin likeBlock(title, likes)
+mixin likeBlock(customConfig = {})
+    - const defaultConfig = require("@components/like-block/like-block.config.json");
+    - const mergedConfig = Object.assign({}, defaultConfig, customConfig);
+    - const { title, list: likes } = mergedConfig;
+
     h3= title
     .like-block 
         each likeObj in likes 
