@@ -1,8 +1,16 @@
+@import '@scss/variables';
+
 .checkbox-buttons{
+
+    &__title {
+        background: $white;
+    }
     &__body {
         margin-top: 16px;
         display: flex;
         flex-direction: column;
+        background: $white;
+        max-width: 222px;
 
         label.checkbox {
             margin-bottom: 10px;

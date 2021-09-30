@@ -4,7 +4,7 @@ mixin checkboxButtons(customConfig = {})
     - const defaultConfig = require("@components/checkbox-buttons/checkbox-buttons.config.json");
     - const mergedConfig = Object.assign({}, defaultConfig, customConfig);
     - const { title, list: items } = mergedConfig;
-    h3= title
+    h3.checkbox-buttons__title= title
     .checkbox-buttons__body
         each val in items
             +checkbox(val)
