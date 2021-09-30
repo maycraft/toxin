@@ -1,0 +1,41 @@
+@import '@scss/variables';
+
+.search {
+    padding: 30px 0 70px;
+    display: grid;
+    grid-template-columns: 266px 1fr;
+    grid-gap: 60px;
+}
+
+.settings {
+    &__item-15 {
+        padding-bottom: 15px;
+    }
+    &__item-2 {
+        padding-bottom: 20px;
+    }
+    &__item-3 {
+        padding-bottom: 30px;
+    }
+    &__caption {
+        font-size: 12px;
+        line-height: 14px;
+        color: $dark50;
+        background: $white;
+        padding-top: 10px;
+    }
+}
+
+.rooms {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 12px;
+        padding-top: 20px;
+    }
+
+    &__pagination {
+        padding-top: 40px;
+        text-align: center;
+    }
+}
