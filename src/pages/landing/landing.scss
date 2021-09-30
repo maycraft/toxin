@@ -1,18 +1,5 @@
 @import '@scss/variables';
 
-.container {
-    max-width: 1190px;
-    min-width: 320px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    @media screen and (max-width: 380px){
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
 .content {
     background-image: url('../../img/slide-3.jpg');
     background-size: cover;
