@@ -2,7 +2,9 @@
 $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(139,164,249,0.25) 100%);
 
 .date-dropdown {
+    
     &-filter {
+        background: $white;
         border: 1px solid $dark25;
         border-radius: 4px;
         padding: 10px 0;
@@ -13,6 +15,7 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
     
         &__title {
             margin-bottom: 5px;
+            background: $white;
         }
         
         &__input {

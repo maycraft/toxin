@@ -6,7 +6,7 @@ let isOpen = false;
 const options = {
     classes: 'date-dropdown-datepicker',
     range: true,
-    multipleDatesSeparator: '-',
+    multipleDatesSeparator: ' - ',
     language: {
         monthsShort: [
             'янв',
@@ -35,15 +35,18 @@ const options = {
 };
 
 const $dateDropdownInputs = $('.date-dropdown__datepicker');
-$dateDropdownInputs.each(function () {
+$dateDropdownInputs.each(function (idx, ddInput) {
+    if (ddInput.classList.contains('date-dropdown-filter__input')) {
+        options.dateFormat = 'dd M';
+    }
     const idVal = $(this).attr('id');
     const dataType = $(this).data('type');
     if (dataType) {
         if (!options.onSelect) {
             options.onSelect = function (fd, date, inst) {
                 const $dateDropdown = inst.$el.closest('.date-dropdown');
-                $dateDropdown.find('.date-dropdown__input-start').val(fd.split('-')[0]);
-                $dateDropdown.find('.date-dropdown__input-end').val(fd.split('-')[1]);
+                $dateDropdown.find('.date-dropdown__input-start').val(fd.split(' - ')[0]);
+                $dateDropdown.find('.date-dropdown__input-end').val(fd.split(' - ')[1]);
             };
         }
     }
