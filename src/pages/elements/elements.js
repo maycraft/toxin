@@ -20,3 +20,6 @@ import '@components/bullet-list/bullet-list';
 import '@components/feedback/feedback';
 import '@components/benefit-block/benefit-block';
 import '@components/checkbox-list/checkbox-list';
+
+const $filterInst = $('#filter').data('datepicker');
+$filterInst.selectDate([new Date('2019-08-19'), new Date('2019-08-23')]);
