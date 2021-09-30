@@ -17,7 +17,7 @@ mixin formRegistration(customConfig = {})
                 +textfield({placeholder: 'Имя'})
             .form__subelement
                 +textfield({placeholder: 'Фамилия'})
-            +radioButtons('', radioButtonsData)
+            +radioButtons({title: '', list: radioButtonsData})
         .form__element
             +inputmasked('дата рождения')
         .form__element
