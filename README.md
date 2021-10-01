@@ -18,3 +18,4 @@
 3. [Cards](https://webcraftt.github.io/toxin/cards)
 4. [Headers & Footers](https://webcraftt.github.io/toxin/headers)
 5. [Landing](https://webcraftt.github.io/toxin/landing)
+6. [Search room](https://webcraftt.github.io/toxin/search-room)
