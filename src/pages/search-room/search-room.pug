@@ -1,0 +1,48 @@
+extends /layout/layout
+include /components/header/header
+include /components/footer/footer
+include /components/date-dropdown/date-dropdown
+include /components/dropdown/dropdown
+include /components/range/range
+include /components/checkbox-buttons/checkbox-buttons
+include /components/richbox-list/richbox-list
+include /components/checkbox-list/checkbox-list
+include /components/card-room/card-room
+include /components/pagination/pagination
+
+block variables
+    -
+        const title = 'Search room'
+        const data = require('@pages/search-room/search-room.config.json')
+        const { dpList, dpRoom, cardRooms } = data;
+
+block content
+    .container
+        +header
+    .container
+        .search
+            .search__settings.settings
+                .settings__item-2 
+                    +dateDropdown({id: 'filter', classes: 'filter', title_start: 'даты пребывания в отеле'})
+                .settings__item-3
+                    +dropdown({type: 'forms-reserv-guest', items: dpList, title: 'гости', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
+                .settings__item-3
+                    +range('диапазон цены', 0, 16000, 5000, 10000, 1000)
+                    p.settings__caption Стоимость за сутки пребывания в номере
+                .settings__item-3
+                    +checkboxButtons({title: 'правила дома'})
+                .settings__item-3
+                    +richboxList({title: 'доступность'})
+                .settings__item-15
+                    +dropdown({type: 'room', items: dpRoom, title: 'удобства номера', defaultValue: 'Что предпочитаете'})
+                .settings__item
+                    +checkboxList({title: 'дополнительные удобства'})
+            .search__rooms.rooms
+                h1.rooms__title Номера, которые мы для вас подобрали
+                .rooms__items
+                    each room in cardRooms
+                        +cardRoom(room)
+                .rooms__pagination
+                    +pagination
+    .container
+        +footer

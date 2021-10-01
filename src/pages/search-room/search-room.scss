@@ -1,0 +1,66 @@
+@import '@scss/variables';
+
+.search {
+    padding: 30px 0 70px;
+    display: grid;
+    grid-template-columns: 266px 1fr;
+    grid-gap: 60px;
+
+    @media screen and (max-width: 1200px){
+        grid-gap: 90px;
+    }
+    @media screen and (max-width: 992px){
+        grid-template-columns: 1fr;
+        grid-gap: 60px;
+    }
+}
+
+.settings {
+    &__item-15 {
+        padding-bottom: 15px;
+    }
+    &__item-2 {
+        padding-bottom: 20px;
+    }
+    &__item-3 {
+        padding-bottom: 30px;
+    }
+    &__caption {
+        font-size: 12px;
+        line-height: 14px;
+        color: $dark50;
+        background: $white;
+        padding-top: 10px;
+    }
+
+    @media screen and (max-width: 992px){
+        justify-self: center;
+        width: 500px;
+    }
+    @media screen and (max-width: 576px){
+        width: 100%;
+    }
+}
+
+.rooms {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 12px;
+        padding-top: 20px;
+
+        @media screen and (max-width: 992px) {
+            justify-content: center;
+        }
+    }
+    
+    &__pagination {
+        padding-top: 40px;
+        text-align: center;
+    }
+    &__title {
+        @media screen and (max-width: 992px) {
+            text-align: center;
+        }
+    }
+}

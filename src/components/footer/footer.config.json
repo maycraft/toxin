@@ -1,0 +1,66 @@
+{
+    "description": "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+    "menuList": [
+        { 
+            "title": "навигация", 
+            "items": [ 
+                {
+                    "text": "О нас", 
+                    "link": "/mock-address/change-me"
+                },
+                {
+                    "text": "Новости", 
+                    "link": "/mock-address/change-me"
+                },
+                {
+                    "text": "Служба поддержки", 
+                    "link": "/mock-address/change-me"
+                },
+                {
+                    "text": "Услуги", 
+                    "link": "/mock-address/change-me"
+                }
+            ] 
+        },
+        { 
+            "title": "о нас", 
+            "items": [ 
+                {
+                    "text": "О сервисе", 
+                    "link": "/mock-address/change-me"
+                },
+                {
+                    "text": "Наша команда", 
+                    "link": "/mock-address/change-me"
+                },
+                {
+                    "text": "Вакансии", 
+                    "link": "/mock-address/change-me"
+                },
+                {
+                    "text": "Инвесторы", 
+                    "link": "/mock-address/change-me"
+                }
+            ] 
+        },
+        { 
+            "title": "Служба поддержки", 
+            "items": [ 
+                {
+                    "text": "Соглашения", 
+                    "link": "/mock-address/change-me"
+                },
+                {
+                    "text": "Сообщества", 
+                    "link": "/mock-address/change-me"
+                },
+                {
+                    "text": "Связь с нами", 
+                    "link": "/mock-address/change-me"
+                }
+            ]
+        }
+    ],
+    "copyright": "Copyright © 2018 Toxin отель. Все права защищены.",
+    "isDesktop": true
+}

@@ -1,0 +1,199 @@
+{
+    "dpList": [
+        { 
+            "id": 1, 
+            "name": "взрослые", 
+            "wordForms": "", 
+            "defaultCount": 2
+        },
+        { 
+            "id": 2, 
+            "name": "дети", 
+            "wordForms": "", 
+            "defaultCount": 1
+        },
+        { 
+            "id": 3, 
+            "name": "младенцы", 
+            "wordForms": "младенец,младенца,младенцев",
+            "defaultCount": 1
+        }
+    ],
+    "dpRoom": [
+        {
+            "id": 1, 
+            "name": "спальни",
+            "wordForms": "спальня,спальни,спален",
+            "defaultCount": 2
+        },
+        {
+            "id": 2, 
+            "name": "кровати",
+            "wordForms": "кровать,кровати,кроватей",
+            "defaultCount": 2
+        },
+        {
+            "id": 3, 
+            "name": "ванные комнаты",
+            "wordForms": "ванная комната,ванные комнаты,ванных комнат"
+        }
+    ],
+    "cardRooms": [
+        {
+            "images": [
+                "room1.png", 
+                "room2.png", 
+                "room3.png", 
+                "room4.png" 
+            ], 
+            "number": 888, 
+            "cost": 9990, 
+            "feedbackCount": 145, 
+            "stars": 5, 
+            "isFancy": true
+        },
+        {
+            "images": [
+                "room2.png", 
+                "room3.png", 
+                "room4.png", 
+                "room5.png" 
+            ], 
+            "number": 840, 
+            "cost": 9990, 
+            "feedbackCount": 65, 
+            "stars": 4, 
+            "isFancy": false
+        },
+        {
+            "images": [
+                "room9.png", 
+                "room6.png", 
+                "room7.png", 
+                "room8.png" 
+            ], 
+            "number": 980, 
+            "cost": 8500, 
+            "feedbackCount": 35, 
+            "stars": 3, 
+            "isFancy": true
+        },
+        {
+            "images": [
+                "room10.png", 
+                "room8.png", 
+                "room9.png", 
+                "room11.png" 
+            ], 
+            "number": 856, 
+            "cost": 7300, 
+            "feedbackCount": 19, 
+            "stars": 5, 
+            "isFancy": false
+        },
+        {
+            "images": [
+                "room11.png", 
+                "room12.png", 
+                "room13.png", 
+                "room14.png" 
+            ], 
+            "number": 740, 
+            "cost": 6000, 
+            "feedbackCount": 44, 
+            "stars": 4, 
+            "isFancy": false
+        },
+        {
+            "images": [
+                "room12.png", 
+                "room13.png", 
+                "room14.png", 
+                "room15.png" 
+            ], 
+            "number": 982, 
+            "cost": 5800, 
+            "feedbackCount": 56, 
+            "stars": 3, 
+            "isFancy": false
+        },
+        {
+            "images": [
+                "room13.png", 
+                "room14.png", 
+                "room15.png", 
+                "room16.png" 
+            ], 
+            "number": 678, 
+            "cost": 5500, 
+            "feedbackCount": 45, 
+            "stars": 5, 
+            "isFancy": false
+        },
+        {
+            "images": [
+                "room14.png", 
+                "room15.png", 
+                "room16.png", 
+                "room17.png" 
+            ], 
+            "number": 450, 
+            "cost": 5300, 
+            "feedbackCount": 39, 
+            "stars": 4, 
+            "isFancy": false
+        },
+        {
+            "images": [
+                "room15.png", 
+                "room16.png", 
+                "room17.png", 
+                "room18.png" 
+            ], 
+            "number": 350, 
+            "cost": 5000, 
+            "feedbackCount": 77, 
+            "stars": 3, 
+            "isFancy": false
+        },
+        {
+            "images": [
+                "room16.png", 
+                "room17.png", 
+                "room18.png", 
+                "room1.png" 
+            ], 
+            "number": 666, 
+            "cost": 5000, 
+            "feedbackCount": 25, 
+            "stars": 5, 
+            "isFancy": false
+        },
+        {
+            "images": [
+                "room17.png", 
+                "room2.png", 
+                "room3.png", 
+                "room4.png" 
+            ], 
+            "number": 444, 
+            "cost": 5000, 
+            "feedbackCount": 15, 
+            "stars": 3, 
+            "isFancy": false
+        },
+        {
+            "images": [
+                "room18.png", 
+                "room5.png", 
+                "room6.png", 
+                "room7.png" 
+            ], 
+            "number": 352, 
+            "cost": 5000, 
+            "feedbackCount": 55, 
+            "stars": 3, 
+            "isFancy": false
+        }
+    ]
+}

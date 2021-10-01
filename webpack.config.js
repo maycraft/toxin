@@ -9,7 +9,7 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminOptipng = require('imagemin-optipng');
 
 const isDev = process.env.NODE_ENV === 'development';
-const pages = ['index', 'colors', 'elements', 'cards', 'headers', 'landing', 'search'];
+const pages = ['index', 'colors', 'elements', 'cards', 'headers', 'landing', 'search-room'];
 console.log(isDev);
 module.exports = {
     entry: {
@@ -19,7 +19,7 @@ module.exports = {
         cards: '@pages/cards/cards.js',
         headers: '@pages/headers/headers.js',
         landing: '@pages/landing/landing.js',
-        search: '@pages/search/search.js',
+        'search-room': '@pages/search-room/search-room.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -33,6 +33,7 @@ module.exports = {
         hot: true,
         open: true,
         openPage: 'toxin/',
+        host: '10.1.2.15',
         port: 3000,
     },
     module: {

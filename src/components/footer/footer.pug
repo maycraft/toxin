@@ -2,20 +2,21 @@ include /components/brand/brand.pug
 include /components/subscription-textfield/subscription-textfield.pug
 include /components/footer-menu/footer-menu.pug
 
-mixin footer(isDesktop=true)
+mixin footer(customConfig = {})
+    - const defaultConfig = require("@components/footer/footer.config.json");
+    - const mergedConfig = Object.assign({}, defaultConfig, customConfig);
+    - const { description, menuList, copyright, isDesktop } = mergedConfig;
+
     if isDesktop
         .footer
             .footer-descr
                 .footer-descr__item
                     +brand
-                    p.footer-descr__info Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                    p.footer-descr__info= description
                 .footer-descr__navigation.navigation
-                    .navigation__block.navigation__block-offset
-                        +footerMenu({ title: 'навигация', items: [ {text: 'О нас', link: '/mock-address/change-me'}, {text: 'Новости', link: '/mock-address/change-me'}, {text: 'Служба поддержки', link: '/mock-address/change-me'}, {text: 'Услуги', link: '/mock-address/change-me'}, ] })
-                    .navigation__block.navigation__block-offset
-                        +footerMenu({ title: 'о нас', items: [ {text: 'О сервисе', link: '/mock-address/change-me'}, {text: 'Наша команда', link: '/mock-address/change-me'}, {text: 'Вакансии', link: '/mock-address/change-me'}, {text: 'Инвесторы', link: '/mock-address/change-me'}, ] })
-                    .navigation__block.navigation__block-offset 
-                        +footerMenu({ title: 'Служба поддержки', items: [ {text: 'Соглашения', link: '/mock-address/change-me'}, {text: 'Сообщества', link: '/mock-address/change-me'}, {text: 'Связь с нами', link: '/mock-address/change-me'}, ] })
+                    each menu in menuList
+                        .navigation__block.navigation__block-offset
+                            +footerMenu(menu)
                 .footer-descr__item.footer-descr__item-offset.subscribe 
                     h3.subscribe__title Подписка
                     p.footer-descr__info Получайте специальные предложения и новости сервиса
@@ -23,7 +24,7 @@ mixin footer(isDesktop=true)
             .footer__logo
                 +brand
             .footer-copyright 
-                .footer-copyright__text Copyright © 2018 Toxin отель. Все права защищены.
+                .footer-copyright__text= copyright
                 .footer-copyright__social.social 
                     ul.social__items 
                         li.social__item.social__item-twitter
@@ -34,7 +35,7 @@ mixin footer(isDesktop=true)
             .footer-small__logo
                 +brand
             .footer-small-copyright 
-                .footer-small__copyright__text Copyright © 2018 Toxin отель. Все права защищены.
+                .footer-small__copyright__text= copyright
                 .footer-small__social.social 
                     ul.social__items 
                         li.social__item.social__item-twitter

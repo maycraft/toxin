@@ -1,7 +1,7 @@
 @import '@scss/variables';
 
 .pagination{
-    display: inline;
+    display: inline-block;
     &__nav{
         display: inline-flex;
     }
@@ -42,8 +42,8 @@
     &__descr {
         @extend %font14-24;
         color: $dark75;
-        margin-top: 1rem;
-        padding-left: 5px;
+        margin-top: 7px;
+        text-align: left;
     }
     &__title {
         margin-bottom: 16px;

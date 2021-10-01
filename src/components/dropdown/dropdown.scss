@@ -5,6 +5,7 @@
     padding: 9px 12px;
     border: 1px solid $dark25;
     border-radius: 3px 3px 0 0;
+    background: $white;
     &-menu {
         height: auto;
     }
@@ -45,9 +46,10 @@
     &-title {
         @extend %font12-15;
         font-weight: bold;
-        display: inline-block;
+        display: block;
         margin-bottom: 5px;
         color: $dark;
+        background: $white;
     }
     &-button {
         display: flex;

@@ -5,7 +5,7 @@ mixin richboxList(customConfig = {})
     - const mergedConfig = Object.assign({}, defaultConfig, customConfig);
     - const { title, list: items } = mergedConfig;
 
-    h3= title
+    h3.richbox-list__title= title
     .richbox-list__body
         each val in items
             +checkbox(val)

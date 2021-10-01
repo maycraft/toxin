@@ -1,19 +1,30 @@
 @import '@scss/variables';
 
-.richbox-list__body {
-    display: flex;
-    flex-direction: column;
-    margin-top: 16px;
+.richbox-list {
+    &__title {
+        background: $white;
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+        background: $white;
 
-    .checkbox {
-        margin-bottom: 10px;
+        .checkbox {
+            margin-bottom: 10px;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
-        &__body {
-            display: inline-block;
-            max-width: 225px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &__title {
+                background: $white;
+            }
+
+            &__body {
+                display: inline-block;
+                max-width: 225px;
+                padding-top: 2px;
+            }
         }
     }
 }

@@ -1,7 +1,8 @@
 @import '@scss/variables';
 
 .range {
-    height: 46px;
+    height: 47px;
+    background: $white;
     &__slider {
         background: $white;
         border: 1px solid $dark25;
