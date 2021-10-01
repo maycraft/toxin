@@ -1,5 +1,5 @@
 import '@scss/main.scss';
-import './search.scss';
+import './search-room.scss';
 import '@components/header/header';
 import '@components/footer/footer';
 import '@components/date-dropdown/date-dropdown';
