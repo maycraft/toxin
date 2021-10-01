@@ -33,6 +33,7 @@ module.exports = {
         hot: true,
         open: true,
         openPage: 'toxin/',
+        host: '10.1.2.15',
         port: 3000,
     },
     module: {
