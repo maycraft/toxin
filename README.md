@@ -13,9 +13,9 @@
 
 #### Посмотреть сайт:
 
-1. [Colors & Type](https://webcraftt.github.io/toxin/colors)
-2. [Form Elements](https://webcraftt.github.io/toxin/elements)
-3. [Cards](https://webcraftt.github.io/toxin/cards)
-4. [Headers & Footers](https://webcraftt.github.io/toxin/headers)
-5. [Landing](https://webcraftt.github.io/toxin/landing)
-6. [Search room](https://webcraftt.github.io/toxin/search-room)
+1. [Colors & Type](https://maycraft.github.io/toxin/colors)
+2. [Form Elements](https://maycraft.github.io/toxin/elements)
+3. [Cards](https://maycraft.github.io/toxin/cards)
+4. [Headers & Footers](https://maycraft.github.io/toxin/headers)
+5. [Landing](https://maycraft.github.io/toxin/landing)
+6. [Search room](https://maycraft.github.io/toxin/search-room)
