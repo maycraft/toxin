@@ -9,7 +9,16 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminOptipng = require('imagemin-optipng');
 
 const isDev = process.env.NODE_ENV === 'development';
-const pages = ['index', 'colors', 'elements', 'cards', 'headers', 'landing', 'search-room'];
+const pages = [
+    'index',
+    'colors',
+    'elements',
+    'cards',
+    'headers',
+    'landing',
+    'search-room',
+    'room-details',
+];
 console.log(isDev);
 module.exports = {
     entry: {
@@ -20,6 +29,7 @@ module.exports = {
         headers: '@pages/headers/headers.js',
         landing: '@pages/landing/landing.js',
         'search-room': '@pages/search-room/search-room.js',
+        'room-details': '@pages/room-details/room-details.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
