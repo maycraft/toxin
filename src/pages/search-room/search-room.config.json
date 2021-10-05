@@ -41,10 +41,10 @@
     "cardRooms": [
         {
             "images": [
-                "room1.png", 
-                "room2.png", 
-                "room3.png", 
-                "room4.png" 
+                "room1.jpg", 
+                "room2.jpg", 
+                "room3.jpg", 
+                "room4.jpg" 
             ], 
             "number": 888, 
             "cost": 9990, 
@@ -54,10 +54,10 @@
         },
         {
             "images": [
-                "room2.png", 
-                "room3.png", 
-                "room4.png", 
-                "room5.png" 
+                "room2.jpg", 
+                "room3.jpg", 
+                "room4.jpg", 
+                "room5.jpg" 
             ], 
             "number": 840, 
             "cost": 9990, 
@@ -67,10 +67,10 @@
         },
         {
             "images": [
-                "room9.png", 
-                "room6.png", 
-                "room7.png", 
-                "room8.png" 
+                "room9.jpg", 
+                "room6.jpg", 
+                "room7.jpg", 
+                "room8.jpg" 
             ], 
             "number": 980, 
             "cost": 8500, 
@@ -80,10 +80,10 @@
         },
         {
             "images": [
-                "room10.png", 
-                "room8.png", 
-                "room9.png", 
-                "room11.png" 
+                "room10.jpg", 
+                "room8.jpg", 
+                "room9.jpg", 
+                "room11.jpg" 
             ], 
             "number": 856, 
             "cost": 7300, 
@@ -93,10 +93,10 @@
         },
         {
             "images": [
-                "room11.png", 
-                "room12.png", 
-                "room13.png", 
-                "room14.png" 
+                "room11.jpg", 
+                "room12.jpg", 
+                "room13.jpg", 
+                "room14.jpg" 
             ], 
             "number": 740, 
             "cost": 6000, 
@@ -106,10 +106,10 @@
         },
         {
             "images": [
-                "room12.png", 
-                "room13.png", 
-                "room14.png", 
-                "room15.png" 
+                "room12.jpg", 
+                "room13.jpg", 
+                "room14.jpg", 
+                "room15.jpg" 
             ], 
             "number": 982, 
             "cost": 5800, 
@@ -119,10 +119,10 @@
         },
         {
             "images": [
-                "room13.png", 
-                "room14.png", 
-                "room15.png", 
-                "room16.png" 
+                "room13.jpg", 
+                "room14.jpg", 
+                "room15.jpg", 
+                "room16.jpg" 
             ], 
             "number": 678, 
             "cost": 5500, 
@@ -132,10 +132,10 @@
         },
         {
             "images": [
-                "room14.png", 
-                "room15.png", 
-                "room16.png", 
-                "room17.png" 
+                "room14.jpg", 
+                "room15.jpg", 
+                "room16.jpg", 
+                "room17.jpg" 
             ], 
             "number": 450, 
             "cost": 5300, 
@@ -145,10 +145,10 @@
         },
         {
             "images": [
-                "room15.png", 
-                "room16.png", 
-                "room17.png", 
-                "room18.png" 
+                "room15.jpg", 
+                "room16.jpg", 
+                "room17.jpg", 
+                "room18.jpg" 
             ], 
             "number": 350, 
             "cost": 5000, 
@@ -158,10 +158,10 @@
         },
         {
             "images": [
-                "room16.png", 
-                "room17.png", 
-                "room18.png", 
-                "room1.png" 
+                "room16.jpg", 
+                "room17.jpg", 
+                "room18.jpg", 
+                "room1.jpg" 
             ], 
             "number": 666, 
             "cost": 5000, 
@@ -171,10 +171,10 @@
         },
         {
             "images": [
-                "room17.png", 
-                "room2.png", 
-                "room3.png", 
-                "room4.png" 
+                "room17.jpg", 
+                "room2.jpg", 
+                "room3.jpg", 
+                "room4.jpg" 
             ], 
             "number": 444, 
             "cost": 5000, 
@@ -184,10 +184,10 @@
         },
         {
             "images": [
-                "room18.png", 
-                "room5.png", 
-                "room6.png", 
-                "room7.png" 
+                "room18.jpg", 
+                "room5.jpg", 
+                "room6.jpg", 
+                "room7.jpg" 
             ], 
             "number": 352, 
             "cost": 5000, 
