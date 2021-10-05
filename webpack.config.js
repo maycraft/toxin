@@ -6,7 +6,6 @@ const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require('imagemin-mozjpeg');
-const imageminOptipng = require('imagemin-optipng');
 
 const isDev = process.env.NODE_ENV === 'development';
 const pages = [
@@ -113,13 +112,14 @@ module.exports = {
         new ImageminPlugin({
             disable: isDev,
             test: /\.(jpe?g|png|gif|svg)$/i,
-            jpegtran: null,
+            pngquant: {
+                quality: '50-70',
+            },
             plugins: [
                 imageminMozjpeg({
                     quality: 70,
                     progressive: true,
                 }),
-                imageminOptipng(),
             ],
         }),
         ...pages.map(
