@@ -1,0 +1,19 @@
+@import '@scss/variables';
+
+.feedback-block {
+    &__item {
+        margin-top: 2rem;
+    }
+
+    &__descr {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__count {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        color: $dark50;
+    }
+}

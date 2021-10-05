@@ -1,0 +1,16 @@
+include /components/feedback/feedback
+
+mixin feedbackBlock(customConfig = {})
+    -
+        const defaultConfig = require("@components/feedback-block/feedback-block.config.json");
+        const mergedConfig = Object.assign({}, defaultConfig, customConfig);
+        const { title, list: feedbackList } = mergedConfig;
+
+    .feedback-block
+        .feedback-block__descr
+            if title
+                h3.feedback-block__title= title
+            .feedback-block__count #{ feedbackList.length } отзывов
+        each item in feedbackList
+            .feedback-block__item
+                +feedback(item)
