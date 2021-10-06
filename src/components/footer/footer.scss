@@ -3,6 +3,16 @@
 .footer {
     background-color: $white;
 
+    &__container {
+        max-width: 1190px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    &__body {
+        box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    }
+
     &-small {
         margin: auto;
         background-color: $white;
@@ -31,7 +41,6 @@
 
     &-descr {
         padding: 100px 0;
-        box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
         display: flex;
         flex-wrap: wrap;
 
@@ -86,8 +95,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 25px 0;
-        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        padding: 23px 0;
 
         @media screen and (max-width: 768px ){
             justify-content: center;
@@ -104,6 +112,10 @@
             @media screen and (max-width: 768px ){
                 margin: 20px 0 25px;
             }
+        }
+
+        &__body {
+            box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
         }
     }
 }
