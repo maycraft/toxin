@@ -1,6 +1,8 @@
 @import '@scss/variables';
 
 .feedback-block {
+    background: $white;
+
     &__item {
         margin-top: 2rem;
     }
