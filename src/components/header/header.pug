@@ -6,26 +6,28 @@ mixin header(customConfig = {})
     - const data = Object.assign({}, defaultConfit, customConfig);
     - const { menu: items, buttons, login } = data;
     header.header
-        +brand
-        nav.header__navbar
-            button.header__burmenu.burmenu
-                i.burmenu__line 
-                i.burmenu__line 
-                i.burmenu__line
-            .header__menu
-                ul.header-menu
-                    each item in items
-                        - let className = "header-menu__item";
-                        - const { title, link, active, multiple } = item;
-                        - className += active ? " header-menu__item-active" : "";
-                        - className += multiple ? " header-menu__item-multiple " : "";
-                        li(class=className)
-                            a.header-menu__link(href=link)= title
-                            if (multiple)
-                                i.material-icons expand_more
-                if login
-                    .header__login= login
-                else
-                    each btnConfig in buttons
-                        .header__btn
-                            +btn(btnConfig)
+        .header__container
+            .header__body
+                +brand
+                nav.header__navbar
+                    button.header__burmenu.burmenu
+                        i.burmenu__line 
+                        i.burmenu__line 
+                        i.burmenu__line
+                    .header__menu
+                        ul.header-menu
+                            each item in items
+                                - let className = "header-menu__item";
+                                - const { title, link, active, multiple } = item;
+                                - className += active ? " header-menu__item-active" : "";
+                                - className += multiple ? " header-menu__item-multiple " : "";
+                                li(class=className)
+                                    a.header-menu__link(href=link)= title
+                                    if (multiple)
+                                        i.material-icons expand_more
+                        if login
+                            .header__login= login
+                        else
+                            each btnConfig in buttons
+                                .header__btn
+                                    +btn(btnConfig)

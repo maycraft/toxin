@@ -1,13 +1,21 @@
 @import '@scss/variables';
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
     max-height: 70px;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     
+    &__container {
+        max-width: 1190px;
+        margin: 0 auto;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
     .header__menu.show {
         display: flex;
     }
