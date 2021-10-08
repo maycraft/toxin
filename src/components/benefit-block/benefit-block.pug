@@ -6,6 +6,6 @@ mixin benefitBlock(customConfig = {})
     - const { title, list: benefitList } = mergedConfig;
     .benefit-block
         if title
-            h3.benefit-block__title= title
+            h2.benefit-block__title= title
         each item in benefitList
             +benefit(item)
