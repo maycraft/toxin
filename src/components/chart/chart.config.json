@@ -1,0 +1,33 @@
+{
+    "totalCount": 260,
+    "pieces": [
+        {
+            "title": "Разочарован",
+            "percent": 0,
+            "colorId": "gradientBlack",
+            "colorStart": "#919191",
+            "colorEnd": "#3D4975"
+        },
+        {
+            "title": "Удовлетворительно",
+            "percent": 25,
+            "colorId": "gradientPurple",
+            "colorStart": "#BC9CFF",
+            "colorEnd": "#8BA4F9"
+        },
+        {
+            "title": "Хорошо",
+            "percent": 25,
+            "colorId": "gradientGreen",
+            "colorStart": "#6FCF97",
+            "colorEnd": "#66D2EA"
+        },
+        {
+            "title": "Великолепно",
+            "percent": 50,
+            "colorId": "gradientYellow",
+            "colorStart": "#FFE39C",
+            "colorEnd": "#FFBA9C" 
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+@import '@scss/variables';
+
+.chart {
+    max-width: 120px;
+    max-height: 120px;
+    &__unit {
+        fill: none;
+        stroke-width: 1;
+    }
+    &__text {
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 16px;
+        fill: $purple;
+        transform: translateY(0.5em);
+    }
+    &__number {
+        font-size: .4em;
+        line-height: 29px;
+        font-weight: bold;
+        text-anchor: middle;
+        transform: translateY(-1.3em);
+    }
+    &__label {
+        font-size: .2em;
+        line-height: 15px;
+        font-weight: bold;
+        text-anchor: middle;
+        text-transform: uppercase;
+        transform: translateY(-0.95em);
+    }
+}
+
+.legend {
+    max-width: 160px;
+    max-height: 90px;
+    margin-top: auto;
+    margin-bottom: 3px;
+    &__item {
+        @extend %font14-24;
+        color: $dark75;
+        position: relative;
+        padding-left: 1.5rem;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        &:nth-child(1)::before {
+            background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+        }
+        &:nth-child(2)::before {
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        }
+        &:nth-child(3)::before {
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        }
+        &:nth-child(4)::before {
+            background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+        }
+    }
+}
