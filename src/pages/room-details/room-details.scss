@@ -1,0 +1,106 @@
+@import '@scss/variables';
+
+.detail {
+    background: $white;
+
+    &__images {
+        display: grid;
+        grid-template-columns: 1fr 30.25%;
+        grid-template-rows: repeat(2, 242.5px);
+        max-height: 485px;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+
+        &-main {
+            grid-row: span 2;
+            object-fit: cover;
+            order: -1;
+            cursor: default;
+        }
+    }
+}
+
+.descr {
+    padding: 70px 0;
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        margin-bottom: 3rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        &-offset {
+            margin-left: 2rem;
+        }
+    }
+
+    &__common {
+        width: 62%;
+        max-width: 710px;
+    }
+
+    &__reserv {
+        width: 33%;
+        max-width: 380px;
+    }
+
+    &__about {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        width: 41%;
+        max-width: 290px;
+    }
+
+    &__impress {
+        height: 170px;
+        width: 44%;
+        max-width: 310px;
+        margin-right: 40px;
+        position: relative;
+    }
+
+    &__extra {
+        display: flex;
+        justify-content: space-between;
+        max-height: 160px;
+    }
+}
+
+.impress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 311px;
+    max-height: 121px;
+
+    &__title {
+        margin-bottom: 2rem;
+    }
+}
+
+.cancel {
+    max-width: 340px;
+    margin-right: 10px;
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__info {
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark75;
+    }
+}
