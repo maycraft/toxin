@@ -35,6 +35,10 @@
     max-height: 90px;
     margin-top: auto;
     margin-bottom: 3px;
+
+    @media screen and(max-width: 1024px){
+        margin-top: 2rem;
+    }
     &__item {
         @extend %font14-24;
         color: $dark75;

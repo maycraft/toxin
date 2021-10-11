@@ -15,6 +15,12 @@
         justify-content: space-between;
         align-items: center;
         padding: 15px;
+        max-height: 70px;
+        position: relative;
+    }
+
+    &__navbar {
+        position: relative;
     }
 
     .header__menu.show {
@@ -89,7 +95,6 @@
         border: none;
         cursor: pointer;
         display: none;
-        margin-top: 10px;
 
         &:focus {
             outline: none;
@@ -121,11 +126,14 @@
             align-items: center;
             padding: 20px;
             background: $white;
-            position: relative;
+            position: absolute;
+            top: 30px;
+            right: 0px;
             z-index: 100;
 
             @media screen and (max-width: 576px){
                 padding: 5px;
+                padding-top: 20px;
             }
         }
 
