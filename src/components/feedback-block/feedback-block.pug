@@ -10,7 +10,7 @@ mixin feedbackBlock(customConfig = {})
         .feedback-block__descr
             if title
                 h2.feedback-block__title= title
-            .feedback-block__count #{ feedbackList.length } отзывов
+            .feedback-block__count #{ feedbackList.length } отзывa
         each item in feedbackList
             .feedback-block__item
                 +feedback(item)

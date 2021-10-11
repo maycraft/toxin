@@ -10,7 +10,7 @@
 
     &__element {
         box-sizing: border-box;
-        margin-bottom: 20px;
+        margin-bottom: 21px;
     }
     &__subelement {
         box-sizing: border-box;
@@ -65,9 +65,10 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        @extend %font14-24;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
         color: $dark75;
-        margin-bottom: 10px;
+        margin-bottom: 16px;
     }
     &__item {
         @extend %font14-18;
