@@ -1,0 +1,11 @@
+@import '@scss/variables';
+
+.benefit-block {
+    background: $white;
+}
+
+.benefit {
+    &:last-child {
+        padding-bottom: 0;
+    }
+}

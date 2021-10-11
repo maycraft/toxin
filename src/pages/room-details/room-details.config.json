@@ -1,0 +1,26 @@
+{
+    "benefitData": {
+        "title": "Сведения о номере",
+        "list": [
+            {            
+                "icon": "insert_emoticon",
+                "title": "Комфорт",
+                "descr": "Шумопоглощающие стены",
+                "isBordered": true
+            },
+            {
+                "icon": "location_city",
+                "title": "Удобство",
+                "descr": "Окно в каждой из спален",
+                "isBordered": true
+            },
+            {
+                "icon": "whatshot",
+                "title": "Уют",
+                "descr": "Номер оснащён камином",
+                "isBordered": false
+            }
+        ]
+    },
+    "bulletList": ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
+}

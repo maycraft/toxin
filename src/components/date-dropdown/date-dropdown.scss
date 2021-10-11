@@ -2,6 +2,9 @@
 $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(139,164,249,0.25) 100%);
 
 .date-dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     
     &-filter {
         background: $white;
@@ -44,15 +47,17 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
             color: $purple;
         }
     }
-    display: flex;
 
     &__title {
+
         margin-bottom: 5px;
     }
     &__part {
         cursor: pointer;
         &:first-child {
-            margin-right: 2rem;
+            @media screen and(max-width: 1024px){
+                margin-bottom: 2rem;
+            }
         }
     }
     &-block {
@@ -62,6 +67,13 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
         border: 1px solid $dark25;
         border-radius: 4px;
         padding: 9px 9px 9px 0;
+
+        @media screen and(max-width: 1024px){
+            max-width: none;
+        }
+        @media screen and(max-width: 768px){
+            max-width: 15rem;
+        }
     }
     &__input {
         font-family: Montserrat, Arial, sans-serif;
@@ -73,6 +85,14 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
         max-width: 100px;
         padding-left: 15px;
         cursor: pointer;
+        
+        @media screen and(max-width: 1024px){
+            max-width: 100%;
+        }
+
+        @media screen and(max-width:768px){
+            max-width: 100px;
+        }
     }
 } 
 

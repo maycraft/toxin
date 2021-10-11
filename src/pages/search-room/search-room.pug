@@ -17,8 +17,7 @@ block variables
         const { dpList, dpRoom, cardRooms } = data;
 
 block content
-    .container
-        +header
+    +header
     .container
         .search
             .search__settings.settings
@@ -44,5 +43,4 @@ block content
                         +cardRoom(room)
                 .rooms__pagination
                     +pagination
-    .container
-        +footer
+    +footer

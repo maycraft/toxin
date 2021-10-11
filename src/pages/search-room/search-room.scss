@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 266px 1fr;
     grid-gap: 60px;
+    background: $white;
 
     @media screen and (max-width: 1200px){
         grid-gap: 90px;

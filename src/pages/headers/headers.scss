@@ -1,13 +1,12 @@
 @import '@scss/variables';
 
 .wrapper {
-    background: #F4F4F6;
+    background: #E5E5E5;
 }
 
 .headers {
     &__block {
-        padding: 28px 15px 140px;
-        max-width: 1190px;
+        padding: 28px 0 140px;
         margin: auto;
     }
     &__item {
@@ -16,12 +15,12 @@
 
         &-dark {
             @media screen and (max-width: 960px ){
-                background: #F4F4F6;
+                background: #E5E5E5;
             }
         }
         
         &-small {
-            background: #F4F4F6;
+            background: #E5E5E5;
         }
     }
 

@@ -9,27 +9,31 @@ mixin footer(customConfig = {})
 
     if isDesktop
         .footer
-            .footer-descr
-                .footer-descr__item
-                    +brand
-                    p.footer-descr__info= description
-                .footer-descr__navigation.navigation
-                    each menu in menuList
-                        .navigation__block.navigation__block-offset
-                            +footerMenu(menu)
-                .footer-descr__item.footer-descr__item-offset.subscribe 
-                    h3.subscribe__title Подписка
-                    p.footer-descr__info Получайте специальные предложения и новости сервиса
-                    +subscriptionTextfield
-            .footer__logo
-                +brand
-            .footer-copyright 
-                .footer-copyright__text= copyright
-                .footer-copyright__social.social 
-                    ul.social__items 
-                        li.social__item.social__item-twitter
-                        li.social__item.social__item-facebook
-                        li.social__item.social__item-instagram
+            .footer__body
+                .footer__container
+                    .footer-descr
+                        .footer-descr__item
+                            +brand
+                            p.footer-descr__info= description
+                        .footer-descr__navigation.navigation
+                            each menu in menuList
+                                .navigation__block.navigation__block-offset
+                                    +footerMenu(menu)
+                        .footer-descr__item.footer-descr__item-offset.subscribe 
+                            h3.subscribe__title Подписка
+                            p.footer-descr__info Получайте специальные предложения и новости сервиса
+                            +subscriptionTextfield
+                    .footer__logo
+                        +brand
+            .footer-copyright__body 
+                .footer__container
+                    .footer-copyright 
+                        .footer-copyright__text= copyright
+                        .footer-copyright__social.social 
+                            ul.social__items 
+                                li.social__item.social__item-twitter
+                                li.social__item.social__item-facebook
+                                li.social__item.social__item-instagram
     else
         .footer-small
             .footer-small__logo

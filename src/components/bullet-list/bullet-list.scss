@@ -3,6 +3,14 @@
 .bullet-list {
     max-width: 29.2rem;
     padding-right: 3rem;
+    background: $white;
+
+    @media screen and (max-width: 1024px){
+        padding-right: 2rem;
+    }
+    @media screen and (max-width: 768px){
+        padding-right: 1.3rem;
+    }
 
     &__title {
         margin-bottom: 11px;
