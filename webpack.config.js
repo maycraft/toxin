@@ -17,6 +17,8 @@ const pages = [
     'landing',
     'search-room',
     'room-details',
+    'registration',
+    'login',
 ];
 console.log(isDev);
 module.exports = {
@@ -29,6 +31,8 @@ module.exports = {
         landing: '@pages/landing/landing.js',
         'search-room': '@pages/search-room/search-room.js',
         'room-details': '@pages/room-details/room-details.js',
+        registration: '@pages/registration/registration.js',
+        login: '@pages/login/login.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

@@ -1,0 +1,15 @@
+extends /layout/layout
+include /components/header/header
+include /components/footer/footer
+include /components/form-enter/form-enter
+
+block variables
+    -
+        const title = 'Log in'
+
+block content
+    +header
+    main.registration__content
+        .registration__container
+            +formEnter
+    +footer
