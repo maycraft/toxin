@@ -9,7 +9,7 @@
 
     &__item {
         // column-gap: 2rem;
-        margin-bottom: 3rem;
+        margin-bottom: 28px;
 
         &:nth-child(odd) {
             margin-right: 2rem;
@@ -19,4 +19,8 @@
             margin-bottom: 0;
         }
     }
+}
+.buttons__item {
+    max-width: 99px;
+    max-height: 44px;
 }

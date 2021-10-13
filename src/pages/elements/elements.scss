@@ -1,9 +1,9 @@
 .elements {
     padding: 2.2% 9.75%;
     display: grid;
-    grid-template-columns: 320px 126px 320px 73px 320px;
+    grid-template-columns: 320px 127px 320px 73px 320px;
     grid-template-rows: 627px 586px 158px;
-    row-gap: 100px;
+    row-gap: 102px;
     &__item {
         &-join {
             grid-column: span 3;
@@ -30,8 +30,8 @@
         &__radio__buttons {
             height: 55px;
         }
-        &__dropdown__guest-open {
-            margin-bottom: 260px;
+        &__dropdownguest-open {
+            margin-bottom: 258px;
         }
     }
     .mb-2 {
@@ -42,5 +42,8 @@
     }
     .mb-4 {
         margin-bottom: 4rem;
+    }
+    .mb-45 {
+        margin-bottom: 4.5rem;
     }
 }

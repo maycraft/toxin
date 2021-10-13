@@ -5,7 +5,7 @@ mixin likeBlock(customConfig = {})
     - const mergedConfig = Object.assign({}, defaultConfig, customConfig);
     - const { title, list: likes } = mergedConfig;
 
-    h3= title
+    h3.like-block__title= title
     .like-block 
         each likeObj in likes 
             +like(likeObj)

@@ -11,11 +11,12 @@
         },
         {
             "type": "outline", 
-            "title": "click me"},
+            "title": "click me",
+            "className": "buttons__item"        },
         {
             "type": "outline", 
-            "title": "click me", 
-            "className": "btn-focus"
+            "title": "click me",
+            "className": "btn-focus buttons__item"
         },
         {
             "type": "text", 

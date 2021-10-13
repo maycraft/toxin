@@ -84,7 +84,7 @@ block content
                 +checkboxButtons
             .element__radio__buttons.mb-4
                 +radioButtons
-            .element__toggle.mb-4
+            .element__toggle.mb-45
                 +toggleButtons
             .element__like-button.mb-4
                 +likeBlock
@@ -111,13 +111,13 @@ block content
                 +checkboxList({ isOpen: true })
         .elements__divide
         section.elements__item 
-            .element__dropdown__guest-open
+            .element__dropdownguest-open
                 +dropdown({type: 'guest-open', items: dropdownGuests, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей', isOpen: true})
             .element__rich-checkbox-buttons
                 +richboxList
         .elements__divide
         section.elements__item
-            .element__dropdown__guest-open
+            .element__dropdownguest-open
                 +dropdown({type: 'guest-full', items: dropdownGuestsFull, title: 'dropdown', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей', isOpen: 'true'})
             .element__bullet-list
                 +bulletList('bullet list', bulletArr)

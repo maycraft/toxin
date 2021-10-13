@@ -3,6 +3,8 @@
 .toggle-buttons {
     margin-top: 16px;
     .toggle {
-        margin-bottom: 10px; 
+        &:first-child {
+            margin-bottom: 15px; 
+        }
     }
 }
