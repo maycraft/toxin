@@ -3,31 +3,6 @@
 body {
     background-color: $grey;
 }
-.form {
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    padding: 40px 30px 30px 30px;
-    box-sizing: border-box;
-    background-color: $white;
-
-    &__element {
-        box-sizing: border-box;
-        // margin-bottom: 20px;
-    }
-    &__subelement {
-        box-sizing: border-box;
-        margin-bottom: 9px;
-    }
-    &__element-mt2 {
-        box-sizing: border-box;
-        margin-top: 20px;
-    }
-    &__element-mt3 {
-        box-sizing: border-box;
-        margin-top: 30px;
-    }
-}
 
 .cards {
     box-sizing: content-box;

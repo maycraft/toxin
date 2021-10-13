@@ -3,6 +3,7 @@ import './cards.scss';
 import '@components/form-search/form-search';
 import '@components/form-registration/form-registration';
 import '@components/form-reserv/form-reserv';
+import '@components/form-enter/form-enter';
 import '@components/date-dropdown/date-dropdown';
 import '@components/card-room/card-room';
 

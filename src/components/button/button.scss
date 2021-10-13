@@ -28,20 +28,26 @@ button.btn {
     }
 
     &.btn-outline {
-        color: $purple;
+        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to bottom, #BC9CFF, #8BA4F9) border-box;
+        color: $purple;        
+        border: 2px solid transparent;
+        border-radius: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: $purpleGradient;
-            border-radius: 2.4rem;
-            z-index: -1;
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: -2px;
+        //     left: -2px;
+        //     right: -2px;
+        //     bottom: -2px;
+        //     background: $purpleGradient;
+        //     border-radius: 2.2rem;
+        //     z-index: -1;
 
-        }
+        // }
         
         &.btn-focus.btn-outline::before {
             opacity: 0.5;
@@ -84,8 +90,8 @@ button.btn {
             width: 2rem;
             height: 2rem;
             position: absolute;
-            top: 1.4rem;
-            right: 2rem;
+            top: 1.3rem;
+            right: 1rem;
             background-image: url("./arrow_forward.svg");
             background-repeat: no-repeat;
         }

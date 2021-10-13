@@ -10,17 +10,17 @@ mixin formReserv(customConfig = {})
         const formatNum = new Intl.NumberFormat('ru-RU').format(cost);
 
     .form.form-reserv
-        .form__element
+        .form-reserv__element
             .form-reserv__appartment.appartment
                 .appartment__info
                     span.appartment__number № <b>#{ number }</b>
                     span.appartment__type= type
                 .appartment__cost <span>#{ formatNum }&#8381;</span> в сутки
-        .form__element
+        .form-reserv__element
             +dateDropdown({id: 'reservation', classes: 'reservation', type: 'double', title_start: 'прибытие', title_end: 'выезд'})
-        .form__element
+        .form-reserv__element
             +dropdown({type: 'forms-reserv-guest', items: dpData, title: 'гости', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
-        .form__element
+        .form-reserv__element
             .form-reserv__service.service 
                 .service__line 
                     p.service__item #{ formatNum }&#8381; X 4 суток
@@ -33,10 +33,10 @@ mixin formReserv(customConfig = {})
                     p.service__item Сбор за дополнительные услуги
                         span.info-sign i
                     span.service__cost 300&#8381;
-        .form__element-mt3
+        .form-reserv__element-mt3
             .form-reserv__total.total
                 p.total__text Итого
                 span.total__line
                 p.total__text #{ new Intl.NumberFormat('ru-RU').format(38081) }&#8381;
-        .form__element-mt2
+        .form-reserv__element-mt2
             +btn({type: 'big', title: 'забронировать'})

@@ -8,25 +8,25 @@ include /components/auth-info/auth-info.pug
 mixin formRegistration(customConfig = {})
     - const defaultConfig = require("@components/form-registration/form-registration.config.json");
     - const mergedConfig = Object.assign({}, defaultConfig, customConfig);
-    - const { title, list: radioButtonsData } = mergedConfig;
+    - const { title, list: radioButtonsData, btnText = "перейти к оплате" } = mergedConfig;
     .form.form-registration 
-        .form__element
+        .form-registration__element
             h1.form-registration__title= title
-        .form__element
-            .form__subelement
+        .form-registration__element-mb21
+            .form-registration__subelement
                 +textfield({placeholder: 'Имя'})
-            .form__subelement
+            .form-registration__subelement
                 +textfield({placeholder: 'Фамилия'})
             +radioButtons({title: '', list: radioButtonsData})
-        .form__element
+        .form-registration__element
             +inputmasked('дата рождения')
-        .form__element-mb25
-            .form__subelement
+        .form-registration__element-mb25
+            .form-registration__subelement
                 +textfield({title: 'данные для входа в сервис', placeholder: 'Email'})
-            .form__subelement
+            .form-registration__subelement
                 +textfield({placeholder: 'Пароль'})
             +toggle({text: 'Получать спецпредложения', name: 'offer'})
-        .form__element
-            +btn({type: 'big', title: 'перейти к оплате'})
-        .form__element-mt3
+        .form-registration__element-mb25
+            +btn({type: 'big', title: btnText})
+        .form-registration__element
             +authInfo('Уже есть аккаунт на Toxin', 'войти')

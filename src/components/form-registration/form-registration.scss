@@ -8,23 +8,23 @@
     box-sizing: border-box;
     background-color: $white;
 
-    &__element {
+    &-registration__element {
         box-sizing: border-box;
         margin-bottom: 20px;
+        
+        &:last-child {
+            margin-bottom: 0px;
+        }
     }
-    &__subelement {
+    &-registration__subelement {
         box-sizing: border-box;
-        margin-bottom: 9px;
+        margin-bottom: 10px;
     }
-    &__element-mt2 {
+    &-registration__element-mb21 {
         box-sizing: border-box;
-        margin-top: 20px;
+        margin-bottom: 21px;
     }
-    &__element-mt3 {
-        box-sizing: border-box;
-        margin-top: 30px;
-    }
-    &__element-mb25 {
-        margin-bottom: 25px;
+    &-registration__element-mb25 {
+        margin-bottom: 26px;
     }
 }

@@ -4,13 +4,13 @@ include /components/auth-info/auth-info.pug
 
 mixin formEnter(title)
     .form.form-enter
-        .form__element
+        .form-enter__element
             h1.form-enter= title
-        .form__element
-            .form__subelement
+        .form-enter__element
+            .form-enter__subelement
                 +textfield({placeholder: 'Email'})
             +textfield({placeholder: 'Пароль'})
-        .form__element
+        .form-enter__element
             +btn({type: 'big', title: 'войти'})
-        .form__element-mt3
+        .form-enter__element-mt3
             +authInfo('Нет аккаунта на Toxin?', 'создать')
