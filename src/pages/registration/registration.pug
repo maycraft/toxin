@@ -1,0 +1,15 @@
+extends /layout/layout
+include /components/header/header
+include /components/footer/footer
+include /components/form-registration/form-registration
+
+block variables
+    -
+        const title = 'Registration'
+
+block content
+    +header
+    main.registration__content
+        .registration__container
+            +formRegistration({btnText: 'зарегистрироваться'})
+    +footer
