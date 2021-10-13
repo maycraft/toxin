@@ -1,0 +1,17 @@
+@import '@scss/variables';
+
+.registration {
+    &__content {
+        height: 686px;
+        background-image: url('../../img/bg-login.jpg');
+        background-repeat: no-repeat;
+        background-position: 0% 50%;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__container {
+        max-width: 380px;
+    }
+}
