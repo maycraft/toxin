@@ -58,10 +58,13 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
     &__part {
         cursor: pointer;
         &:first-child {
-            margin-right: 1.5rem;
+            margin-right: 2rem;
 
             @media screen and(max-width: 1024px){
                 margin-bottom: 2rem;
+            }
+            @media screen and(max-width: 950px){
+                margin-right: 1.5rem;
             }
             @media screen and(max-width: 380px){
                 margin-right: 0;

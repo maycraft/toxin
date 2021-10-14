@@ -10,8 +10,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media screen and (max-width: 450px){
+            background-image: none;
+            background: $purple;
+        }
     }
     &__container {
+        width: 100%;
         max-width: 380px;
     }
 }
