@@ -1,0 +1,24 @@
+@import '@scss/variables';
+
+.login{
+    &__content {
+        height: 686px;
+        background-image: url('../../img/bg-login.jpg');
+        background-repeat: no-repeat;
+        background-position: 0% 50%;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 450px){
+            background-image: none;
+            background: $purple;
+            height: 445px;
+        }
+    }
+    &__container {
+        width: 100%;
+        max-width: 380px;
+    }
+}
