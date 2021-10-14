@@ -20,3 +20,5 @@
 5. [Landing](https://maycraft.github.io/toxin/landing)
 6. [Search room](https://maycraft.github.io/toxin/search-room)
 7. [Room details](https://maycraft.github.io/toxin/room-details)
+8. [Registration](https://maycraft.github.io/toxin/registration)
+9. [Sign in](https://maycraft.github.io/toxin/login)
