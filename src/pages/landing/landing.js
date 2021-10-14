@@ -15,7 +15,7 @@ const intervalID = setInterval(() => {
     i++;
 }, delay);
 
-if (window.innerWidth < 420) {
+if (window.innerWidth < 450) {
     clearInterval(intervalID);
     content.style.backgroundImage = 'none';
 }
