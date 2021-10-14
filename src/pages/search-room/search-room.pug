@@ -21,18 +21,18 @@ block content
     .container
         .search
             .search__settings.settings
-                .settings__item-2 
+                .settings__item
                     +dateDropdown({id: 'filter', classes: 'filter', title_start: 'даты пребывания в отеле'})
-                .settings__item-3
+                .settings__item
                     +dropdown({type: 'forms-reserv-guest', items: dpList, title: 'гости', defaultValue: 'Сколько гостей', isApply: true, common: 'гость,гостя,гостей'})
-                .settings__item-3
+                .settings__item
                     +range('диапазон цены', 0, 16000, 5000, 10000, 1000)
                     p.settings__caption Стоимость за сутки пребывания в номере
-                .settings__item-3
+                .settings__item
                     +checkboxButtons({title: 'правила дома'})
-                .settings__item-3
+                .settings__item
                     +richboxList({title: 'доступность'})
-                .settings__item-15
+                .settings__item
                     +dropdown({type: 'room', items: dpRoom, title: 'удобства номера', defaultValue: 'Что предпочитаете'})
                 .settings__item
                     +checkboxList({title: 'дополнительные удобства'})
