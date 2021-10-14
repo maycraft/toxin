@@ -3,14 +3,17 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
 
 .date-dropdown {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    
+    @media screen and(max-width: 1024px){
+        flex-wrap: wrap;
+    }
     
     &-filter {
         background: $white;
         border: 1px solid $dark25;
         border-radius: 4px;
-        padding: 10px 0;
+        padding: 9px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -55,9 +58,18 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
     &__part {
         cursor: pointer;
         &:first-child {
+            margin-right: 1.5rem;
+
             @media screen and(max-width: 1024px){
                 margin-bottom: 2rem;
             }
+            @media screen and(max-width: 380px){
+                margin-right: 0;
+            }
+        }
+
+        @media screen and(max-width: 380px) {
+            width: 100%;
         }
     }
     &-block {
@@ -67,12 +79,8 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
         border: 1px solid $dark25;
         border-radius: 4px;
         padding: 9px 9px 9px 0;
-
-        @media screen and(max-width: 1024px){
+        @media screen and(max-width: 380px) {
             max-width: none;
-        }
-        @media screen and(max-width: 768px){
-            max-width: 15rem;
         }
     }
     &__input {
@@ -85,13 +93,10 @@ $lightPurpleGradient: linear-gradient(180deg, rgba(188,156,255,0.25) 0%, rgba(13
         max-width: 100px;
         padding-left: 15px;
         cursor: pointer;
-        
-        @media screen and(max-width: 1024px){
-            max-width: 100%;
-        }
 
-        @media screen and(max-width:768px){
-            max-width: 100px;
+        @media screen and(max-width: 380px){
+            width: 100%;
+            max-width: none;
         }
     }
 } 
