@@ -1,6 +1,7 @@
 include ../button/button.pug
 
-mixin authInfo(text, btnTitle)
+mixin authInfo(options)
+    - const { text, title, link } = options;
     .auth-info 
         p.auth-info__text= text
-        +btn({type: 'outline', title: btnTitle, className: 'auth-info__btn'})
+        +btn({ title, type: 'outline', className: 'auth-info__btn', link})
