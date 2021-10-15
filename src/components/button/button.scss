@@ -1,8 +1,8 @@
 @import '@scss/variables';
 
-button.btn {
+.btn {
     @extend %font12-15;
-    padding: 1.4rem 1.85rem;
+    padding: 1.5rem 1.85rem;
     border: none;
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
@@ -26,15 +26,19 @@ button.btn {
             opacity: 0.5;
         }
     }
+    &__link {
+        text-align: center;
+        color: $white;
+    }
 
     &.btn-outline {
-        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to bottom, #BC9CFF, #8BA4F9) border-box;
+        // background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to bottom, #BC9CFF, #8BA4F9) border-box;
         color: $purple;        
-        border: 2px solid transparent;
-        border-radius: 22px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // border: 2px solid transparent;
+        // border-radius: 22px;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
 
         // &::before {
         //     content: "";
@@ -48,6 +52,22 @@ button.btn {
         //     z-index: -1;
 
         // }
+        &::before {
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            border-radius:22px; 
+            padding: 2px; 
+            background: $purpleGradient; 
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out; 
+            mask-composite: exclude; 
+        }
         
         &.btn-focus.btn-outline::before {
             opacity: 0.5;
@@ -102,5 +122,8 @@ button.btn {
     }
     &:active {
         transform: translateY(2px);
+    }
+    .btn__link {
+        color: $purple;
     }
 }

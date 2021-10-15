@@ -35,12 +35,14 @@
         {
             "type": "outline", 
             "title": "войти", 
-            "className": "header__btn-login"
+            "className": "btn-header",
+            "link": "https://maycraft.github.io/toxin/login"
         },
         {
             "type": "filled", 
             "title": "зарегистрироваться", 
-            "className": "header__btn-join"
+            "className": "btn-header",
+            "link": "https://maycraft.github.io/toxin/registration"
         }
     ],
     "login": ""

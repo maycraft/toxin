@@ -13,4 +13,4 @@ mixin formEnter(title)
         .form-enter__element
             +btn({type: 'big', title: 'войти'})
         .form-enter__element-mt3
-            +authInfo('Нет аккаунта на Toxin?', 'создать')
+            +authInfo({title: 'создать', text: 'Нет аккаунта на Toxin?'})

@@ -1,6 +1,6 @@
 mixin btn(options)
     -
-        const {type='filled', title='button', className=''} = options
+        const {type='filled', title='button', className='', link=''} = options
         let btnClassName = 'btn'
     case type
         when 'filled'
@@ -13,4 +13,7 @@ mixin btn(options)
             - btnClassName += " btn-big";
     -
         btnClassName += className ? ` ${className}` : ''
-    button(class=btnClassName)= title
+    if link
+        a.btn__link(href=link, class=btnClassName)= title
+    else
+        button(class=btnClassName)= title

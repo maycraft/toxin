@@ -29,4 +29,4 @@ mixin formRegistration(customConfig = {})
         .form-registration__element-mb25
             +btn({type: 'big', title: btnText})
         .form-registration__element
-            +authInfo('Уже есть аккаунт на Toxin', 'войти')
+            +authInfo({title: 'войти', text: 'Уже есть аккаунт на Toxin', link: "https://maycraft.github.io/toxin/login" })
