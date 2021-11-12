@@ -10,17 +10,17 @@ mixin dropdown(props)
                 defaultValue = 'Сколько гостей',
                 isApply = false,
                 isOpen = false } = props
-        let className = "iqdropdown"
+        let className = "iqdropdown js-iqdropdown"
         className += isOpen ? ' menu-open' : ''
     h3.iqdropdown-title= title
     div(class=className, data-dropdown-type=type)
-        p.iqdropdown-selection(data-default-value=defaultValue)
+        p.iqdropdown-selection.js-iqdropdown-selection(data-default-value=defaultValue)
         .iqdropdown-menu(data-common-form-text=common)
             each val in items
                 +dropdown-option(type, val.id, val.name, val.wordForms, val.defaultCount)
             if isApply
-                .iqdropdown-button
-                    .iqdropdown-button-clear.hide
+                .iqdropdown-button.js-iqdropdown-button
+                    .iqdropdown-button-clear.js-iqdropdown-button-clear.hide
                         +btn({type: 'text', title: 'очистить'})
-                    .iqdropdown-button-apply
+                    .iqdropdown-button-apply.js-iqdropdown-button-apply
                         +btn({type: 'text', title: 'применить'})

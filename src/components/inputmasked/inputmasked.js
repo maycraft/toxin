@@ -9,7 +9,7 @@ const InputMask = function () {
 const inputMask = {
     // Default Values
     d: {
-        masked: '.masked',
+        masked: '.js-masked',
         mNum: 'XдДмМгГ9',
         mChar: '_',
         onError() {},
@@ -38,7 +38,7 @@ const inputMask = {
         const pTxt = t.getAttribute('placeholder');
         const placeholder = document.createTextNode(pTxt);
 
-        t.setAttribute('maxlength', placeholder.length);
+        t.setAttribute('max-length', placeholder.length);
         t.setAttribute('data-placeholder', pTxt);
         t.removeAttribute('placeholder');
         if (!tClass || (tClass && tClass.indexOf('masked') === -1)) {
@@ -46,7 +46,7 @@ const inputMask = {
         }
 
         mask.setAttribute('aria-hidden', 'true');
-        mask.classList.add('mask');
+        mask.classList.add('js-mask');
         mask.appendChild(emphasis);
         mask.appendChild(placeholder);
 
@@ -78,8 +78,8 @@ const inputMask = {
         if (e.target.value === document.querySelector('.js-date').innerHTML) {
             return; // Continue only if value hasn't changed
         }
-        document.querySelector('.masked').value = this.handleCurrentValue(e);
-        document.querySelector('.mask').innerHTML = this.setValueOfMask(e);
+        document.querySelector('.js-masked').value = this.handleCurrentValue(e);
+        document.querySelector('.js-mask').innerHTML = this.setValueOfMask(e);
     },
 
     handleCurrentValue(e) {
@@ -149,7 +149,7 @@ for (const property in inputMask) {
         InputMask.prototype[property] = inputMask[property];
     }
 }
-const masked = document.querySelector('.masked');
+const masked = document.querySelector('.js-masked');
 if (masked) {
     masked.value = '';
     new InputMask();

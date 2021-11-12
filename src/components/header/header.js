@@ -2,10 +2,10 @@ import './header.scss';
 import '@components/brand/brand';
 import '@components/button/button';
 
-const burmenu = document.querySelector('.burmenu');
-const menu = document.querySelector('.header__menu');
+const burgerMenu = document.querySelector('.js-burger-menu');
+const menu = document.querySelector('.js-header__menu');
 
-burmenu.addEventListener('click', event => {
+burgerMenu.addEventListener('click', event => {
     event.preventDefault();
     if (!menu.classList.contains('show')) {
         menu.classList.add('show');

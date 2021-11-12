@@ -13,7 +13,7 @@ function declOfWord(n, words) {
     return words[2];
 }
 // Получаем все блоки с кнопками
-const iqDropdownButton = document.querySelectorAll('.iqdropdown-button');
+const iqDropdownButton = document.querySelectorAll('.js-iqdropdown-button');
 // Пробегаемся по всем блокам
 iqDropdownButton.forEach(buttonBlock => {
     buttonBlock.addEventListener('click', event => {
@@ -22,7 +22,7 @@ iqDropdownButton.forEach(buttonBlock => {
     });
 });
 // Получаем все кнопки Применить
-const applyBtns = document.querySelectorAll('.iqdropdown-button-apply > button');
+const applyBtns = document.querySelectorAll('.js-iqdropdown-button-apply > button');
 applyBtns.forEach(btn => {
     btn.addEventListener('click', event => {
         event.stopPropagation();
@@ -35,7 +35,7 @@ applyBtns.forEach(btn => {
     });
 });
 // Получаем все кнопки Очистить и пробегаемся по ним
-const clearBtns = document.querySelectorAll('.iqdropdown-button-clear > button');
+const clearBtns = document.querySelectorAll('.js-iqdropdown-button-clear > button');
 clearBtns.forEach(clearBtn => {
     // проверяем есть ли кнопка, если есть вешаем событие клик
     if (clearBtn) {
@@ -45,7 +45,7 @@ clearBtns.forEach(clearBtn => {
             // Пробегаемся по каждой строке с элементами
             for (const elem of iqDropdownMenu.children) {
                 // Получаем элемент с счётчиком
-                const counter = elem.querySelector('.counter');
+                const counter = elem.querySelector('.js-counter');
                 // Если он есть и значения этого элемента больше нуля
                 if (counter && counter.innerText > 0) {
                     // То получаем кнопку минус
@@ -66,11 +66,11 @@ const options = {
         // Получаем тип элементов
         const dataType = Object.keys(itemCount)[0].replace('1', '');
         // С помощью которого, потом получаем нужный dropdown
-        const iqDropdown = document.querySelector(`.iqdropdown[data-dropdown-type=${dataType}]`);
+        const iqDropdown = document.querySelector(`.js-iqdropdown[data-dropdown-type=${dataType}]`);
         // Получаем поле с выводом
-        const iqSelection = iqDropdown.querySelector('.iqdropdown-selection');
+        const iqSelection = iqDropdown.querySelector('.js-iqdropdown-selection');
         // Получаем блок с кнопкой clear
-        const clearBtnBlock = iqDropdown.querySelector('.iqdropdown-button-clear');
+        const clearBtnBlock = iqDropdown.querySelector('.js-iqdropdown-button-clear');
 
         // Переменная для подсчёта объединённых полей
         let commonCount = 0;
@@ -86,7 +86,7 @@ const options = {
             // Получаем количество выбранных элементов для текущего
             const counter = itemCount[item];
             // Получаем нужную колонку отвечающий за текущий элемент
-            const el = document.querySelector(`.iqdropdown-menu-option[data-id=${item}]`);
+            const el = document.querySelector(`.js-iqdropdown-menu-option[data-id=${item}]`);
             // Получаем массив с вариантами склонения слов для отображения
             const wordForms = el.dataset.wordForms.split(',');
             // Если data-word-forms пустая, т.е. должно быть общее значение на несколько элементов
@@ -135,7 +135,10 @@ const options = {
         // Возвращаем нужную строку
         return strValue;
     },
+    controls: {
+        counterCls: 'js-counter',
+    },
 };
 $(document).ready(() => {
-    $('.iqdropdown').iqDropdown(options);
+    $('.js-iqdropdown').iqDropdown(options);
 });

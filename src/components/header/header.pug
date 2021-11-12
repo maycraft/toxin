@@ -2,19 +2,19 @@ include /components/brand/brand.pug
 include /components/button/button.pug
 
 mixin header(customConfig = {})
-    - const defaultConfit = require("@components/header/header.config.json");
-    - const data = Object.assign({}, defaultConfit, customConfig);
+    - const defaultConfig = require("@components/header/header.config.json");
+    - const data = Object.assign({}, defaultConfig, customConfig);
     - const { menu: items, buttons, login } = data;
     header.header
         .header__container
             .header__body
                 +brand
                 nav.header__navbar
-                    button.header__burmenu.burmenu
-                        i.burmenu__line 
-                        i.burmenu__line 
-                        i.burmenu__line
-                    .header__menu
+                    button.header__burger-menu.burger-menu.js-burger-menu
+                        i.burger-menu__line 
+                        i.burger-menu__line 
+                        i.burger-menu__line
+                    .header__menu.js-header__menu
                         ul.header-menu
                             each item in items
                                 - let className = "header-menu__item";

@@ -1,7 +1,7 @@
 mixin inputmasked(title)
     if title
         h3.masked__text= title
-    input.masked(
+    input.masked.js-masked(
         type='text',
         placeholder='ДД.ММ.ГГГГ',
         pattern='^(0[1-9]|[12][0-9]|3[0-1])\.(1[0-2]|0[1-9])\.((19|2[09])[0-9][0-9])$',

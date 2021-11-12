@@ -4,7 +4,7 @@ import '@components/header/header';
 import '@components/footer/footer';
 import '@components/form-search/form-search';
 
-const content = document.querySelector('.content');
+const content = document.querySelector('.js-content');
 let i = 1;
 const images = 3;
 const delay = 10000;

@@ -1,6 +1,6 @@
 mixin slider(images, selected=1)
-    .slider
-        .slider__arrow.slider__arrow-left
+    .slider.js-slider
+        .slider__arrow.slider__arrow-left.js-slider__arrow-left
         - for(let i=0; i < images.length; i++)
             - const selectIdx = i + 1;
             - let className = "slider__picture";
@@ -8,7 +8,7 @@ mixin slider(images, selected=1)
             img(class=className, src="/toxin/assets/img/" + images[i], alt='')
         .slider__control.control
             - for( let i = 1; i <= images.length; i++ )
-                - let className = "control__circle";
+                - let className = "control__circle js-control__circle";
                 - className += selected === i ? " control__circle-active" : "";
                 div(class=className)
-        .slider__arrow.slider__arrow-right
+        .slider__arrow.slider__arrow-right.js-slider__arrow-right

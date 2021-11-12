@@ -9,7 +9,7 @@ import '@components/bullet-list/bullet-list';
 import '@components/chart/chart';
 
 // Получаем все изображения
-const images = document.querySelectorAll('.detail__image');
+const images = document.querySelectorAll('.js-detail__image');
 const changeMain = ({ target }) => {
     // если у изображения есть такой класс, то игнорим
     if (target.classList.contains('detail__image-main')) {

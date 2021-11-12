@@ -13,16 +13,23 @@ block variables
         const data = require('@pages/room-details/room-details.config.json')
         const { benefitData, bulletList } = data
 
+
 block content
     +header
     main.detail 
         .detail__images
-            img.detail__image.detail__image-main(
+            img.detail__image.js-detail__image.detail__image-main(
                 src='/toxin/assets/img/room1.jpg',
                 alt='main photo'
             )
-            img.detail__image(src='/toxin/assets/img/detail-2.jpg', alt='second photo')
-            img.detail__image(src='/toxin/assets/img/detail-3.jpg', alt='third photo')
+            img.detail__image.js-detail__image(
+                src='/toxin/assets/img/detail-2.jpg',
+                alt='second photo'
+            )
+            img.detail__image.js-detail__image(
+                src='/toxin/assets/img/detail-3.jpg',
+                alt='third photo'
+            )
         .container 
             .detail__descr.descr
                 .descr__common

@@ -10,14 +10,14 @@ function formatNum(num) {
     return `${num.substr(0, idx)} ${num.substr(idx, 3)}`;
 }
 $(document).ready(() => {
-    const slider = document.querySelector('.range__slider');
+    const slider = document.querySelector('.js-range__slider');
     if (slider) {
         const min = slider.dataset.min;
         const max = slider.dataset.max;
         const start = slider.dataset.start;
         const end = slider.dataset.end;
         const step = slider.dataset.step;
-        const rangeValues = document.querySelector('.range__values');
+        const rangeValues = document.querySelector('.js-range__values');
 
         noUiSlider.create(slider, {
             start: [5000, 10000],

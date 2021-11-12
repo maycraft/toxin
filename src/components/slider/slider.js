@@ -1,12 +1,12 @@
 import './slider.scss';
 
-const sliders = document.querySelectorAll('.slider');
+const sliders = document.querySelectorAll('.js-slider');
 sliders.forEach(slider => {
     let idx = 0;
     const images = slider.querySelectorAll('img');
-    const circles = slider.querySelectorAll('.control__circle');
-    const arrowPrev = slider.querySelector('.slider__arrow-left');
-    const arrowNext = slider.querySelector('.slider__arrow-right');
+    const circles = slider.querySelectorAll('.js-control__circle');
+    const arrowPrev = slider.querySelector('.js-slider__arrow-left');
+    const arrowNext = slider.querySelector('.js-slider__arrow-right');
 
     arrowPrev.addEventListener('click', () => {
         images[idx].classList.remove('slider__picture-active');
